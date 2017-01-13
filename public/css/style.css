@@ -1,0 +1,263 @@
+body {
+
+}
+
+#root {
+    min-height: 100%;
+    margin: 0;
+}
+
+main {
+    min-height: 400px;
+    min-height: 50em;
+    min-height: 60vh;
+}
+
+header {
+    background: #fff;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+header h1 a {
+    color: #000000;
+    letter-spacing: .2em;
+    text-decoration: none;
+}
+
+header h1 a .fat {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+header h1 a:hover, header h1 a:active, header h1 a:focus {
+    text-decoration: none;
+    color: #000000;
+}
+
+#navigation ul {
+    margin: 0;
+    padding: 0;
+}
+
+#navigation ul li.active {
+    display: none;
+}
+
+li {
+    list-style: none;
+}
+
+.social-media-icons .fa {
+    font-size: 2rem;
+    margin: .5rem 0;
+}
+
+#navigation a {
+    font-size: 1.5rem;
+}
+
+#navigation a i {
+    float: left;
+}
+
+button#clr {
+    display: none;
+}
+
+#language {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #000;
+    letter-spacing: .1em;
+}
+
+@media only screen and (max-width: 640px) {
+
+    #root .group {
+        position: relative;
+    }
+
+    #language {
+        float: right
+    }
+
+    #root .social-media-icons {
+        padding: 0;
+        text-align: center;
+    }
+
+    #root .social-media-icons li {
+        display: inline-block;
+        margin: .6em;
+    }
+
+    #root #navigation ul li {
+        margin: 1em auto;
+        width: 75%;
+    }
+
+    #root footer {
+        margin: 5em auto 1em auto !important;
+    }
+
+    #root footer .txt-lft {
+        position: static;
+    }
+
+    #root footer img {
+        display: none;
+    }
+
+    #root .product-list .product {
+        margin: 1em auto;
+        width: 85%;
+    }
+}
+
+#navigation ul li {
+    margin: 1em auto;
+    cursor: pointer;
+    width: 12em;
+}
+
+#navigation ul li a {
+    display: block;
+}
+
+#navigation a:link, #navigation a:active, #navigation a:visited {
+    border: 1px solid #333333;
+    color: #ffffff;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    padding: .4em .5em;
+}
+
+footer {
+    text-align: center;
+}
+
+footer .txt-lft {
+    position: relative;
+    left: -30px;
+}
+
+footer img {
+    max-width: 80px;
+    max-height: auto;
+    left: 105px;
+    top: -20px;
+    opacity: .9;
+    position: relative;
+}
+
+main img {
+    max-height: auto;
+    background-color: #eae9d4;
+    box-shadow: 0 0 6px rgba(132, 132, 132, .75);
+    border-radius: 3px;
+    padding: .3em;
+    border: 2px solid #ccc;
+    margin: .8em;
+}
+
+.product-list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.product-list .product {
+    border: 2px solid black;
+    padding: .5em;
+    margin: .3em;
+    text-align: center;
+    width: 45%;
+    display: inline-block;
+}
+
+.product-list .product #qty-1 {
+    width: 35%;
+}
+
+/*  SECTIONS  */
+.section {
+    clear: both;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWELVE  */
+.span_12_of_12 {
+    width: 100%;
+}
+
+.span_11_of_12 {
+    width: 91.53%;
+}
+.span_10_of_12 {
+    width: 83.06%;
+}
+
+.span_9_of_12 {
+    width: 74.6%;
+}
+
+.span_8_of_12 {
+    width: 66.13%;
+}
+
+.span_7_of_12 {
+    width: 57.66%;
+}
+
+.span_6_of_12 {
+    width: 49.2%;
+}
+
+.span_5_of_12 {
+    width: 40.73%;
+}
+
+.span_4_of_12 {
+    width: 32.26%;
+}
+
+.span_3_of_12 {
+    width: 23.8%;
+}
+
+.span_2_of_12 {
+    width: 15.33%;
+}
+
+.span_1_of_12 {
+    width: 6.866%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+    .col { 
+        margin: 1% 0 1% 0%;
+    }
+    
+    .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
+        width: 100%; 
+    }
+}
