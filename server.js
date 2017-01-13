@@ -8,6 +8,17 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 })
 
+app.get('/beards.html', (req, res) => {
+  res.sendFile(__dirname + '/beards.html');
+})
+
+app.get('/birds.html', (req, res) => {
+  res.sendFile(__dirname + '/birds.html');
+})
+
+app.get('/contact.html', (req, res) => {
+  res.sendFile(__dirname + '/contact.html');
+})
 
 // stina / newworld1
 /*
