@@ -9,7 +9,6 @@ app.get('/', (req, res) => {
 })
 
 
-
 // stina / newworld1
 /*
 To connect using the mongo shell:
@@ -27,8 +26,8 @@ MongoClient.connect('mongodb://<stina>:<newworld1>@ds163738.mlab.com:63738/stina
 	//if (err) return console.log(err)
 
 	db = database
-  	app.listen(3000, () => {
-    	console.log('listening on 3000')
+  	app.listen(80, () => {
+    	console.log('listening on 80')
   	})
 
 	console.log("mongo nasen");
