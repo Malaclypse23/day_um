@@ -177,8 +177,32 @@ main img {
     display: inline-block;
 }
 
+.product-list .product img {
+    max-width: auto;
+    max-height: 250px;
+}
+
 .product-list .product #qty-1 {
     width: 35%;
+}
+
+.cart {
+  float: right;
+  font-size: 1rem;
+  border: 1px solid black;
+}
+
+.cart .item {
+  border-top: 1px solid black;
+}
+
+.cart .item td {
+  padding: .2em .5em;
+  border-right: 1px solid black;
+}
+
+.cart .item td.item-total {
+  border: 0 none;
 }
 
 /*  SECTIONS  */
@@ -253,11 +277,11 @@ main img {
 
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 480px) {
-    .col { 
+    .col {
         margin: 1% 0 1% 0%;
     }
-    
+
     .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
-        width: 100%; 
+        width: 100%;
     }
 }
