@@ -13,11 +13,8 @@
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
 
-
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
-
-
 </head>
 
 <body ng-app="ShopApp">
@@ -110,8 +107,8 @@
 										<input type="text" name="qty-1" id="qty-1" class="qty" ng-model="product.quantity" value="1" />
 										<label for="qty-1">Size</label>
 										<!--
-										<select name="size" id="size" ng-model="product.size">
-											<option ng-repeat="option in product.size" value="{{option}}">{{option}}</option>
+										<select ng-model="product.size">
+											<option ng-options="product.size in products.size"></option>
 										</select>
 										<br />
 										-->
@@ -127,11 +124,17 @@
 			<nav id="navigation" class="col span_2_of_12">
 				<ul>
 					<li>
-						<a href="#"><i class="fa fa-paint-brush"></i>Artwork</a>
+						<a href="recent.html"><i class="fa fa-paint-brush"></i>Recent work</a>
 						<ul>
 							<li><a href="beards.html">Beards</a></li>
 							<li><a href="birds.html">Birds</a></li>
 							<li><a href="redhands.html">Red Hands</a></li>
+							<li><a href="octopus.html">Octopus</a></li>
+						</ul>
+						<a href="past.html"><i class="fa fa-camera"></i>Past work</a>
+						<ul>
+							<li><a href="drawings.html">Drawings</a></li>
+							<li><a href="photos.html">Photos</a></li>
 						</ul>
 					</li>
 					<li class="active"><a href="shop.html"><i class="fa fa-shopping-cart"></i>Shop</a></li>

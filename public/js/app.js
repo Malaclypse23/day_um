@@ -7,7 +7,6 @@ $(function() {
 	});
 });
 
-
 angular.module('ShopApp', ['ngRoute'])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
