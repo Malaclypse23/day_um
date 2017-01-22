@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'));
 
-
 app.listen(80, () => {
   console.log('listening on 80')
 })
@@ -27,3 +26,7 @@ var MongoClient = require('mongodb').MongoClient;
 //var Db = require('mongodb').Db;
 //var ObjectId = require('mongodb').ObjectID;
 var url = 'mongodb://<tomahawk>:<stina>@ds163738.mlab.com:63738/stina';
+
+
+
+
