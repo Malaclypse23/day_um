@@ -1,5 +1,3 @@
-'use strict';
-
 $(function() {
 	lightbox.option({
 		'resizeDuration': 200,
@@ -7,11 +5,8 @@ $(function() {
 		'alwaysShowNavOnTouchDevices': true,
 		'albumLabel':	"Image %1 of %2",
 	});
-});
 
-$(function() {
 	var cart = { item: "Product 1", price: 19.00, qty: 2 };
-
 	var settings = $.cookie("settings");
 	if (settings == null) {
 		settings = { 'lang': 'en', 'debug': false, 'cart':  JSON.stringify(cart)};
