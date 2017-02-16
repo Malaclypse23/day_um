@@ -40,11 +40,16 @@
 					<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
 						<a href="#" id="past" class="pure-menu-link pure-menu-disabled">Past</a>
 						<ul class="pure-menu-children">
-							<li class="pure-menu-item"><a href="drawings.html" class="pure-menu-link pure-menu-disabled">Drawings</a></li>
+							<li class="pure-menu-item"><a href="drawings.html" class="pure-menu-link">Drawings</a></li>
 							<li class="pure-menu-item"><a href="photos.html" class="pure-menu-link pure-menu-disabled">Photography</a></li>
 						</ul>
 					</li>
-					<li class="pure-menu-item"><a id="language" href="#" class="pure-menu-link">de  |  [en]</a></li>
+					<li class="pure-menu-item">
+						<select onchange="select_language(this.options[this.selectedIndex].value)">
+						  	<option value="en" selected>English</option>
+						  	<option value="de">Deutsch</option>
+						</select>
+					</li>
 				</ul>
 			</nav>
 		</div>

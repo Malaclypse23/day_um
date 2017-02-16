@@ -1,3 +1,13 @@
+function select_language(language) {
+	$("[lang]").each(function () {
+        if ($(this).attr("lang") == language)
+            $(this).show();
+        else
+            $(this).hide();
+    });
+}
+
+
 $(function() {
 	lightbox.option({
 		'resizeDuration': 200,
@@ -6,6 +16,7 @@ $(function() {
 		'albumLabel':	"Image %1 of %2",
 	});
 
+	/*
 	var cart = { item: "Product 1", price: 19.00, qty: 2 };
 	var settings = $.cookie("settings");
 	if (settings == null) {
@@ -13,18 +24,9 @@ $(function() {
 	}
 
 	$.cookie("settings", JSON.stringify(settings));
+	*/
 
-	if (settings.lang == 'en') {
-		$('.deutsch').each(function() {
-			$(this).hide();
-		});
-	} else if (settings.lang == 'de') {
-		$('#language').text('en  |  [de]');
-		$('.english').each(function() {
-			$(this).hide();
-		});
-	}
-
+	/*
 	$("#language").on('click', function() {
 		if (settings.lang == "en") {
 			var s = { 'lang': 'de', 'debug': true };
@@ -35,4 +37,5 @@ $(function() {
 		}
 		location.reload();
 	});
+*/
 });
