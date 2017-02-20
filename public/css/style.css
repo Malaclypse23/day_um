@@ -12,6 +12,7 @@ main {
 
 header h1 {
     width: 75%;
+    margin-top: .2em;
     margin-bottom: 0;
 }
 
@@ -50,7 +51,7 @@ header h1 a {
 
 .title {
     position: fixed;
-    top: 9%;
+    top: 7%;
     right: 1.5rem;
     font-size: .7rem;
     text-align: right;
@@ -201,11 +202,7 @@ main img {
     }
 
     footer {
-        left: 30%;
-    }
-
-    .title {
-    
+        left: 5%;
     }
 
     .main-menu {
@@ -224,7 +221,7 @@ main img {
 
     #crossfade > img {
         max-width: 100%;
-        top: 15%;
+        top: 20%;
         left: 0;
         z-index: 2;
     }
