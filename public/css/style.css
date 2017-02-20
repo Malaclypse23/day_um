@@ -2,7 +2,7 @@ body {
 }
 
 #root {
-    padding: 2%;
+    padding: 1%;
 }
 
 main {
@@ -10,18 +10,51 @@ main {
     min-height: 45vh;
 }
 
-header {
-    text-align: center;
+header h1 {
+    width: 75%;
+    margin-bottom: 0;
 }
 
-main .deutsch, main .english {
+header h2 {
+    font-size: .8rem;
+    margin-bottom: 3rem;
+    color: #cccccc;
+}
+
+p {
     text-align: justify;
+}
+
+.main-menu {
+    text-align: right;
+    font-size: .8rem;
+    position: fixed;
+    width: 100%;
+    left: -20px;
+    top: 20px;
+    z-index: 100;
+}
+
+.main-menu input, .main-menu label {
+    display: none;
+}
+.main-menu label {
+    cursor: pointer;
 }
 
 header h1 a {
     color: #000000;
-    letter-spacing: .2em;
+    letter-spacing: .1em;
     text-decoration: none;
+}
+
+.title {
+    position: fixed;
+    top: 55%;
+    right: 1.5rem;
+    font-size: .7rem;
+    text-align: right;
+    z-index: 10;
 }
 
 header h1 a:hover, header h1 a:active, header h1 a:focus {
@@ -42,35 +75,67 @@ button#clr {
 footer {
     position: fixed;
     bottom: .5em;
-    text-align: center;
+    left: 80%;
     margin-top: 3rem;
-}
-
-footer .txt-lft {
-    position: relative;
-    left: -30px;
 }
 
 footer img {
     max-width: 80px;
-    left: 80px;
-    top: -20px;
-    /*
     position: relative;
-    */
+    left: 90px;
+    top: 0;
 }
 
 main img {
-    /*
-    box-shadow: 0 0 3px rgba(132, 132, 132, .75);
-    border-radius: 2px;
-    padding: .2em;
-    border: 1px solid #ccc;
-    margin: .5rem;
-    */
-    /*max-height: 100px;*/
     max-width: auto;
 }
+
+
+#crossfade > img { 
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    color: transparent;
+    opacity: 0;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 30s linear infinite 0s;
+    -moz-animation: imageAnimation 30s linear infinite 0s;
+    -o-animation: imageAnimation 30s linear infinite 0s;
+    -ms-animation: imageAnimation 30s linear infinite 0s;
+    animation: imageAnimation 30s linear infinite 0s; 
+}
+
+#crossfade > img:nth-child(2)  {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s; 
+}
+#crossfade > img:nth-child(3) {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s; 
+}
+#crossfade > img:nth-child(4) {
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s; 
+}
+#crossfade > img:nth-child(5) {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s; 
+}
+
 
 .product-list {
     display: inline-block;
@@ -117,7 +182,8 @@ main img {
 
 @media only screen and (max-width: 640px) {
     #root .social-media-icons li {
-        display: inline-block;
+        /*display: inline-block;*/
+        display: none;
     }
 
     #root footer .txt-lft {
@@ -132,6 +198,102 @@ main img {
         margin: .5rem auto;
         width: 98%;
     }
+
+    footer {
+        left: 30%;
+    }
+
+    .title {
+    
+    }
+
+    .main-menu {
+        z-index: 3;
+        bottom: 1rem;
+        top: inherit;
+        left: 73%;
+        background-color: transparent;
+        position: fixed;
+    }
+
+    .main-menu li, .main-menu li a {
+        background-color: transparent;
+        height: auto;
+    }
+
+    #crossfade > img {
+        max-width: 100%;
+        top: 15%;
+        left: 0;
+        z-index: 2;
+    }
+
+    #root .main-menu > ul {
+        display: none;
+        height: 100%;
+    }
+
+    #root .main-menu input {
+        text-align: right;
+        display: none;
+    }
+
+    #root .main-menu input:checked ~ ul {
+        display: block !important;       
+    }
+
+    #root .main-menu input:checked ~ label {
+        display: none;
+    }
+
+    .main-menu ul .pure-menu-item {
+        display: block;
+    }
+
+    .main-menu ul .pure-menu-children {
+        display: block;
+        position: static;
+        left: inherit;
+        top: inherit;
+    }
+
+    .main-menu ul li {
+        width: 6em;
+    }
+
+    .main-menu ul > .pure-menu-has-children > a { 
+        display: none;
+    }
+
+    .main-menu .pure-menu-disabled {
+        display: none;
+    }
+
+    .main-menu input:checked ul > .pure-menu-item {
+        display: block;
+        font-size: 1rem;
+    }
+
+    .main-menu label {
+      position: relative;
+      right: -2rem;
+      bottom: 0;
+      text-align: right;
+      background-image: url('../img/menu-alt.png');
+      width: 32px;
+      height: 32px;
+      display: block;
+    }
+
+    .main-menu label::after {
+        position: absolute;
+        left: 0;
+        top: 0.25em;
+        width: 1em;
+        height: 0.15em;
+        background: black;
+        box-shadow: 0 0.25em 0 0 black, 0 0.5em 0 0 black;
+    }
 }
 
 @media only screen and (min-width: 767px) {
@@ -144,52 +306,6 @@ main img {
 }
 
 
-
-#crossfade > img { 
-    max-width: 50%;
-    height: auto;
-    position: absolute;
-    top: 200px;
-    left: 100px;
-    color: transparent;
-    opacity: 0;
-    z-index: 0;
-    -webkit-backface-visibility: hidden;
-    -webkit-animation: imageAnimation 30s linear infinite 0s;
-    -moz-animation: imageAnimation 30s linear infinite 0s;
-    -o-animation: imageAnimation 30s linear infinite 0s;
-    -ms-animation: imageAnimation 30s linear infinite 0s;
-    animation: imageAnimation 30s linear infinite 0s; 
-}
-
-#crossfade > img:nth-child(2)  {
-    -webkit-animation-delay: 6s;
-    -moz-animation-delay: 6s;
-    -o-animation-delay: 6s;
-    -ms-animation-delay: 6s;
-    animation-delay: 6s; 
-}
-#crossfade > img:nth-child(3) {
-    -webkit-animation-delay: 12s;
-    -moz-animation-delay: 12s;
-    -o-animation-delay: 12s;
-    -ms-animation-delay: 12s;
-    animation-delay: 12s; 
-}
-#crossfade > img:nth-child(4) {
-    -webkit-animation-delay: 18s;
-    -moz-animation-delay: 18s;
-    -o-animation-delay: 18s;
-    -ms-animation-delay: 18s;
-    animation-delay: 18s; 
-}
-#crossfade > img:nth-child(5) {
-    -webkit-animation-delay: 24s;
-    -moz-animation-delay: 24s;
-    -o-animation-delay: 24s;
-    -ms-animation-delay: 24s;
-    animation-delay: 24s; 
-}
 
 @-webkit-keyframes imageAnimation { 
     0% { opacity: 0;

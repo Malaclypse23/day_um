@@ -15,6 +15,7 @@ $(function() {
 		'alwaysShowNavOnTouchDevices': true,
 		'albumLabel':	"Image %1 of %2",
 	});
+	select_language('en');
 
 	/*
 	var cart = { item: "Product 1", price: 19.00, qty: 2 };
