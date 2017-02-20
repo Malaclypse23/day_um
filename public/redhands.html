@@ -22,10 +22,47 @@
 	<div id="root">
 
 		<div class="pure-g">
-			<header class="pure-u-1 pure-u-md-2-3">
-				<h1><a href="index.html">Christina Day</a></h1>
+			<header class="pure-u-1 pure-u-md-1-6">
+				<h1>
+					<a href="index.html">Christina Day</a>
+				</h1>
+				<h2>
+					Oxford | Berlin
+				</h2>
 			</header>
-			<nav class="pure-u-1 pure-u-md-1-3 pure-menu pure-menu-horizontal">
+		</div>
+
+		<div class="pure-g">
+			<aside class="pure-u-1 pure-u-md-3-24 pure-menu">
+				<ul class="pure-menu-list social-media-icons">
+					<li class="pure-menu-item"><a href="https://www.facebook.com/ChristinaPatriceDay" target="_blank" class="pure-menu-link"><i class="fa fa-facebook-square" title="facebook icon"></i></a></li>
+					<li class="pure-menu-item"><a href="https://twitter.com/CStinaday" target="_blank" class="pure-menu-link"><i class="fa fa-twitter-square" title="twitter icon"></i></a></li>
+					<li class="pure-menu-item"><a href="https://www.instagram.com/rhysika2" target="_blank" class="pure-menu-link">	<i class="fa fa-instagram" title="instagram icon"></i></a></li>
+					<li class="pure-menu-item"><a href="mailto:christ_in_day@hotmail.com" target="_blank" class="pure-menu-link"><i class="fa fa-envelope" title="email icon"></i></a></li>
+					<li class="pure-menu-item"><a href="https://abshuberlin.wordpress.com/2015/07/12/abandoned-shoes-of-everywhere" target="_blank" class="pure-menu-link"><i class="fa fa-pencil-square-o" title="blog icon"></i></a></li>
+				</ul>
+			</aside>
+			<main class="pure-u-1 pure-u-md-17-24">
+				<div id="crossfade">
+					<img src="img/big/redhand1.jpg" alt="Red Hand1">
+					<img src="img/big/redhand2.jpg" alt="Red Hand2">
+					<img src="img/big/redhand3.jpg" alt="Red Hand3">
+				</div>
+			</main>
+
+			<aside class="title pure-u-1 pure-u-md-4-24 pure-menu">
+				<h1>
+					<span lang="en">Red Hands</span>
+					<span lang="de">Rote Hände</span>
+				</h1>
+			</aside>
+		</div>
+
+		<div class="pure-g">
+			<nav class="main-menu pure-u-1 pure-u-md-1-6 pure-menu pure-menu-horizontal">
+				<input type="checkbox" id="menu">
+				<label for="menu" onclick></label>
+
 				<ul class="pure-menu-list">
 					<li class="pure-menu-item"><a href="shop.html" class="pure-menu-link">Shop</a></li>
 					<li class="pure-menu-item"><a href="contact.html" class="pure-menu-link">Contact</a></li>
@@ -41,47 +78,18 @@
 					<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
 						<a href="#" id="past" class="pure-menu-link pure-menu-disabled">Past</a>
 						<ul class="pure-menu-children">
-							<li class="pure-menu-item"><a href="drawings.html" class="pure-menu-link pure-menu-disabled">Drawings</a></li>
-							<li class="pure-menu-item"><a href="photos.html" class="pure-menu-link pure-menu-disabled">Photography</a></li>
+							<li class="pure-menu-item"><a href="drawings.html" class="pure-menu-link">Drawings</a></li>
+							<li class="pure-menu-item"><a href="photos.html" class="pure-menu-link">Photography</a></li>
 						</ul>
 					</li>
-					<li class="pure-menu-item"><a id="language" href="#" class="pure-menu-link">de  |  [en]</a></li>
+					<li class="pure-menu-item">
+						<select onchange="select_language(this.options[this.selectedIndex].value)">
+						  	<option value="en" selected>English</option>
+						  	<option value="de">Deutsch</option>
+						</select>
+					</li>
 				</ul>
 			</nav>
-		</div>
-
-		<div class="pure-g">
-			<aside class="pure-u-1 pure-u-md-3-24 pure-menu">
-				<ul class="pure-menu-list social-media-icons">
-					<li class="pure-menu-item"><a href="https://www.facebook.com/ChristinaPatriceDay" target="_blank" class="pure-menu-link"><i class="fa fa-facebook-square" title="facebook icon"></i></a></li>
-					<li class="pure-menu-item"><a href="https://twitter.com/CStinaday" target="_blank" class="pure-menu-link"><i class="fa fa-twitter-square" title="twitter icon"></i></a></li>
-					<li class="pure-menu-item"><a href="https://www.instagram.com/rhysika2" target="_blank" class="pure-menu-link">	<i class="fa fa-instagram" title="instagram icon"></i></a></li>
-					<li class="pure-menu-item"><a href="mailto:christ_in_day@hotmail.com" target="_blank" class="pure-menu-link"><i class="fa fa-envelope" title="email icon"></i></a></li>
-					<li class="pure-menu-item"><a href="https://abshuberlin.wordpress.com/2015/07/12/abandoned-shoes-of-everywhere" target="_blank" class="pure-menu-link"><i class="fa fa-pencil-square-o" title="blog icon"></i></a></li>
-				</ul>
-			</aside>
-			<main class="pure-u-1 pure-u-md-17-24">
-				<div class="english">
-					<h1>Red Hands</h1>
-					<p>
-						Red Hand Series
-					</p>
-				</div>
-
-				<div class="deutsch">
-					<h1>Rote Hände</h1>
-					<p>
-						Serie von Roten Händen
-					</p>
-				</div>
-
-				<a href="img/big/redhand1.jpg" data-title="Red Hand 1" data-lightbox="redhands"><img src="img/thumbs/redhand1.jpg" alt="redhand1" /></a>
-				<a href="img/big/redhand2.jpg" data-lightbox="redhands"><img src="img/thumbs/redhand2.jpg" alt="redhand2" /></a>
-				<a href="img/big/redhand3.jpg" data-lightbox="redhands"><img src="img/thumbs/redhand3.jpg" alt="redhand3" /></a>
-			</main>
-
-			<aside class="pure-u-1 pure-u-md-4-24 pure-menu">
-			</aside>
 		</div>
 
 		<div class="pure-g">

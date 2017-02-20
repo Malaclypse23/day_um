@@ -50,11 +50,12 @@ header h1 a {
 
 .title {
     position: fixed;
-    top: 55%;
+    top: 9%;
     right: 1.5rem;
     font-size: .7rem;
     text-align: right;
     z-index: 10;
+    width: 18em;
 }
 
 header h1 a:hover, header h1 a:active, header h1 a:focus {
@@ -262,6 +263,10 @@ main img {
     }
 
     .main-menu ul > .pure-menu-has-children > a { 
+        display: none;
+    }
+
+    .main-menu ul > .pure-menu-has-children > a:hover  { 
         display: none;
     }
 
