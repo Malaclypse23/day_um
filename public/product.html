@@ -1,0 +1,14 @@
+<ul ng-controller="ProductController" class="product-list">
+	<li ng-repeat="product in products" class="product">
+		<article>
+			<div class="col span_6_of_12">
+				<img ng-src="{{product.filename}}" alt="{{product.name}}" />
+			</div>
+			<div class="col span_6_of_12">
+				<h3 ng-model="product.name">{{product.name}}</h3>
+				<h4 ng-model="product.type">{{product.type}}</h4>
+				<p ng-model="product.price" class="product-price">{{product.price}}</p>
+			</div>
+		</article>
+	</li>
+</ul>

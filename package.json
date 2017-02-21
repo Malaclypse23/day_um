@@ -1,0 +1,17 @@
+{
+  "name": "day_um",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Spanner",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "express": "^4.13.0",
+    "mongodb": "^2.2.21"
+  }
+}
