@@ -6,8 +6,8 @@ body {
 }
 
 main {
-    margin-top: 4rem;
-    padding: .8em;
+    margin-top: 5rem;
+    padding: .5em;
     min-height: 45vh;
 }
 
@@ -211,8 +211,8 @@ main img {
     }
 
     #root .product-list .product {
-        margin: .5rem auto;
-        width: 98%;
+        margin: .8rem auto;
+        width: 80%;
     }
 
     footer {
@@ -221,7 +221,7 @@ main img {
 
     .main-menu {
         z-index: 3;
-        bottom: 1rem;
+        bottom: .5em;
         top: inherit;
         left: 72%;
         background-color: transparent;
@@ -258,8 +258,12 @@ main img {
     }
 
     .main-menu ul li a {
-       padding: .6em 0;
-       margin: .4em 0;
+       padding: 1em 0;
+       margin: .5em 0;
+    }
+
+    .main-menu ul li:last-of-type {
+       display: none;
     }
 
     .main-menu .pure-menu-disabled {
