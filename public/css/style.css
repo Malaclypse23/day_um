@@ -6,34 +6,44 @@ body {
 }
 
 main {
-    margin-top: 1rem;
+    margin-top: 4rem;
+    padding: .8em;
     min-height: 45vh;
 }
 
+.is-text header, .is-text .title {
+    position: absolute;
+}
+
+header {
+    position: fixed;
+    left: 5em;
+    top: 20px;
+}
+
 header h1 {
-    width: 75%;
-    margin-top: .2em;
-    margin-bottom: 0;
+    width: 80%;
+    margin: 0;
 }
 
 header h2 {
     font-size: .8rem;
-    margin-bottom: 3rem;
     color: #cccccc;
-}
-
-p {
-    text-align: justify;
 }
 
 .main-menu {
     text-align: right;
-    font-size: .8rem;
+    font-size: .7rem;
     position: fixed;
     width: 100%;
-    left: -20px;
-    top: 20px;
+    left: -1em;
+    top: 1em;
     z-index: 100;
+}
+
+
+.main-menu .pure-menu-selected {
+    display: none !important;
 }
 
 .main-menu input, .main-menu label {
@@ -51,9 +61,9 @@ header h1 a {
 
 .title {
     position: fixed;
-    top: 7%;
-    right: 1.5rem;
-    font-size: .7rem;
+    top: 6%;
+    right: 1em;
+    font-size: .6rem;
     text-align: right;
     z-index: 10;
     width: 18em;
@@ -77,14 +87,17 @@ button#clr {
 footer {
     position: fixed;
     bottom: .5em;
-    left: 80%;
-    margin-top: 3rem;
+    left: 85%;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #cccccc;
+    font-size: .7rem;
 }
 
 footer img {
     max-width: 80px;
     position: relative;
-    left: 90px;
+    left: 3em;
     top: 0;
 }
 
@@ -92,12 +105,12 @@ main img {
     max-width: auto;
 }
 
-
 #crossfade > img { 
-    max-width: 50%;
+    max-width: 66%;
     height: auto;
     position: absolute;
-    top: 0;
+    top: 5%;
+    left: 20%;
     color: transparent;
     opacity: 0;
     z-index: 0;
@@ -167,6 +180,7 @@ main img {
 
 .cart {
   border: 1px solid black;
+  float: right;
 }
 
 .cart .item {
@@ -183,8 +197,8 @@ main img {
 }
 
 @media only screen and (max-width: 640px) {
+
     #root .social-media-icons li {
-        /*display: inline-block;*/
         display: none;
     }
 
@@ -202,38 +216,32 @@ main img {
     }
 
     footer {
-        left: 5%;
+        left: 2%;
     }
 
     .main-menu {
         z-index: 3;
         bottom: 1rem;
         top: inherit;
-        left: 73%;
+        left: 72%;
         background-color: transparent;
         position: fixed;
     }
 
-    .main-menu li, .main-menu li a {
-        background-color: transparent;
-        height: auto;
+    header {
+        top: 0;
+        left: 1rem;
     }
 
     #crossfade > img {
         max-width: 100%;
-        top: 20%;
+        top: 13%;
         left: 0;
-        z-index: 2;
     }
 
     #root .main-menu > ul {
         display: none;
         height: 100%;
-    }
-
-    #root .main-menu input {
-        text-align: right;
-        display: none;
     }
 
     #root .main-menu input:checked ~ ul {
@@ -245,69 +253,42 @@ main img {
     }
 
     .main-menu ul .pure-menu-item {
+        width: 7em;
         display: block;
     }
 
-    .main-menu ul .pure-menu-children {
-        display: block;
-        position: static;
-        left: inherit;
-        top: inherit;
-    }
-
-    .main-menu ul li {
-        width: 6em;
-    }
-
-    .main-menu ul > .pure-menu-has-children > a { 
-        display: none;
-    }
-
-    .main-menu ul > .pure-menu-has-children > a:hover  { 
-        display: none;
+    .main-menu ul li a {
+       padding: .6em 0;
+       margin: .4em 0;
     }
 
     .main-menu .pure-menu-disabled {
         display: none;
     }
 
-    .main-menu input:checked ul > .pure-menu-item {
-        display: block;
-        font-size: 1rem;
-    }
-
     .main-menu label {
-      position: relative;
-      right: -2rem;
-      bottom: 0;
-      text-align: right;
+      position: fixed;
+      right: .5em;
+      bottom: .5em;
       background-image: url('../img/menu-alt.png');
       width: 32px;
       height: 32px;
       display: block;
     }
 
-    .main-menu label::after {
-        position: absolute;
-        left: 0;
-        top: 0.25em;
-        width: 1em;
-        height: 0.15em;
-        background: black;
-        box-shadow: 0 0.25em 0 0 black, 0 0.5em 0 0 black;
+    .is-text .main-menu label {
+        right: 2em;
     }
 }
 
 @media only screen and (min-width: 767px) {
-    main .deutsch, main .english {
-        width: 70%;
-    }
     .social-media-icons {
         width: 3.5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
 }
-
-
 
 @-webkit-keyframes imageAnimation { 
     0% { opacity: 0;

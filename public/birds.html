@@ -22,32 +22,14 @@
 	<div id="root">
 
 		<div class="pure-g">
-			<header class="pure-u-1 pure-u-md-2-3">
-				<h1><a href="index.html">Christina Day</a></h1>
+			<header class="pure-u-1 pure-u-md-1-6">
+				<h1>
+					<a href="index.html">Christina Day</a>
+				</h1>
+				<h2>
+					Oxford | Berlin
+				</h2>
 			</header>
-			<nav class="pure-u-1 pure-u-md-1-3 pure-menu pure-menu-horizontal">
-				<ul class="pure-menu-list">
-					<li class="pure-menu-item"><a href="shop.html" class="pure-menu-link">Shop</a></li>
-					<li class="pure-menu-item"><a href="contact.html" class="pure-menu-link">Contact</a></li>
-					<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-						<a href="#" id="present" class="pure-menu-link pure-menu-disabled">Present</a>
-						<ul class="pure-menu-children">
-							<li class="pure-menu-item"><a href="beards.html" class="pure-menu-link">Beards</a></li>
-							<li class="pure-menu-item pure-menu-selected"><a href="birds.html" class="pure-menu-link">Birds</a></li>
-							<li class="pure-menu-item"><a href="redhands.html" class="pure-menu-link">Red Hands</a></li>
-							<li class="pure-menu-item"><a href="octopus.html" class="pure-menu-link pure-menu-disabled">Octopus</a></li>
-						</ul>
-					</li>
-					<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-						<a href="#" id="past" class="pure-menu-link pure-menu-disabled">Past</a>
-						<ul class="pure-menu-children">
-							<li class="pure-menu-item"><a href="drawings.html" class="pure-menu-link pure-menu-disabled">Drawings</a></li>
-							<li class="pure-menu-item"><a href="photos.html" class="pure-menu-link pure-menu-disabled">Photography</a></li>
-						</ul>
-					</li>
-					<li class="pure-menu-item"><a id="language" href="#" class="pure-menu-link">de  |  [en]</a></li>
-				</ul>
-			</nav>
 		</div>
 
 		<div class="pure-g">
@@ -61,35 +43,53 @@
 				</ul>
 			</aside>
 			<main class="pure-u-1 pure-u-md-17-24">
-				<div class="english">
-					<h1>Birds</h1>
-					<p>
-						Nothing but birds... The Great Tits are the best!
-					</p>
+				<div id="crossfade">
+					<img src="img/big/birds1.jpg" alt="Bird 1">
+					<img src="img/big/birds3.jpg" alt="Bird 3">
+					<img src="img/big/birds4.jpg" alt="Bird 4">
+					<img src="img/big/birds5.jpg" alt="Bird 5">
 				</div>
-
-				<div class="deutsch">
-					<h1>Vögel</h1>
-					<p>
-						Serie von Vogel-Zeichnungen
-					</p>
-				</div>
-
-				<a href="img/big/birds1.jpg" data-title="Bird 1" data-lightbox="birds"><img src="img/thumbs/birds1.jpg" alt="beards2" /></a>
-				<a href="img/big/birds3.jpg" data-lightbox="birds"><img src="img/thumbs/birds3.jpg" alt="birds3" /></a>
-				<a href="img/big/birds4.jpg" data-lightbox="birds"><img src="img/thumbs/birds4.jpg" alt="birds4" /></a>
-				<a href="img/big/birds5.jpg" data-lightbox="birds"><img src="img/thumbs/birds5.jpg" alt="birds5" /></a>
 			</main>
-			<aside class="pure-u-1 pure-u-md-4-24 pure-menu">
+
+			<aside class="title pure-u-1 pure-u-md-4-24 pure-menu">
+				<h1>
+					<span lang="en">Birds</span>
+					<span lang="de">Vögel</span>
+				</h1>
 			</aside>
 		</div>
 
 		<div class="pure-g">
-			<footer class="pure-u-1">
-				<div>&copy; 2017 Christina Day</div>
-				<div class="txt-lft">All Rights Reserved</div>
-				<img src="img/stina_footer.jpg" alt="stina" />
-			</footer>
+			<nav class="main-menu pure-u-1 pure-u-md-1-6 pure-menu pure-menu-horizontal">
+				<input type="checkbox" id="menu">
+				<label for="menu" onclick></label>
+
+				<ul class="pure-menu-list">
+					<li class="pure-menu-item"><a href="shop.html" class="pure-menu-link">Shop</a></li>
+					<li class="pure-menu-item"><a href="beards.html" class="pure-menu-link">Beards</a></li>
+					<li class="pure-menu-item pure-menu-selected"><a href="birds.html" class="pure-menu-link">Birds</a></li>
+					<li class="pure-menu-item"><a href="redhands.html" class="pure-menu-link">Red Hands</a></li>
+					<li class="pure-menu-item"><a href="octopus.html" class="pure-menu-link pure-menu-disabled">Octopus</a></li>
+					<li class="pure-menu-item"><a href="portraits.html" class="pure-menu-link">Portraits</a></li>
+					<li class="pure-menu-item"><a href="photos.html" class="pure-menu-link">Photography</a></li>
+					<li class="pure-menu-item">
+						<select onchange="select_language(this.options[this.selectedIndex].value)">
+						  	<option value="en" selected>EN</option>
+						  	<option value="de">DE</option>
+						</select>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="pure-g">
+			<a href="contact.html">
+				<footer class="pure-u-1">
+					<div>&copy; 2017 Christina Day</div>
+					<div class="txt-lft">All Rights Reserved</div>
+					<img src="img/stina_footer.jpg" alt="stina" />
+				</footer>
+			</a>
 		</div>
 
 	</div>
