@@ -1,6 +1,3 @@
-body {
-}
-
 #root {
     padding: 1%;
 }
@@ -22,8 +19,13 @@ header {
 }
 
 header h1 {
-    width: 80%;
     margin: 0;
+}
+
+header h1 a {
+    color: #000000;
+    letter-spacing: .1em;
+    text-decoration: none;
 }
 
 header h2 {
@@ -33,14 +35,13 @@ header h2 {
 
 .main-menu {
     text-align: right;
-    font-size: .7rem;
+    font-size: .8rem;
     position: fixed;
     width: 100%;
     left: -1em;
     top: 1em;
     z-index: 100;
 }
-
 
 .main-menu .pure-menu-selected {
     display: none !important;
@@ -49,20 +50,15 @@ header h2 {
 .main-menu input, .main-menu label {
     display: none;
 }
+
 .main-menu label {
     cursor: pointer;
 }
 
-header h1 a {
-    color: #000000;
-    letter-spacing: .1em;
-    text-decoration: none;
-}
-
 .title {
     position: fixed;
-    top: 6%;
-    right: 1em;
+    top: 10%;
+    right: 7em;
     font-size: .6rem;
     text-align: right;
     z-index: 10;
@@ -77,7 +73,6 @@ header h1 a:hover, header h1 a:active, header h1 a:focus {
 .social-media-icons .fa {
     font-size: 1.5rem;
     color: #000;
-    margin: 0 auto;
 }
 
 button#clr {
@@ -86,9 +81,8 @@ button#clr {
 
 footer {
     position: fixed;
-    bottom: .5em;
-    left: 85%;
-    margin-top: 1rem;
+    bottom: 1em;
+    left: 88%;
     text-decoration: none;
     color: #cccccc;
     font-size: .7rem;
@@ -101,16 +95,12 @@ footer img {
     top: 0;
 }
 
-main img {
-    max-width: auto;
-}
-
 #crossfade > img { 
     max-width: 66%;
     height: auto;
     position: absolute;
-    top: 5%;
-    left: 20%;
+    top: 8%;
+    left: 22%;
     color: transparent;
     opacity: 0;
     z-index: 0;
@@ -150,7 +140,6 @@ main img {
     -ms-animation-delay: 24s;
     animation-delay: 24s; 
 }
-
 
 .product-list {
     display: inline-block;
@@ -202,30 +191,9 @@ main img {
         display: none;
     }
 
-    #root footer .txt-lft {
-        position: static;
-    }
-
-    #root footer img {
-        display: none;
-    }
-
     #root .product-list .product {
         margin: .8rem auto;
         width: 80%;
-    }
-
-    footer {
-        left: 2%;
-    }
-
-    .main-menu {
-        z-index: 3;
-        bottom: .5em;
-        top: inherit;
-        left: 72%;
-        background-color: transparent;
-        position: fixed;
     }
 
     header {
@@ -237,6 +205,15 @@ main img {
         max-width: 100%;
         top: 13%;
         left: 0;
+    }
+
+    #root .main-menu {
+        z-index: 3;
+        bottom: .5em;
+        top: inherit;
+        left: 72%;
+        background-color: transparent;
+        position: fixed;
     }
 
     #root .main-menu > ul {
@@ -282,6 +259,18 @@ main img {
 
     .is-text .main-menu label {
         right: 2em;
+    }
+
+    #root footer {
+        left: 2%;
+    }
+
+    #root footer .txt-lft {
+        position: static;
+    }
+
+    #root footer img {
+        display: none;
     }
 }
 
