@@ -15,7 +15,7 @@ main {
 }
 
 .is-text main {
-    margin: 5em auto 2em;
+    margin: 5em 0 1em;
     padding: 1em;
 }
 
@@ -25,8 +25,8 @@ main {
 
 header {
     position: fixed;
-    left: 5em;
-    top: 2%;
+    left: 3em;
+    top: 8%;
 }
 
 header h1 {
@@ -214,8 +214,13 @@ footer img {
 
 @media only screen and (max-width: 640px) {
 
-    #root .social-media-icons li {
-        display: none;
+     #root .social-media-icons {
+        position: absolute;
+        bottom: 1.3em;
+    }
+
+    #root .social-media-icons li a {
+        display: inline-block;
     }
 
     #root .product-list .product {
@@ -295,6 +300,7 @@ footer img {
 
     #root footer {
         left: 2%;
+        bottom: .2em;
     }
 
     #root footer .txt-lft {
@@ -310,8 +316,8 @@ footer img {
     .social-media-icons {
         width: 3.5rem;
         position: fixed;
-        top: 0;
-        left: 0;
+        top: .5em;
+        left: .5em;
     }
 }
 
