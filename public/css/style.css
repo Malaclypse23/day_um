@@ -1,3 +1,4 @@
+/*
 #root {
     padding: 1%;
 }
@@ -7,18 +8,29 @@ main {
     padding: .5em;
     min-height: 45vh;
 }
+*/
 
 .is-text header, .is-text .title {
     position: absolute;
 }
 
+.is-text main {
+    margin: 5em 0 1em;
+    padding: 1em;
+}
+
+.is-text .main-menu a {
+    color: #000000;
+}
+
 header {
     position: fixed;
-    left: 5em;
-    top: 20px;
+    left: 3em;
+    top: 8%;
 }
 
 header h1 {
+    width: 80%;
     margin: 0;
 }
 
@@ -93,6 +105,21 @@ footer img {
     position: relative;
     left: 3em;
     top: 0;
+}
+
+#watermark {
+    position: fixed;
+    left: 35%;
+    top: 42%;
+    font-size: 1.5rem;
+    border: 2px solid #cccccc;
+    padding: .7em;
+    opacity: .4;
+    z-index: 99;
+    width: 10em;
+    color: #000000;
+    background-color: #ffffff;
+    text-align: center;
 }
 
 #crossfade > img { 
@@ -187,8 +214,13 @@ footer img {
 
 @media only screen and (max-width: 640px) {
 
-    #root .social-media-icons li {
-        display: none;
+     #root .social-media-icons {
+        position: absolute;
+        bottom: 1.3em;
+    }
+
+    #root .social-media-icons li a {
+        display: inline-block;
     }
 
     #root .product-list .product {
@@ -201,9 +233,14 @@ footer img {
         left: 1rem;
     }
 
+    .title {
+        top: 6%;
+        right: 1em;
+    }
+
     #crossfade > img {
         max-width: 100%;
-        top: 13%;
+        top: 15%;
         left: 0;
     }
 
@@ -263,6 +300,7 @@ footer img {
 
     #root footer {
         left: 2%;
+        bottom: .2em;
     }
 
     #root footer .txt-lft {
@@ -278,8 +316,8 @@ footer img {
     .social-media-icons {
         width: 3.5rem;
         position: fixed;
-        top: 0;
-        left: 0;
+        top: .5em;
+        left: .5em;
     }
 }
 

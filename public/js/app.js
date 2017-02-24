@@ -9,14 +9,19 @@ function select_language(language) {
 
 
 $(function() {
+
+	// disable right-click SAVE AS!
+	//document.addEventListener('contextmenu', event => event.preventDefault());
+
+	select_language('en');
+
 	lightbox.option({
 		'resizeDuration': 200,
 		'wrapAround': true,
 		'alwaysShowNavOnTouchDevices': true,
 		'albumLabel':	"Image %1 of %2",
 	});
-	select_language('en');
-
+	
 	/*
 	var cart = { item: "Product 1", price: 19.00, qty: 2 };
 	var settings = $.cookie("settings");
