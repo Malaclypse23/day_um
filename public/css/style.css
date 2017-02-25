@@ -9,13 +9,12 @@ main {
     min-height: 45vh;
 }
 */
-
 .is-text header, .is-text .title {
     position: absolute;
 }
 
 .is-text main {
-    margin: 5em 0 1em;
+    margin: 6.2em 0 1em;
     padding: 1em;
 }
 
@@ -74,7 +73,7 @@ header h2 {
     font-size: .6rem;
     text-align: right;
     z-index: 10;
-    width: 18em;
+    width: 21em;
 }
 
 header h1 a:hover, header h1 a:active, header h1 a:focus {
@@ -122,16 +121,68 @@ footer img {
     text-align: center;
 }
 
-#crossfade > img { 
-    max-width: 66%;
-    height: auto;
+.fade div {
+    width: 600px;
+    height: 600px;
     position: absolute;
-    top: 8%;
-    left: 22%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.redhands div:nth-child(1) {
+  background-image: url(../img/big/redhands/redhand1.jpg);
+}
+.redhands div:nth-child(2) {
+  background-image: url(../img/big/redhands/redhand2.jpg);
+}
+.redhands div:nth-child(3) {
+  background-image: url(../img/big/redhands/redhand3.jpg);  
+}
+.photos div:nth-child(1) {
+  background-image: url(../img/big/photos/what_my_pillow_sees_at_night.jpg);
+}
+.photos div:nth-child(2) {
+  background-image: url(../img/big/photos/fairy_tale.jpg);
+}
+.photos div:nth-child(3) {
+  background-image: url(../img/big/photos/yotoshi_publications.jpg);
+}
+.photos div:nth-child(4) {
+  background-image: url(../img/big/photos/marcus_room.jpg);
+}
+.photos div:nth-child(5) {
+  background-image: url(../img/big/photos/the_caretaker.jpg);  
+}
+.portraits div:nth-child(1) {
+  background-image: url(../img/big/portraits/afro.jpg);
+}
+.portraits div:nth-child(2) {
+  background-image: url(../img/big/portraits/south_african_fashion.jpg);
+}
+.portraits div:nth-child(3) {
+  background-image: url(../img/big/portraits/untitled woman.jpg);  
+}
+
+.fade > div {
+    top: 15%;
+    max-width: 100%;
+    max-height: 75vh;
     color: transparent;
     opacity: 0;
     z-index: 0;
     -webkit-backface-visibility: hidden;
+}
+
+.fade.seven > div { 
+    -webkit-animation: imageAnimation 42s linear infinite 0s;
+    -moz-animation: imageAnimation 42s linear infinite 0s;
+    -o-animation: imageAnimation 42s linear infinite 0s;
+    -ms-animation: imageAnimation 42s linear infinite 0s;
+    animation: imageAnimation 42s linear infinite 0s; 
+}
+
+.fade.five > div { 
     -webkit-animation: imageAnimation 30s linear infinite 0s;
     -moz-animation: imageAnimation 30s linear infinite 0s;
     -o-animation: imageAnimation 30s linear infinite 0s;
@@ -139,33 +190,56 @@ footer img {
     animation: imageAnimation 30s linear infinite 0s; 
 }
 
-#crossfade > img:nth-child(2)  {
+.fade.three > div { 
+    -webkit-animation: imageAnimation 18s linear infinite 0s;
+    -moz-animation: imageAnimation 18s linear infinite 0s;
+    -o-animation: imageAnimation 18s linear infinite 0s;
+    -ms-animation: imageAnimation 18s linear infinite 0s;
+    animation: imageAnimation 18s linear infinite 0s; 
+}
+
+.fade > div:nth-child(2) {
     -webkit-animation-delay: 6s;
     -moz-animation-delay: 6s;
     -o-animation-delay: 6s;
     -ms-animation-delay: 6s;
     animation-delay: 6s; 
 }
-#crossfade > img:nth-child(3) {
+
+.fade > div:nth-child(3) {
     -webkit-animation-delay: 12s;
     -moz-animation-delay: 12s;
     -o-animation-delay: 12s;
     -ms-animation-delay: 12s;
     animation-delay: 12s; 
 }
-#crossfade > img:nth-child(4) {
+.fade > div:nth-child(4) {
     -webkit-animation-delay: 18s;
     -moz-animation-delay: 18s;
     -o-animation-delay: 18s;
     -ms-animation-delay: 18s;
     animation-delay: 18s; 
 }
-#crossfade > img:nth-child(5) {
+.fade > div:nth-child(5) {
     -webkit-animation-delay: 24s;
     -moz-animation-delay: 24s;
     -o-animation-delay: 24s;
     -ms-animation-delay: 24s;
     animation-delay: 24s; 
+}
+.fade > div:nth-child(6) {
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s; 
+}
+.fade > div:nth-child(7) {
+    -webkit-animation-delay: 36s;
+    -moz-animation-delay: 36s;
+    -o-animation-delay: 36s;
+    -ms-animation-delay: 36s;
+    animation-delay: 36s; 
 }
 
 .product-list {
@@ -215,8 +289,8 @@ footer img {
 @media only screen and (max-width: 640px) {
 
      #root .social-media-icons {
-        position: absolute;
-        bottom: 1.3em;
+        position: fixed;
+        bottom: 1.5em;
     }
 
     #root .social-media-icons li a {
@@ -238,19 +312,15 @@ footer img {
         right: 1em;
     }
 
-    #crossfade > img {
-        max-width: 100%;
-        top: 15%;
-        left: 0;
-    }
-
     #root .main-menu {
         z-index: 3;
-        bottom: .5em;
+        bottom: 0;
         top: inherit;
-        left: 72%;
+        left: inherit;
+        right: 0;
         background-color: transparent;
         position: fixed;
+        width: 8em;
     }
 
     #root .main-menu > ul {
@@ -259,7 +329,23 @@ footer img {
     }
 
     #root .main-menu input:checked ~ ul {
-        display: block !important;       
+        display: block !important;
+        /*background-color: ghostwhite;*/
+        opacity: .7;
+    }
+
+    #root .main-menu input:checked ~ ul li a:hover {
+        color: #ffffff;
+        opacity: 1; 
+    }
+
+    #root .main-menu input:checked ~ ul li:not(.pure-menu-selected) {
+        border-top: 1px solid #cccccc;
+        border-left: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+    }
+    #root .main-menu input:checked ~ ul li:last-of-type:not(.pure-menu-selected) {
+        border-bottom: 1px solid #cccccc;
     }
 
     #root .main-menu input:checked ~ label {
@@ -267,13 +353,12 @@ footer img {
     }
 
     .main-menu ul .pure-menu-item {
-        width: 7em;
         display: block;
     }
 
     .main-menu ul li a {
-       padding: 1em 0;
-       margin: .5em 0;
+       margin: .7em 0;
+       text-align: center;
     }
 
     .main-menu ul li:last-of-type {
@@ -287,7 +372,7 @@ footer img {
     .main-menu label {
       position: fixed;
       right: .5em;
-      bottom: .5em;
+      bottom: 1em;
       background-image: url('../img/menu-alt.png');
       width: 32px;
       height: 32px;
@@ -318,6 +403,10 @@ footer img {
         position: fixed;
         top: .5em;
         left: .5em;
+    }
+
+    .fade > div {
+        left: 20%;
     }
 }
 
