@@ -100,7 +100,6 @@ footer {
 }
 
 footer img {
-    max-width: 80px;
     position: relative;
     left: 3em;
     top: 0;
@@ -206,16 +205,16 @@ footer img {
   background-image: url(../img/big/portraits/untitled_woman.jpg);
 }
 .portraits div:nth-child(4) {
-  background-image: url(../img/big/portraits/sneezing_in_green1.jpg);
+  background-image: url(../img/big/portraits/stina.jpg);
 }
 .portraits div:nth-child(5) {
-  background-image: url(../img/big/portraits/sneezing_in_green2.jpg);
+  background-image: url(../img/big/portraits/bolan.jpg);
 }
 .portraits div:nth-child(6) {
-  background-image: url(../img/big/portraits/sneezing_in_green3.jpg);
+  background-image: url(../img/big/portraits/depardieu.jpg);
 }
 .portraits div:nth-child(7) {
-  background-image: url(../img/big/portraits/sneezing_in_green4.jpg);
+  background-image: url(../img/big/portraits/bearded_man.jpg);
 }
 .illustrations div:nth-child(1) {
   background-image: url(../img/big/illustrations/luke_child.jpg);
@@ -247,6 +246,18 @@ footer img {
 .octopus div:nth-child(5) {
   background-image: url(../img/big/octopus/octopus5.jpg);
 }
+.sneezing div:nth-child(1) {
+  background-image: url(../img/big/sneezing/sneezing_in_green1.jpg);
+}
+.sneezing div:nth-child(2) {
+  background-image: url(../img/big/sneezing/sneezing_in_green2.jpg);
+}
+.sneezing div:nth-child(3) {
+  background-image: url(../img/big/sneezing/sneezing_in_green3.jpg);
+}
+.sneezing div:nth-child(4) {
+  background-image: url(../img/big/sneezing/sneezing_in_green4.jpg);
+}
 
 .fade > div {
     top: 15%;
@@ -272,6 +283,14 @@ footer img {
     -o-animation: imageAnimation 20s linear infinite 0s;
     -ms-animation: imageAnimation 20s linear infinite 0s;
     animation: imageAnimation 20s linear infinite 0s;
+}
+
+.fade.four > div {
+    -webkit-animation: imageAnimation 16s linear infinite 0s;
+    -moz-animation: imageAnimation 16s linear infinite 0s;
+    -o-animation: imageAnimation 16s linear infinite 0s;
+    -ms-animation: imageAnimation 16s linear infinite 0s;
+    animation: imageAnimation 16s linear infinite 0s;
 }
 
 .fade.three > div {
