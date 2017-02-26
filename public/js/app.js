@@ -13,7 +13,16 @@ $(function() {
 	// disable right-click SAVE AS!
 	//document.addEventListener('contextmenu', event => event.preventDefault());
 
+	var settings = $.cookie("settings");
+	if (settings == null) {
+		settings = { 'lang': 'en', 'debug': false };
+	}
+
+	var lang = $('header select option:selected').text(); // TODO
+
 	select_language('en');
+
+	$.cookie("settings", JSON.stringify(settings));
 
 	lightbox.option({
 		'resizeDuration': 200,
@@ -24,10 +33,7 @@ $(function() {
 	
 	/*
 	var cart = { item: "Product 1", price: 19.00, qty: 2 };
-	var settings = $.cookie("settings");
-	if (settings == null) {
-		settings = { 'lang': 'en', 'debug': false, 'cart':  JSON.stringify(cart)};
-	}
+	'cart':  JSON.stringify(cart)
 
 	$.cookie("settings", JSON.stringify(settings));
 	*/
