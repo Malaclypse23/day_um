@@ -227,10 +227,25 @@ footer img {
   background-image: url(../img/big/illustrations/woman with gun.jpg);
 }
 .illustrations div:nth-child(4) {
-  background-image: url(../img/big/illustrations/sneezing_in_green1.jpg);
+  background-image: url(../img/big/illustrations/angrycircles1.jpg);
 }
 .illustrations div:nth-child(5) {
-  background-image: url(../img/big/illustrations/sneezing_in_green2.jpg);
+  background-image: url(../img/big/illustrations/angrycircles2.jpg);
+}
+.octopus div:nth-child(1) {
+  background-image: url(../img/big/octopus/octopus1.jpg);
+}
+.octopus div:nth-child(2) {
+  background-image: url(../img/big/octopus/octopus2.jpg);
+}
+.octopus div:nth-child(3) {
+  background-image: url(../img/big/octopus/octopus3.jpg);
+}
+.octopus div:nth-child(4) {
+  background-image: url(../img/big/octopus/octopus4.jpg);
+}
+.octopus div:nth-child(5) {
+  background-image: url(../img/big/octopus/octopus5.jpg);
 }
 
 .fade > div {
@@ -252,66 +267,22 @@ footer img {
 }
 
 .fade.five > div {
-    -webkit-animation: imageAnimation 30s linear infinite 0s;
-    -moz-animation: imageAnimation 30s linear infinite 0s;
-    -o-animation: imageAnimation 30s linear infinite 0s;
-    -ms-animation: imageAnimation 30s linear infinite 0s;
-    animation: imageAnimation 30s linear infinite 0s;
+    -webkit-animation: imageAnimation 20s linear infinite 0s;
+    -moz-animation: imageAnimation 20s linear infinite 0s;
+    -o-animation: imageAnimation 20s linear infinite 0s;
+    -ms-animation: imageAnimation 20s linear infinite 0s;
+    animation: imageAnimation 20s linear infinite 0s;
 }
 
 .fade.three > div {
-    -webkit-animation: imageAnimation 18s linear infinite 0s;
-    -moz-animation: imageAnimation 18s linear infinite 0s;
-    -o-animation: imageAnimation 18s linear infinite 0s;
-    -ms-animation: imageAnimation 18s linear infinite 0s;
-    animation: imageAnimation 18s linear infinite 0s;
+    -webkit-animation: imageAnimation 12s linear infinite 0s;
+    -moz-animation: imageAnimation 12s linear infinite 0s;
+    -o-animation: imageAnimation 12s linear infinite 0s;
+    -ms-animation: imageAnimation 12s linear infinite 0s;
+    animation: imageAnimation 12s linear infinite 0s;
 }
 
 .fade > div:nth-child(2) {
-    -webkit-animation-delay: 6s;
-    -moz-animation-delay: 6s;
-    -o-animation-delay: 6s;
-    -ms-animation-delay: 6s;
-    animation-delay: 6s;
-}
-
-.fade > div:nth-child(3) {
-    -webkit-animation-delay: 12s;
-    -moz-animation-delay: 12s;
-    -o-animation-delay: 12s;
-    -ms-animation-delay: 12s;
-    animation-delay: 12s;
-}
-.fade > div:nth-child(4) {
-    -webkit-animation-delay: 18s;
-    -moz-animation-delay: 18s;
-    -o-animation-delay: 18s;
-    -ms-animation-delay: 18s;
-    animation-delay: 18s;
-}
-.fade > div:nth-child(5) {
-    -webkit-animation-delay: 24s;
-    -moz-animation-delay: 24s;
-    -o-animation-delay: 24s;
-    -ms-animation-delay: 24s;
-    animation-delay: 24s;
-}
-.fade > div:nth-child(6) {
-    -webkit-animation-delay: 30s;
-    -moz-animation-delay: 30s;
-    -o-animation-delay: 30s;
-    -ms-animation-delay: 30s;
-    animation-delay: 30s;
-}
-.fade > div:nth-child(7) {
-    -webkit-animation-delay: 36s;
-    -moz-animation-delay: 36s;
-    -o-animation-delay: 36s;
-    -ms-animation-delay: 36s;
-    animation-delay: 36s;
-}
-
-.fade.fast > div:nth-child(2) {
     -webkit-animation-delay: 4s;
     -moz-animation-delay: 4s;
     -o-animation-delay: 4s;
@@ -319,45 +290,41 @@ footer img {
     animation-delay: 4s;
 }
 
-.fade.fast > div:nth-child(3) {
+.fade > div:nth-child(3) {
     -webkit-animation-delay: 8s;
     -moz-animation-delay: 8s;
     -o-animation-delay: 8s;
     -ms-animation-delay: 8s;
     animation-delay: 8s;
 }
-.fade.fast > div:nth-child(4) {
+.fade > div:nth-child(4) {
     -webkit-animation-delay: 12s;
     -moz-animation-delay: 12s;
     -o-animation-delay: 12s;
     -ms-animation-delay: 12s;
     animation-delay: 12s;
 }
-.fade.fast > div:nth-child(5) {
+.fade > div:nth-child(5) {
     -webkit-animation-delay: 16s;
     -moz-animation-delay: 16s;
     -o-animation-delay: 16s;
     -ms-animation-delay: 16s;
     animation-delay: 16s;
 }
-.fade.fast > div:nth-child(6) {
+.fade > div:nth-child(6) {
     -webkit-animation-delay: 20s;
     -moz-animation-delay: 20s;
     -o-animation-delay: 20s;
     -ms-animation-delay: 20s;
     animation-delay: 20s;
 }
-.fade.fast > div:nth-child(7) {
+.fade > div:nth-child(7) {
     -webkit-animation-delay: 24s;
     -moz-animation-delay: 24s;
     -o-animation-delay: 24s;
     -ms-animation-delay: 24s;
     animation-delay: 24s;
 }
-
-
-
-
 
 .product-list {
     display: inline-block;
