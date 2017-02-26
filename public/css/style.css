@@ -230,12 +230,19 @@ footer img {
     -webkit-backface-visibility: hidden;
 }
 
-.fade.seven > div { 
+.fade.seven.fast > div { 
     -webkit-animation: imageAnimation 42s linear infinite 0s;
     -moz-animation: imageAnimation 42s linear infinite 0s;
     -o-animation: imageAnimation 42s linear infinite 0s;
     -ms-animation: imageAnimation 42s linear infinite 0s;
     animation: imageAnimation 42s linear infinite 0s; 
+}
+.fade.seven.fast > div { 
+    -webkit-animation: imageAnimation 28s linear infinite 0s;
+    -moz-animation: imageAnimation 28s linear infinite 0s;
+    -o-animation: imageAnimation 28s linear infinite 0s;
+    -ms-animation: imageAnimation 28s linear infinite 0s;
+    animation: imageAnimation 28s linear infinite 0s; 
 }
 
 .fade.five > div { 
@@ -297,6 +304,56 @@ footer img {
     -ms-animation-delay: 36s;
     animation-delay: 36s; 
 }
+
+
+
+.fade.fast > div:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    -ms-animation-delay: 4s;
+    animation-delay: 4s; 
+}
+
+.fade.fast > div:nth-child(3) {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    -o-animation-delay: 8s;
+    -ms-animation-delay: 8s;
+    animation-delay: 8s; 
+}
+.fade.fast > div:nth-child(4) {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s; 
+}
+.fade.fast > div:nth-child(5) {
+    -webkit-animation-delay: 16s;
+    -moz-animation-delay: 16s;
+    -o-animation-delay: 16s;
+    -ms-animation-delay: 16s;
+    animation-delay: 16s; 
+}
+.fade.fast > div:nth-child(6) {
+    -webkit-animation-delay: 20s;
+    -moz-animation-delay: 20s;
+    -o-animation-delay: 20s;
+    -ms-animation-delay: 20s;
+    animation-delay: 20s; 
+}
+.fade.fast > div:nth-child(7) {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s; 
+}
+
+
+
+
 
 .product-list {
     display: inline-block;
