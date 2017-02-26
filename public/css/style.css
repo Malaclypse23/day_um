@@ -130,6 +130,50 @@ footer img {
     background-position: 0 0;
 }
 
+.beards div:nth-child(1) {
+  background-image: url(../img/big/beards/beards1.jpg);  
+}
+.beards div:nth-child(2) {
+  background-image: url(../img/big/beards/beards2.jpg);  
+}
+.beards div:nth-child(3) {
+  background-image: url(../img/big/beards/beards3.jpg);  
+}
+.beards div:nth-child(4) {
+  background-image: url(../img/big/beards/beards4.jpg);  
+}
+.beards div:nth-child(5) {
+  background-image: url(../img/big/beards/beards5.jpg);  
+}
+.beards div:nth-child(6) {
+  background-image: url(../img/big/beards/beards6.jpg);  
+}
+.beards div:nth-child(7) {
+  background-image: url(../img/big/beards/beards7.jpg);  
+}
+.birds div:nth-child(1) {
+  background-image: url(../img/big/birds/birds1.jpg);  
+}
+.birds div:nth-child(2) {
+  background-image: url(../img/big/birds/birds2.jpg);  
+}
+.birds div:nth-child(3) {
+  background-image: url(../img/big/birds/birds3.jpg);  
+}
+.birds div:nth-child(4) {
+  background-image: url(../img/big/birds/birds4.jpg);  
+}
+.birds div:nth-child(5) {
+  background-image: url(../img/big/birds/birds5.jpg);  
+}
+.birds div:nth-child(6) {
+  background-image: url(../img/big/birds/birds6.jpg);  
+}
+.birds div:nth-child(7) {
+  background-image: url(../img/big/birds/birds7.jpg);  
+}
+
+
 .redhands div:nth-child(1) {
   background-image: url(../img/big/redhands/redhand1.jpg);
 }
@@ -161,7 +205,19 @@ footer img {
   background-image: url(../img/big/portraits/south_african_fashion.jpg);
 }
 .portraits div:nth-child(3) {
-  background-image: url(../img/big/portraits/untitled woman.jpg);  
+  background-image: url(../img/big/portraits/untitled_woman.jpg);  
+}
+.portraits div:nth-child(4) {
+  background-image: url(../img/big/portraits/sneezing_in_green1.jpg);
+}
+.portraits div:nth-child(5) {
+  background-image: url(../img/big/portraits/sneezing_in_green2.jpg);
+}
+.portraits div:nth-child(6) {
+  background-image: url(../img/big/portraits/sneezing_in_green3.jpg);  
+}
+.portraits div:nth-child(7) {
+  background-image: url(../img/big/portraits/sneezing_in_green4.jpg);  
 }
 
 .fade > div {
@@ -342,7 +398,6 @@ footer img {
     #root .main-menu input:checked ~ ul li:not(.pure-menu-selected) {
         border-top: 1px solid #cccccc;
         border-left: 1px solid #cccccc;
-        border-right: 1px solid #cccccc;
     }
     #root .main-menu input:checked ~ ul li:last-of-type:not(.pure-menu-selected) {
         border-bottom: 1px solid #cccccc;
