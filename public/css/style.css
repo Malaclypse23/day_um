@@ -448,7 +448,11 @@ footer img {
         position: fixed;
         width: 8em;
         opacity: .9;
+    }
 
+    #root.is-text .main-menu {
+        opacity: 1;
+        z-index: 11;
     }
 
     #root .main-menu > ul {
