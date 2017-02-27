@@ -509,7 +509,8 @@ footer img {
     #root footer {
         left: 2%;
         bottom: .2em;
-        z-index: 3;
+        z-index: 4;
+        width: 40%;
     }
 
     #root footer .txt-lft {
