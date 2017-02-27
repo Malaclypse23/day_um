@@ -411,7 +411,9 @@ footer img {
 
      #root .social-media-icons {
         position: fixed;
-        bottom: 1.5em;
+        z-index: 3;
+        bottom: 0;
+        height: 4em;
         width: 100%;
         background-color: #ffffff;
     }
@@ -438,7 +440,7 @@ footer img {
 
     #root .main-menu {
         z-index: 3;
-        bottom: 3em;
+        bottom: 5em;
         top: inherit;
         left: inherit;
         right: 0;
@@ -446,6 +448,7 @@ footer img {
         position: fixed;
         width: 8em;
         opacity: .9;
+
     }
 
     #root .main-menu > ul {
@@ -487,7 +490,7 @@ footer img {
     .main-menu label {
       position: fixed;
       right: .5em;
-      bottom: .5em;
+      bottom: 2em;
       background-image: url('../img/menu-alt.png');
       width: 32px;
       height: 32px;
@@ -496,11 +499,17 @@ footer img {
 
     .is-text .main-menu label {
         right: 2em;
+        bottom: 2em;
+    }
+
+    .contact footer {
+        display: none;
     }
 
     #root footer {
         left: 2%;
         bottom: .2em;
+        z-index: 3;
     }
 
     #root footer .txt-lft {
