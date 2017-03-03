@@ -53,6 +53,28 @@ header {
 	} 
 }
 
+.is-text header, .is-text .title {
+    position: absolute;
+}
+
+.title {
+    position: fixed;
+    top: 10%;
+    right: 7em;
+    font-size: .6rem;
+    text-align: right;
+    z-index: 10;
+    width: 21em;
+    
+    @media only screen and (max-width: 640px) {
+    	.title {
+        	top: 6%;
+        	right: 1em;
+        	width: 14em;
+    	}
+    }
+}
+
 .main-menu {
 	text-align: right;
     font-size: .8rem;
@@ -137,6 +159,39 @@ header {
 	}
 }
 
+main p:last-of-type {
+    margin-bottom: 3em;
+}
+
+.is-text main {
+    margin: 10em 0 1em;
+    padding: 1em;
+}
+
+@media only screen and (max-width: 640px) {
+
+    #root.is-text .main-menu {
+        opacity: 1;
+        z-index: 11;
+    }
+
+    .is-text .main-menu label {
+        right: 2em;
+        bottom: 2em;
+    }
+    
+    .is-text main {
+    	margin: 2em 0 1em;
+	}
+}
+
+
+
+
+
+
+
+
 
 
 .social-media-icons {
@@ -163,9 +218,56 @@ header {
 	}
 }
 
+.product-list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    
+    .product {
+	    border: 2px solid black;
+	    text-align: center;
+	    margin: .5rem;
+	    display: inline-block;
+	    width: 45%;
+	    
+	    img {
+		    max-width: auto;
+		    max-height: 150px;
+		}
+		
+		#qty-1 {
+		    width: 20%;
+		    margin-bottom: 1rem;
+		    margin-left: .5rem;
+		    text-align: center;
+		}
+	}
+	
+	@media only screen and (max-width: 640px) {
+		.product {
+        	margin: .8rem auto;
+        	width: 80%;
+    	}
+	}
+}
 
-
-
+.cart {
+  	border: 1px solid black;
+  	float: right;
+ 	
+ 	.item {
+	  	border-top: 1px solid black;
+	  
+	  	td {
+	  		padding: .2em .5em;
+	  		border-right: 1px solid black;
+	  		
+	  		&.item-total {
+	  			border: 0 none;
+			}
+		}
+	}  
+}
 
 footer {
     position: fixed;
@@ -202,3 +304,296 @@ footer {
 }
 
 
+.fade div {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+.fade > div {
+    top: 13%;
+    max-width: 100%;
+    max-height: 75vh;
+    color: transparent;
+    opacity: 0;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+    
+    @media only screen and (min-width: 767px) {
+    	left: 20%;
+    }
+}
+
+.fade.eight > div {
+    -webkit-animation: imageAnimation 32s linear infinite 0s;
+    -moz-animation: imageAnimation 32s linear infinite 0s;
+    -o-animation: imageAnimation 32s linear infinite 0s;
+    -ms-animation: imageAnimation 32s linear infinite 0s;
+    animation: imageAnimation 32s linear infinite 0s;
+}
+.fade.seven > div {
+    -webkit-animation: imageAnimation 28s linear infinite 0s;
+    -moz-animation: imageAnimation 28s linear infinite 0s;
+    -o-animation: imageAnimation 28s linear infinite 0s;
+    -ms-animation: imageAnimation 28s linear infinite 0s;
+    animation: imageAnimation 28s linear infinite 0s;
+}
+.fade.five > div {
+    -webkit-animation: imageAnimation 20s linear infinite 0s;
+    -moz-animation: imageAnimation 20s linear infinite 0s;
+    -o-animation: imageAnimation 20s linear infinite 0s;
+    -ms-animation: imageAnimation 20s linear infinite 0s;
+    animation: imageAnimation 20s linear infinite 0s;
+}
+.fade.four > div {
+    -webkit-animation: imageAnimation 16s linear infinite 0s;
+    -moz-animation: imageAnimation 16s linear infinite 0s;
+    -o-animation: imageAnimation 16s linear infinite 0s;
+    -ms-animation: imageAnimation 16s linear infinite 0s;
+    animation: imageAnimation 16s linear infinite 0s;
+}
+.fade.three > div {
+    -webkit-animation: imageAnimation 12s linear infinite 0s;
+    -moz-animation: imageAnimation 12s linear infinite 0s;
+    -o-animation: imageAnimation 12s linear infinite 0s;
+    -ms-animation: imageAnimation 12s linear infinite 0s;
+    animation: imageAnimation 12s linear infinite 0s;
+}
+
+.fade > div:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    -ms-animation-delay: 4s;
+    animation-delay: 4s;
+}
+.fade > div:nth-child(3) {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    -o-animation-delay: 8s;
+    -ms-animation-delay: 8s;
+    animation-delay: 8s;
+}
+.fade > div:nth-child(4) {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.fade > div:nth-child(5) {
+    -webkit-animation-delay: 16s;
+    -moz-animation-delay: 16s;
+    -o-animation-delay: 16s;
+    -ms-animation-delay: 16s;
+    animation-delay: 16s;
+}
+.fade > div:nth-child(6) {
+    -webkit-animation-delay: 20s;
+    -moz-animation-delay: 20s;
+    -o-animation-delay: 20s;
+    -ms-animation-delay: 20s;
+    animation-delay: 20s;
+}
+.fade > div:nth-child(7) {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.fade > div:nth-child(8) {
+    -webkit-animation-delay: 28s;
+    -moz-animation-delay: 28s;
+    -o-animation-delay: 28s;
+    -ms-animation-delay: 28s;
+    animation-delay: 28s;
+}
+
+
+.beards div:nth-child(1) {
+  background-image: url(../img/big/beards/beards1.jpg);
+}
+.beards div:nth-child(2) {
+  background-image: url(../img/big/beards/beards2.jpg);
+}
+.beards div:nth-child(3) {
+  background-image: url(../img/big/beards/beards3.jpg);
+}
+.beards div:nth-child(4) {
+  background-image: url(../img/big/beards/beards4.jpg);
+}
+.beards div:nth-child(5) {
+  background-image: url(../img/big/beards/beards5.jpg);
+}
+.beards div:nth-child(6) {
+  background-image: url(../img/big/beards/beards6.jpg);
+}
+.beards div:nth-child(7) {
+  background-image: url(../img/big/beards/beards7.jpg);
+}
+.beards div:nth-child(8) {
+  background-image: url(../img/big/beards/beards8.jpg);
+}
+.birds div:nth-child(1) {
+  background-image: url(../img/big/birds/birds1.jpg);
+}
+.birds div:nth-child(2) {
+  background-image: url(../img/big/birds/birds2.jpg);
+}
+.birds div:nth-child(3) {
+  background-image: url(../img/big/birds/birds3.jpg);
+}
+.birds div:nth-child(4) {
+  background-image: url(../img/big/birds/birds4.jpg);
+}
+.birds div:nth-child(5) {
+  background-image: url(../img/big/birds/birds5.jpg);
+}
+.birds div:nth-child(6) {
+  background-image: url(../img/big/birds/birds6.jpg);
+}
+.birds div:nth-child(7) {
+  background-image: url(../img/big/birds/birds7.jpg);
+}
+.redhands div:nth-child(1) {
+  background-image: url(../img/big/redhands/redhand1.jpg);
+}
+.redhands div:nth-child(2) {
+  background-image: url(../img/big/redhands/redhand2.jpg);
+}
+.redhands div:nth-child(3) {
+  background-image: url(../img/big/redhands/redhand3.jpg);
+}
+.photos div:nth-child(1) {
+  background-image: url(../img/big/photos/what_my_pillow_sees_at_night.jpg);
+}
+.photos div:nth-child(2) {
+  background-image: url(../img/big/photos/artist_at_work.jpg);
+}
+.photos div:nth-child(3) {
+  background-image: url(../img/big/photos/yotoshi_publications.jpg);
+}
+.photos div:nth-child(4) {
+  background-image: url(../img/big/photos/marcus_room.jpg);
+}
+.photos div:nth-child(5) {
+  background-image: url(../img/big/photos/the_caretaker.jpg);
+}
+.portraits div:nth-child(1) {
+  background-image: url(../img/big/portraits/afro.jpg);
+}
+.portraits div:nth-child(2) {
+  background-image: url(../img/big/portraits/south_african_fashion.jpg);
+}
+.portraits div:nth-child(3) {
+  background-image: url(../img/big/portraits/untitled_woman.jpg);
+}
+.portraits div:nth-child(4) {
+  background-image: url(../img/big/portraits/stina.jpg);
+}
+.portraits div:nth-child(5) {
+  background-image: url(../img/big/portraits/bolan.jpg);
+}
+.portraits div:nth-child(6) {
+  background-image: url(../img/big/portraits/depardieu.jpg);
+}
+.portraits div:nth-child(7) {
+  background-image: url(../img/big/portraits/bearded_man.jpg);
+}
+.illustrations div:nth-child(1) {
+  background-image: url(../img/big/illustrations/luke_child.jpg);
+}
+.illustrations div:nth-child(2) {
+  background-image: url(../img/big/illustrations/gasmask.jpg);
+}
+.illustrations div:nth-child(3) {
+  background-image: url(../img/big/illustrations/woman_with_gun.jpg);
+}
+.illustrations div:nth-child(4) {
+  background-image: url(../img/big/illustrations/angrycircles1.jpg);
+}
+.illustrations div:nth-child(5) {
+  background-image: url(../img/big/illustrations/angrycircles2.jpg);
+}
+.octopus div:nth-child(1) {
+  background-image: url(../img/big/octopus/octopus1.jpg);
+}
+.octopus div:nth-child(2) {
+  background-image: url(../img/big/octopus/octopus2.jpg);
+}
+.octopus div:nth-child(3) {
+  background-image: url(../img/big/octopus/octopus3.jpg);
+}
+.octopus div:nth-child(4) {
+  background-image: url(../img/big/octopus/octopus4.jpg);
+}
+.octopus div:nth-child(5) {
+  background-image: url(../img/big/octopus/octopus5.jpg);
+}
+.sneezing div:nth-child(1) {
+  background-image: url(../img/big/sneezing/sneezing_in_green1.jpg);
+}
+.sneezing div:nth-child(2) {
+  background-image: url(../img/big/sneezing/sneezing_in_green2.jpg);
+}
+.sneezing div:nth-child(3) {
+  background-image: url(../img/big/sneezing/sneezing_in_green3.jpg);
+}
+.sneezing div:nth-child(4) {
+  background-image: url(../img/big/sneezing/sneezing_in_green4.jpg);
+}
+
+@-webkit-keyframes imageAnimation {
+    0% { opacity: 0;
+    -webkit-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -webkit-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@-moz-keyframes imageAnimation {
+    0% { opacity: 0;
+    -moz-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -moz-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@-o-keyframes imageAnimation {
+    0% { opacity: 0;
+    -o-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -o-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@-ms-keyframes imageAnimation {
+    0% { opacity: 0;
+    -ms-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -ms-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes imageAnimation {
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
