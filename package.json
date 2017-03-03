@@ -4,14 +4,30 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "minify": "gulp minify"
   },
   "author": "Thomas Spanner",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.1",
-    "angular-route": "^1.6.1",
-    "express": "^4.13.0",
-    "mongodb": "^2.2.21"
+    "angular": "^1.6.2",
+    "angular-route": "^1.6.2",
+    "express": "^4.15.0",
+    "gulp-install": "^0.6.0",
+    "mongodb": "^2.2.24",
+    "node": "0.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-changed": "^2.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.1"
   }
 }

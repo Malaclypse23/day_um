@@ -13,11 +13,11 @@ angular.module('ShopApp', ['ngRoute'])
 	}])
 	.controller('ProductController', function ProductController($scope, $window) {
 		  $scope.products = [
-			    { name: 'Red Hand 1', type: "Print", price: '9 EUR', quantity: 1, filename: "img/big/redhand1.jpg" },
-				{ name: 'Red Hand 2', type: "Print", price: '9 EUR', quantity: 1, filename: "img/big/redhand2.jpg" },
-				{ name: 'Red Hand 3', type: "Print", price: '9 EUR', quantity: 1, filename: "img/big/redhand3.jpg" },
-			    { name: 'Birds 1', type: "T-Shirt", price: '19 EUR', quantity: 1, filename: "img/big/birds1.jpg", size: ['M', 'L', 'XL'] },
-				{ name: 'Birds 3', type: "T-Shirt", price: '19 EUR', quantity: 1, filename: "img/big/birds3.jpg", size: ['M', 'L', 'XL'] }
+			    { name: 'Red Hand 1', type: "Print", price: '9 EUR', quantity: 1, filename: "img/big/redhands/redhand1.jpg" },
+				{ name: 'Red Hand 2', type: "Print", price: '9 EUR', quantity: 1, filename: "img/big/redhands/redhand2.jpg" },
+				{ name: 'Red Hand 3', type: "Print", price: '9 EUR', quantity: 1, filename: "img/big/redhands/redhand3.jpg" },
+			    { name: 'Birds 1', type: "T-Shirt", price: '19 EUR', quantity: 1, filename: "img/big/birds/birds1.jpg", size: ['M', 'L', 'XL'] },
+				{ name: 'Birds 3', type: "T-Shirt", price: '19 EUR', quantity: 1, filename: "img/big/birds/birds3.jpg", size: ['M', 'L', 'XL'] }
 		  ];
 	})
 	.controller('CartController', function CartController($scope, $window) {
