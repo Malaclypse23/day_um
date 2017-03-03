@@ -28,8 +28,116 @@ header {
 	    font-size: .8rem;
 	    color: #cccccc;
 	    padding: .5em .3em;
-	}	  
+	}
+	
+	@media only screen and (max-width: 640px) {
+		position: static;
+		top: 0;
+        left: 1rem;
+        
+        h1 {
+	        width: 100%;
+	        text-align: center;
+	        
+	        a {
+	        	text-align: center;
+	        	font-size: 1.5rem;
+	        	width: 100%;
+	        	display: block;
+	    	}
+	    }
+	
+	    h2 {
+	        margin: 0;
+	    }
+	} 
 }
+
+.main-menu {
+	text-align: right;
+    font-size: .8rem;
+    position: fixed;
+    width: 100%;
+    left: -1em;
+    top: 1em;
+    z-index: 100;
+    
+    a span {
+	    color: #000000;
+	}
+	
+	.pure-menu-selected {
+	    display: none !important;
+	}
+	
+	input, label {
+	    display: none;
+	}
+	
+	label {
+	    cursor: pointer;
+	}
+	
+	@media only screen and (max-width: 640px) {
+		z-index: 3;
+        bottom: 5em;
+        top: inherit;
+        left: inherit;
+        right: 0;
+        background-color: ghostwhite;
+        width: 8em;
+        opacity: .9;
+        
+        > ul {
+	        display: none;
+	        height: 100%;
+	    }
+	
+	    input:checked ~ ul {
+	        display: block !important;
+	        opacity: .7;
+	    }
+	
+	    input:checked ~ ul li a:hover {
+	        color: #ffffff;
+	        opacity: 1;
+	    }
+	
+	    input:checked ~ ul li:not(.pure-menu-selected) {
+	        border-top: 1px solid #cccccc;
+	        border-left: 1px solid #cccccc;
+	    }
+	    
+	    input:checked ~ ul li:last-of-type:not(.pure-menu-selected) {
+	        border-bottom: 1px solid #cccccc;
+	    }
+	    
+	    input:checked ~ ul li:last-of-type {
+	        border-bottom: 1px solid #cccccc;
+	    }
+	    
+	    ul .pure-menu-item {
+	        display: block;
+	    }
+	
+	    ul li a {
+	       padding: 1.5em;
+	       text-align: right;
+	    }
+	
+	    label {
+	      position: fixed;
+	      right: .5em;
+	      bottom: 2em;
+	      background-image: url('../img/menu-alt.png');
+	      width: 32px;
+	      height: 32px;
+	      display: block;
+	    }
+	}
+}
+
+
 
 .social-media-icons {
 	width: 3.5rem;

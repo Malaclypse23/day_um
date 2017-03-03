@@ -11,32 +11,6 @@ main p:last-of-type {
     padding: 1em;
 }
 
-.main-menu a span {
-    color: #000000;
-}
-
-.main-menu {
-    text-align: right;
-    font-size: .8rem;
-    position: fixed;
-    width: 100%;
-    left: -1em;
-    top: 1em;
-    z-index: 100;
-}
-
-.main-menu .pure-menu-selected {
-    display: none !important;
-}
-
-.main-menu input, .main-menu label {
-    display: none;
-}
-
-.main-menu label {
-    cursor: pointer;
-}
-
 .title {
     position: fixed;
     top: 10%;
@@ -350,27 +324,9 @@ button#clr {
 
 @media only screen and (max-width: 640px) {
 
-     #root .social-media-icons {
-        position: fixed;
-        z-index: 3;
-        bottom: 0;
-        height: 4em;
-        width: 100%;
-        background-color: #ffffff;
-    }
-
-    #root .social-media-icons li a {
-        display: inline-block;
-    }
-
     #root .product-list .product {
         margin: .8rem auto;
         width: 80%;
-    }
-
-    header {
-        top: 0;
-        left: 1rem;
     }
 
     .title {
@@ -379,86 +335,9 @@ button#clr {
         width: 14em;
     }
 
-    #root .main-menu {
-        z-index: 3;
-        bottom: 5em;
-        top: inherit;
-        left: inherit;
-        right: 0;
-        background-color: ghostwhite;
-        position: fixed;
-        width: 8em;
-        opacity: .9;
-    }
-
-    #root header {
-        position: static;
-    }
-
-    #root header h1 {
-        width: 100%;
-        text-align: center;
-    }
-
-    #root header h1 a {
-        text-align: center;
-        font-size: 1.5rem;
-        width: 100%
-        display: block;
-    }
-
-    header h2 {
-        margin: 0;
-    }
-
     #root.is-text .main-menu {
         opacity: 1;
         z-index: 11;
-    }
-
-    #root .main-menu > ul {
-        display: none;
-        height: 100%;
-    }
-
-    #root .main-menu input:checked ~ ul {
-        display: block !important;
-        opacity: .7;
-    }
-
-    #root .main-menu input:checked ~ ul li a:hover {
-        color: #ffffff;
-        opacity: 1;
-    }
-
-    #root .main-menu input:checked ~ ul li:not(.pure-menu-selected) {
-        border-top: 1px solid #cccccc;
-        border-left: 1px solid #cccccc;
-    }
-    #root .main-menu input:checked ~ ul li:last-of-type:not(.pure-menu-selected) {
-        border-bottom: 1px solid #cccccc;
-    }
-    #root .main-menu input:checked ~ ul li:last-of-type {
-        border-bottom: 1px solid #cccccc;
-    }
-
-    .main-menu ul .pure-menu-item {
-        display: block;
-    }
-
-    .main-menu ul li a {
-       padding: 1.5em;
-       text-align: right;
-    }
-
-    .main-menu label {
-      position: fixed;
-      right: .5em;
-      bottom: 2em;
-      background-image: url('../img/menu-alt.png');
-      width: 32px;
-      height: 32px;
-      display: block;
     }
 
     .is-text .main-menu label {

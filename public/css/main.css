@@ -25,30 +25,120 @@ header {
     font-size: .8rem;
     color: #cccccc;
     padding: .5em .3em; }
+  @media only screen and (max-width: 640px) {
+    /* line 6, sass/main.scss */
+    header {
+      position: static;
+      top: 0;
+      left: 1rem; }
+      /* line 38, sass/main.scss */
+      header h1 {
+        width: 100%;
+        text-align: center; }
+        /* line 42, sass/main.scss */
+        header h1 a {
+          text-align: center;
+          font-size: 1.5rem;
+          width: 100%;
+          display: block; }
+      /* line 50, sass/main.scss */
+      header h2 {
+        margin: 0; } }
 
-/* line 34, sass/main.scss */
+/* line 56, sass/main.scss */
+.main-menu {
+  text-align: right;
+  font-size: .8rem;
+  position: fixed;
+  width: 100%;
+  left: -1em;
+  top: 1em;
+  z-index: 100; }
+  /* line 65, sass/main.scss */
+  .main-menu a span {
+    color: #000000; }
+  /* line 69, sass/main.scss */
+  .main-menu .pure-menu-selected {
+    display: none !important; }
+  /* line 73, sass/main.scss */
+  .main-menu input, .main-menu label {
+    display: none; }
+  /* line 77, sass/main.scss */
+  .main-menu label {
+    cursor: pointer; }
+  @media only screen and (max-width: 640px) {
+    /* line 56, sass/main.scss */
+    .main-menu {
+      z-index: 3;
+      bottom: 5em;
+      top: inherit;
+      left: inherit;
+      right: 0;
+      background-color: ghostwhite;
+      width: 8em;
+      opacity: .9; }
+      /* line 91, sass/main.scss */
+      .main-menu > ul {
+        display: none;
+        height: 100%; }
+      /* line 96, sass/main.scss */
+      .main-menu input:checked ~ ul {
+        display: block !important;
+        opacity: .7; }
+      /* line 101, sass/main.scss */
+      .main-menu input:checked ~ ul li a:hover {
+        color: #ffffff;
+        opacity: 1; }
+      /* line 106, sass/main.scss */
+      .main-menu input:checked ~ ul li:not(.pure-menu-selected) {
+        border-top: 1px solid #cccccc;
+        border-left: 1px solid #cccccc; }
+      /* line 111, sass/main.scss */
+      .main-menu input:checked ~ ul li:last-of-type:not(.pure-menu-selected) {
+        border-bottom: 1px solid #cccccc; }
+      /* line 115, sass/main.scss */
+      .main-menu input:checked ~ ul li:last-of-type {
+        border-bottom: 1px solid #cccccc; }
+      /* line 119, sass/main.scss */
+      .main-menu ul .pure-menu-item {
+        display: block; }
+      /* line 123, sass/main.scss */
+      .main-menu ul li a {
+        padding: 1.5em;
+        text-align: right; }
+      /* line 128, sass/main.scss */
+      .main-menu label {
+        position: fixed;
+        right: .5em;
+        bottom: 2em;
+        background-image: url("../img/menu-alt.png");
+        width: 32px;
+        height: 32px;
+        display: block; } }
+
+/* line 142, sass/main.scss */
 .social-media-icons {
   width: 3.5rem;
   position: fixed;
   top: .5em;
   left: .5em; }
-  /* line 40, sass/main.scss */
+  /* line 148, sass/main.scss */
   .social-media-icons .fa {
     font-size: 1.5rem;
     color: #000; }
   @media only screen and (max-width: 640px) {
-    /* line 34, sass/main.scss */
+    /* line 142, sass/main.scss */
     .social-media-icons {
       z-index: 3;
       bottom: 0;
       height: 4em;
       width: 100%;
       background-color: #ffffff; }
-      /* line 52, sass/main.scss */
+      /* line 160, sass/main.scss */
       .social-media-icons li a {
         display: inline-block; } }
 
-/* line 62, sass/main.scss */
+/* line 170, sass/main.scss */
 footer {
   position: fixed;
   bottom: 1em;
@@ -56,24 +146,24 @@ footer {
   text-decoration: none;
   color: #cccccc;
   font-size: .7rem; }
-  /* line 70, sass/main.scss */
+  /* line 178, sass/main.scss */
   footer img {
     position: relative;
     left: 3em;
     top: 0; }
   @media only screen and (max-width: 640px) {
-    /* line 62, sass/main.scss */
+    /* line 170, sass/main.scss */
     footer {
       left: 2%;
       bottom: .2em;
       z-index: 4;
       width: 40%; }
-      /* line 82, sass/main.scss */
+      /* line 190, sass/main.scss */
       footer .txt-lft {
         position: static; }
-      /* line 86, sass/main.scss */
+      /* line 194, sass/main.scss */
       footer img {
         display: none !important; }
-      /* line 90, sass/main.scss */
+      /* line 198, sass/main.scss */
       footer.contact {
         display: none; } }
