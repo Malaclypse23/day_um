@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "FuturaLight";
+    src: url("../fonts/futura-light.ttf")
+}
+
+header {
+    position: fixed;
+    left: 3em;
+    top: 8%;
+    
+	h1 {
+	    width: 80%;
+	    margin: 0;
+	    
+	    a {
+	    	color: #000000;
+	    	letter-spacing: .2em;
+	    	text-decoration: none;
+	    	
+	    	&:hover, &:active, &:focus {
+    			text-decoration: none;
+    			color: #000000;
+			}
+		}
+	}
+
+	h2 {
+	    font-size: .8rem;
+	    color: #cccccc;
+	    padding: .5em .3em;
+	}	  
+}
+
+.social-media-icons {
+	width: 3.5rem;
+    position: fixed;
+    top: .5em;
+    left: .5em;
+        
+	.fa {
+    	font-size: 1.5rem;
+    	color: #000;
+	}
+	
+	@media only screen and (max-width: 640px) {
+        z-index: 3;
+        bottom: 0;
+        height: 4em;
+        width: 100%;
+        background-color: #ffffff;
+    	
+    	li a {
+        	display: inline-block;
+    	}    
+	}
+}
+
+
+
+
+
+footer {
+    position: fixed;
+    bottom: 1em;
+    left: 88%;
+    text-decoration: none;
+    color: #cccccc;
+    font-size: .7rem;
+    
+    img {
+    	position: relative;
+    	left: 3em;
+    	top: 0;
+	}
+	
+	@media only screen and (max-width: 640px) {
+		left: 2%;
+	    bottom: .2em;
+	    z-index: 4;
+	    width: 40%;
+	
+	    .txt-lft {
+	        position: static;
+	    }
+	
+	    img {
+	        display: none !important;
+	    }
+	    
+	    &.contact {
+        	display: none;
+    	}
+	}
+}
+
+
