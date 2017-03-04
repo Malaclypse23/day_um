@@ -1,15 +1,13 @@
 var gulp = require('gulp'); 
 
-global.jQuery = require('jquery');
 
 var changed = require('gulp-changed'),
     uglify = require('gulp-uglify'),
-    browserify = require('gulp-browserify'),
     imagemin = require('gulp-imagemin'),
     clean = require('gulp-clean'),
     autoprefixer = require('gulp-autoprefixer'),
-    minifyCSS = require('gulp-minify-css'),
-    gulpif = require('gulp-if');
+    gulpif = require('gulp-if'),
+    gulpcleancss = require('gulp-clean-css'),
     sass = require('gulp-sass');
 
 var env = process.env.NODE_ENV || 'development'; 

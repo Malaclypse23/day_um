@@ -67,11 +67,9 @@ header {
     width: 21em;
     
     @media only screen and (max-width: 640px) {
-    	.title {
-        	top: 6%;
-        	right: 1em;
-        	width: 14em;
-    	}
+    	top: 4%;
+      right: 1em;
+      width: 14em;
     }
 }
 
@@ -111,7 +109,7 @@ header {
         opacity: .9;
         
         > ul {
-	        display: none;
+	        display: none !important;
 	        height: 100%;
 	    }
 	
@@ -181,15 +179,9 @@ main p:last-of-type {
     }
     
     .is-text main {
-    	margin: 2em 0 1em;
+    	margin: 4em 0 1em;
 	}
 }
-
-
-
-
-
-
 
 
 
@@ -209,6 +201,8 @@ main p:last-of-type {
         z-index: 3;
         bottom: 0;
         height: 4em;
+        top: inherit;
+        left: inherit;
         width: 100%;
         background-color: #ffffff;
     	
