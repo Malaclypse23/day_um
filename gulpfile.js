@@ -18,7 +18,7 @@ var cssDir = 'public/css';
 gulp.task('sass', function() {
 	var config = {};
 	
-	if (env === 'develpment') {
+	if (env === 'development') {
 		config.sourceComments = 'map';
 	}
 	
