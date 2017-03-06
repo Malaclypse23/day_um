@@ -1,3 +1,5 @@
+var lang;
+
 function select_language(language) {
 	$("[lang]").each(function () {
         if ($(this).attr("lang") == language)
@@ -5,6 +7,35 @@ function select_language(language) {
         else
             $(this).hide();
     });
+    /*
+    var settings = $.cookie("settings");
+    if (language == 'en') {
+		$('header select').val("de");
+		settings = { 'lang': 'de', 'debug': false };
+	} else {
+		$('header select').val("en");
+		settings = { 'lang': 'en', 'debug': false };
+	}
+
+    $.cookie("settings", JSON.stringify(settings));
+
+    if (language == 'en') {
+		$('header select').val("de");
+		$.cookie("lang", 'de');
+	} else {
+		$('header select').val("en");
+		$.cookie("lang", 'en');
+	}
+	*/
+	//$('header select option[value=language]');
+
+	if (language == 'en') {
+		$.cookie("lang", 'de');
+		$("header select option[value='de']");
+	} else {
+		$.cookie("lang", 'en');
+		$("header select option[value='en']");
+	}
 }
 
 
@@ -12,17 +43,18 @@ $(function() {
 
 	// disable right-click SAVE AS!
 	//document.addEventListener('contextmenu', event => event.preventDefault());
-
-	var settings = $.cookie("settings");
-	if (settings == null) {
-		settings = { 'lang': 'en', 'debug': false };
+	var lang = $.cookie("lang");
+	if (lang == undefined || lang == null || lang == 'undefined') {
+		lang = 'en';
+	} else if (lang == 'de') {
+		$("header select option[value='de']");	
 	}
-
-	var lang = $('header select option:selected').text(); // TODO
-
-	select_language('en');
-
-	$.cookie("settings", JSON.stringify(settings));
+	
+	//lang = $('header select option:selected').text(); // TODO
+	select_language(lang);
+	
+	//$.cookie("settings", JSON.stringify(settings));
+	//$.cookie("lang", lang);
 
 	lightbox.option({
 		'resizeDuration': 200,
