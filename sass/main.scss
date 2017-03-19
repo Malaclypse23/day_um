@@ -16,16 +16,16 @@ header {
     position: fixed;
     left: 3em;
     top: 6%;
-    
+
   	h1 {
   	    width: 80%;
   	    margin: 0;
-  	    
+
   	    a {
   	    	color: #000000;
   	    	letter-spacing: .2em;
   	    	text-decoration: none;
-  	    	
+
   	    	&:hover, &:active, &:focus {
       			text-decoration: none;
       			color: #000000;
@@ -38,17 +38,17 @@ header {
 	    color: #cccccc;
 	    padding: .5em .3em;
 	}
-	
+
 	@media only screen and (max-width: 640px) {
 		position: static;
 		top: 0;
         left: 1rem;
-        
+
         h1 {
 	        width: 100%;
 	        text-align: center;
           margin-top: .1em;
-	        
+
 	        a {
 	        	text-align: center;
 	        	font-size: 1.5rem;
@@ -56,11 +56,11 @@ header {
 	        	display: block;
 	    	}
 	    }
-	
+
 	    h2 {
 	        margin: 0;
 	    }
-	} 
+	}
 }
 
 .is-text header, .is-text .title {
@@ -75,7 +75,7 @@ header {
     text-align: right;
     z-index: 10;
     width: 30em;
-    
+
     @media only screen and (max-width: 640px) {
     	top: 5%;
       right: 1em;
@@ -95,23 +95,23 @@ header {
     li:first-of-type {
       display: none !important;
     }
-    
+
     a span {
 	    color: #000000;
 	}
-	
+
 	.pure-menu-selected {
 	    display: none !important;
 	}
-	
+
 	input, label {
 	    display: none;
 	}
-	
+
 	label {
 	    cursor: pointer;
 	}
-	
+
 	@media only screen and (max-width: 640px) {
 		    z-index: 3;
         bottom: 5em;
@@ -121,44 +121,44 @@ header {
         background-color: ghostwhite;
         width: 8em;
         opacity: .9;
-        
+
         > ul {
 	        display: none !important;
 	        height: 100%;
 	    }
-	
+
 	    input:checked ~ ul {
 	        display: block !important;
 	        opacity: .7;
 	    }
-	
+
 	    input:checked ~ ul li a:hover {
 	        color: #ffffff;
 	        opacity: 1;
 	    }
-	
+
 	    input:checked ~ ul li:not(.pure-menu-selected) {
 	        border-top: 1px solid #cccccc;
 	        border-left: 1px solid #cccccc;
 	    }
-	    
+
 	    input:checked ~ ul li:last-of-type:not(.pure-menu-selected) {
 	        border-bottom: 1px solid #cccccc;
 	    }
-	    
+
 	    input:checked ~ ul li:last-of-type {
 	        border-bottom: 1px solid #cccccc;
 	    }
-	    
+
 	    ul .pure-menu-item {
 	        display: block;
 	    }
-	
+
 	    ul li a {
 	       padding: 1.3em 1em;
 	       text-align: right;
 	    }
-	
+
 	    label {
 	      position: fixed;
 	      right: .5em;
@@ -191,7 +191,7 @@ main p:last-of-type {
         right: 2em;
         bottom: 2em;
     }
-    
+
     .is-text main {
     	margin: 5em 0 1em;
 	}
@@ -202,12 +202,12 @@ main p:last-of-type {
     position: fixed;
     top: .5em;
     left: .5em;
-        
+
 	.fa {
     	font-size: 1.5rem;
     	color: #000;
 	}
-	
+
 	@media only screen and (max-width: 640px) {
         z-index: 3;
         bottom: 0;
@@ -216,10 +216,10 @@ main p:last-of-type {
         left: inherit;
         width: 100%;
         background-color: #ffffff;
-    	
+
     	li a {
         	display: inline-block;
-    	}    
+    	}
 	}
 }
 
@@ -227,19 +227,19 @@ main p:last-of-type {
     display: inline-block;
     margin: 0;
     padding: 0;
-    
+
     .product {
 	    border: 2px solid black;
 	    text-align: center;
 	    margin: .5rem;
 	    display: inline-block;
 	    width: 45%;
-	    
+
 	    img {
 		    max-width: auto;
 		    max-height: 150px;
 		}
-		
+
 		#qty-1 {
 		    width: 20%;
 		    margin-bottom: 1rem;
@@ -247,7 +247,7 @@ main p:last-of-type {
 		    text-align: center;
 		}
 	}
-	
+
 	@media only screen and (max-width: 640px) {
 		.product {
         	margin: .8rem auto;
@@ -259,19 +259,19 @@ main p:last-of-type {
 .cart {
   	border: 1px solid black;
   	float: right;
- 	
+
  	.item {
 	  	border-top: 1px solid black;
-	  
+
 	  	td {
 	  		padding: .2em .5em;
 	  		border-right: 1px solid black;
-	  		
+
 	  		&.item-total {
 	  			border: 0 none;
 			}
 		}
-	}  
+	}
 }
 
 footer {
@@ -281,27 +281,27 @@ footer {
     text-decoration: none;
     color: #cccccc;
     font-size: .7rem;
-    
+
     img {
     	position: relative;
     	left: 3em;
     	top: 0;
 	}
-	
+
 	@media only screen and (max-width: 640px) {
 		  left: 1%;
 	    bottom: .1em;
 	    z-index: 4;
 	    width: 42% !important;
-	
+
 	    .txt-lft {
 	        position: static;
 	    }
-	
+
 	    img {
 	        display: none !important;
 	    }
-	    
+
 	    &.contact {
         	display: none;
     	}
@@ -327,7 +327,7 @@ footer {
     opacity: 0;
     z-index: 0;
     -webkit-backface-visibility: hidden;
-    
+
     @media only screen and (min-width: 767px) {
     	left: 20%;
     }
@@ -346,6 +346,13 @@ footer {
     -o-animation: imageAnimation 28s linear infinite 0s;
     -ms-animation: imageAnimation 28s linear infinite 0s;
     animation: imageAnimation 28s linear infinite 0s;
+}
+.fade.six > div {
+    -webkit-animation: imageAnimation 24s linear infinite 0s;
+    -moz-animation: imageAnimation 24s linear infinite 0s;
+    -o-animation: imageAnimation 24s linear infinite 0s;
+    -ms-animation: imageAnimation 24s linear infinite 0s;
+    animation: imageAnimation 24s linear infinite 0s;
 }
 .fade.five > div {
     -webkit-animation: imageAnimation 20s linear infinite 0s;
@@ -418,8 +425,6 @@ footer {
     -ms-animation-delay: 28s;
     animation-delay: 28s;
 }
-
-
 .beards div:nth-child(1) {
   background-image: url(../img/big/beards/beards1.jpg);
 }
@@ -464,6 +469,9 @@ footer {
 }
 .birds div:nth-child(7) {
   background-image: url(../img/big/birds/birds7.jpg);
+}
+.birds div:nth-child(8) {
+  background-image: url(../img/big/birds/birds8.jpg);
 }
 .redhands div:nth-child(1) {
   background-image: url(../img/big/redhands/redhand1.jpg);
