@@ -308,6 +308,10 @@ footer img {
   animation: imageAnimation 28s linear infinite 0s;
 }
 
+.fade.six > div {
+  animation: imageAnimation 24s linear infinite 0s;
+}
+
 .fade.five > div {
   animation: imageAnimation 20s linear infinite 0s;
 }
@@ -406,6 +410,10 @@ footer img {
 
 .birds div:nth-child(7) {
   background-image: url(../img/big/birds/birds7.jpg);
+}
+
+.birds div:nth-child(8) {
+  background-image: url(../img/big/birds/birds8.jpg);
 }
 
 .redhands div:nth-child(1) {
