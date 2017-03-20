@@ -194,7 +194,7 @@ main p:last-of-type {
     .is-text .main-menu label {
         /*
         right: 2em;
-        bottom: 2em; 
+        bottom: 2em;
         */
 
     }
@@ -340,6 +340,13 @@ footer {
     }
 }
 
+.fade.nine > div {
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+}
 .fade.eight > div {
     -webkit-animation: imageAnimation 32s linear infinite 0s;
     -moz-animation: imageAnimation 32s linear infinite 0s;
@@ -432,6 +439,13 @@ footer {
     -ms-animation-delay: 28s;
     animation-delay: 28s;
 }
+.fade > div:nth-child(9) {
+    -webkit-animation-delay: 32s;
+    -moz-animation-delay: 32s;
+    -o-animation-delay: 32s;
+    -ms-animation-delay: 32s;
+    animation-delay: 32s;
+}
 .beards div:nth-child(1) {
   background-image: url(../img/big/beards/beards1.jpg);
 }
@@ -479,6 +493,9 @@ footer {
 }
 .birds div:nth-child(8) {
   background-image: url(../img/big/birds/birds8.jpg);
+}
+.birds div:nth-child(9) {
+  background-image: url(../img/big/birds/birds9.jpg);
 }
 .redhands div:nth-child(1) {
   background-image: url(../img/big/redhands/redhand1.jpg);
