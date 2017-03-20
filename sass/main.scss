@@ -58,13 +58,17 @@ header {
 	    }
 
 	    h2 {
-	        margin: 0;
+	        margin: 0 0 0 .2em;
 	    }
 	}
 }
 
 .is-text header, .is-text .title {
-    position: absolute;
+    /*position: absolute;*/
+}
+
+.is-text main h2 {
+    font-size: 1.2rem;
 }
 
 .title {
@@ -188,12 +192,15 @@ main p:last-of-type {
     }
 
     .is-text .main-menu label {
+        /*
         right: 2em;
-        bottom: 2em;
+        bottom: 2em; 
+        */
+
     }
 
     .is-text main {
-    	margin: 5em 0 1em;
+    	margin: 0 0 1em;
 	}
 }
 
