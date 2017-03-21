@@ -14,16 +14,25 @@ html footer {
 
 header {
     position: fixed;
-    left: 3em;
-    top: 8%;
+    left: 2em;
+    top: 2em;
+
+    @media only screen and (min-width: 800px) {
+        top: 5em;
+    }
+
+    @media only screen and (min-width: 1100px) {
+        top: 2em;
+    }
 
   	h1 {
-  	    width: 80%;
+  	    width: 75%;
   	    margin: 0;
+        font-size: 2.5rem;
 
   	    a {
   	    	color: #000000;
-  	    	letter-spacing: .2em;
+  	    	letter-spacing: .3em;
   	    	text-decoration: none;
 
   	    	&:hover, &:active, &:focus {
@@ -34,7 +43,7 @@ header {
 	}
 
 	h2 {
-	    font-size: .8rem;
+	    font-size: 1.4rem;
 	    color: #cccccc;
 	    padding: .5em .2em;
 	}
@@ -42,7 +51,7 @@ header {
 	@media only screen and (max-width: 640px) {
 		position: static;
 		top: 0;
-        left: 1rem;
+    left: 1rem;
 
         h1 {
 	        width: 100%;
@@ -51,7 +60,7 @@ header {
 
 	        a {
 	        	text-align: center;
-	        	font-size: 1.5rem;
+	        	font-size: 1.8rem;
 	        	width: 100%;
 	        	display: block;
 	    	}
@@ -59,6 +68,7 @@ header {
 
 	    h2 {
 	        margin: 0 0 0 1em;
+          font-size: .8rem;
 	    }
 	}
 }
@@ -76,6 +86,10 @@ header {
     z-index: 10;
     width: 30em;
 
+    h1 {
+      font-size: 1.4rem;
+    }
+
     @media only screen and (max-width: 640px) {
     	top: 3.5%;
       right: 1em;
@@ -83,7 +97,7 @@ header {
     }
 
     @media only screen and (max-width: 321px) {
-      top: 4.5%;
+      top: 5%;
     }
 
     @media only screen and (min-width: 800px) {
@@ -93,7 +107,7 @@ header {
 
 .main-menu {
 	  text-align: right;
-    font-size: .8rem;
+    font-size: 1.1rem;
     position: fixed;
     width: 100%;
     right: .5em;
@@ -101,8 +115,11 @@ header {
     z-index: 100;
 
     @media only screen and (min-width: 700px) {
-        font-size: 1rem;
-        right: 2em;
+        font-size: 1.1rem;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        font-size: 1.3rem;
     }
 
     li:first-of-type {
@@ -127,11 +144,12 @@ header {
 
 	@media only screen and (max-width: 640px) {
 		    z-index: 3;
-        bottom: 5em;
+        bottom: 3em;
         top: inherit;
         background-color: ghostwhite;
         width: 8em;
         opacity: .9;
+        font-size: .7rem;
 
         > ul {
 	        display: none !important;
@@ -174,7 +192,7 @@ header {
 	    label {
 	      position: fixed;
 	      right: .5em;
-	      bottom: 2em;
+	      bottom: .5em;
 	      background-image: url('../img/menu-alt.png');
 	      width: 32px;
 	      height: 32px;
@@ -188,7 +206,7 @@ main p:last-of-type {
 }
 
 .is-text main {
-    margin: 12em 0 1em;
+    margin: 15em 0 1em;
     padding: 1em;
 }
 
@@ -208,7 +226,7 @@ main p:last-of-type {
 .social-media-icons {
 	width: 3.5rem;
   position: fixed;
-  top: .5em;
+  bottom: .5em;
   left: .5em;
 
 	.fa {
@@ -219,14 +237,16 @@ main p:last-of-type {
 	@media only screen and (max-width: 768px) {
         z-index: 3;
         bottom: 0;
-        height: 4em;
+        height: 2.2em;
         top: inherit;
         left: inherit;
         width: 100%;
         background-color: #ffffff;
+        font-size: 1.3rem;
 
     	li a {
         	display: inline-block;
+          padding: .4em .7em;
     	}
 	}
 }
@@ -297,6 +317,7 @@ footer {
 	}
 
 	@media only screen and (max-width: 640px) {
+      display: none !important;
 		  left: 1%;
 	    bottom: .1em;
 	    z-index: 4;
@@ -326,17 +347,22 @@ footer {
     background-position: 0 0;
 }
 .fade > div {
-    top: 11.5%;
+    top: 14%;
     max-width: 100%;
-    max-height: 75vh;
+    max-height: 73vh;
     color: transparent;
     opacity: 0;
     z-index: 0;
     -webkit-backface-visibility: hidden;
 
     @media only screen and (min-width: 767px) {
-    	left: 15%;
+      left: 15%;
       top: 20%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      left: 25%;
+      top: 15%;
     }
 }
 
