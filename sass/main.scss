@@ -326,7 +326,7 @@ footer {
     background-position: 0 0;
 }
 .fade > div {
-    top: 10%;
+    top: 11.5%;
     max-width: 100%;
     max-height: 75vh;
     color: transparent;
@@ -337,10 +337,6 @@ footer {
     @media only screen and (min-width: 767px) {
     	left: 15%;
       top: 20%;
-    }
-
-    @media only screen and (max-width: 321px) {
-      top: 12%;
     }
 }
 
