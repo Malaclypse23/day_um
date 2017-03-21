@@ -59,6 +59,7 @@ header {
 
 	    h2 {
 	        margin: 0 0 0 .2em;
+          padding-top: 0;
 	    }
 	}
 }
@@ -81,18 +82,18 @@ header {
     width: 30em;
 
     @media only screen and (max-width: 640px) {
-    	top: 5%;
+    	top: 4%;
       right: 1em;
       width: 14em;
     }
 }
 
 .main-menu {
-	text-align: right;
+	  text-align: right;
     font-size: .8rem;
     position: fixed;
     width: 100%;
-    left: -1em;
+    left: 72%;
     top: 1em;
     z-index: 100;
 
@@ -120,8 +121,6 @@ header {
 		    z-index: 3;
         bottom: 5em;
         top: inherit;
-        left: inherit;
-        right: 0;
         background-color: ghostwhite;
         width: 8em;
         opacity: .9;
@@ -144,6 +143,7 @@ header {
 	    input:checked ~ ul li:not(.pure-menu-selected) {
 	        border-top: 1px solid #cccccc;
 	        border-left: 1px solid #cccccc;
+          border-right: 1px solid #cccccc;
 	    }
 
 	    input:checked ~ ul li:last-of-type:not(.pure-menu-selected) {
@@ -160,7 +160,7 @@ header {
 
 	    ul li a {
 	       padding: 1.3em 1em;
-	       text-align: right;
+	       text-align: center;
 	    }
 
 	    label {
@@ -189,14 +189,7 @@ main p:last-of-type {
     #root.is-text .main-menu {
         opacity: 1;
         z-index: 11;
-    }
-
-    .is-text .main-menu label {
-        /*
-        right: 2em;
-        bottom: 2em;
-        */
-
+        float: right;
     }
 
     .is-text main {
@@ -567,7 +560,7 @@ footer {
   background-image: url(../img/big/octopus/octopus4.jpg);
 }
 .octopus div:nth-child(5) {
-  background-image: url(../img/big/octopus/octopus5.jpg);
+  background-image: url(../img/big/octopus/octopus6.jpg);
 }
 .sneezing div:nth-child(1) {
   background-image: url(../img/big/sneezing/sneezing_in_green1.jpg);

@@ -8,7 +8,7 @@ var changed = require('gulp-changed'),
     autoprefixer = require('gulp-autoprefixer'),
     compass = require('gulp-compass'),
     gulpif = require('gulp-if'),
-    gulpcleancss = require('gulp-clean-css'),
+    cleanCSS = require('gulp-clean-css'),
     sass = require('gulp-sass');
 
 var env = process.env.NODE_ENV || 'development'; 
@@ -31,7 +31,6 @@ gulp.task('sass', function() {
     	.pipe(gulp.dest(cssDir));
 });
 
-
 gulp.task('styles', function() {
   return gulp.src(['sass/**/*.scss'])
     .pipe(compass({
@@ -40,20 +39,16 @@ gulp.task('styles', function() {
       image: 'public/img'
     }))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    //.pipe(gulp.dest(cssDir))
-    //.pipe(minifycss())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(cssDir));
 });
 
 // JS-uglify
-/*
 gulp.task('js', function() {
   	return gulp.src('public/js/*.js')
-    	.pipe(browserify( { debug: env === 'development' }))
     	.pipe(gulpif(env === 'production', uglify()))
     	.pipe(gulp.dest('public/js'));
 });
-*/
 
 // Komprimiere Bilder
 gulp.task('images', function() {

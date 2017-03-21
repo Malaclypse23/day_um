@@ -28,7 +28,7 @@ $(function() {
 	}
 	
 	select_language(lang, false);
-
+	/*
 	lightbox.option({
 		'resizeDuration': 200,
 		'wrapAround': true,
@@ -36,7 +36,7 @@ $(function() {
 		'albumLabel':	"Image %1 of %2",
 	});
 	
-	/*
+	
 	var cart = { item: "Product 1", price: 19.00, qty: 2 };
 	'cart':  JSON.stringify(cart)
 	$.cookie("settings", JSON.stringify(settings));
