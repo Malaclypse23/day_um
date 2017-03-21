@@ -1,6 +1,6 @@
 @font-face {
     font-family: "FuturaLight", Arial, sans-serif !important;
-    src: url("fonts/futura-light.ttf");
+    src: url("../fonts/futura-light.ttf");
 }
 
 html header,
@@ -9,7 +9,7 @@ html .title,
 html .main-menu,
 html footer {
   font-family: "FuturaLight", Arial, sans-serif !important;
-  src: url("fonts/futura-light.ttf");
+  src: url("../fonts/futura-light.ttf");
 }
 
 header {
@@ -70,16 +70,24 @@ header {
 .title {
     position: fixed;
     top: 20%;
-    right: 7em;
+    right: 2em;
     font-size: .6rem;
     text-align: right;
     z-index: 10;
     width: 30em;
 
     @media only screen and (max-width: 640px) {
-    	top: 4%;
+    	top: 3.5%;
       right: 1em;
       width: 14em;
+    }
+
+    @media only screen and (max-width: 321px) {
+      top: 4.5%;
+    }
+
+    @media only screen and (min-width: 800px) {
+      right: 7em;
     }
 }
 
@@ -88,9 +96,14 @@ header {
     font-size: .8rem;
     position: fixed;
     width: 100%;
-    left: 72%;
+    right: .5em;
     top: 1em;
     z-index: 100;
+
+    @media only screen and (min-width: 700px) {
+        font-size: 1rem;
+        right: 2em;
+    }
 
     li:first-of-type {
       display: none !important;
@@ -175,7 +188,7 @@ main p:last-of-type {
 }
 
 .is-text main {
-    margin: 10em 0 1em;
+    margin: 12em 0 1em;
     padding: 1em;
 }
 
@@ -194,16 +207,16 @@ main p:last-of-type {
 
 .social-media-icons {
 	width: 3.5rem;
-    position: fixed;
-    top: .5em;
-    left: .5em;
+  position: fixed;
+  top: .5em;
+  left: .5em;
 
 	.fa {
     	font-size: 1.5rem;
     	color: #000;
 	}
 
-	@media only screen and (max-width: 640px) {
+	@media only screen and (max-width: 768px) {
         z-index: 3;
         bottom: 0;
         height: 4em;
@@ -322,7 +335,12 @@ footer {
     -webkit-backface-visibility: hidden;
 
     @media only screen and (min-width: 767px) {
-    	left: 20%;
+    	left: 15%;
+      top: 20%;
+    }
+
+    @media only screen and (max-width: 321px) {
+      top: 12%;
     }
 }
 
