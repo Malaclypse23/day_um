@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'));
 
-app.listen(80, () => {
-  console.log('listening on 80')
+app.listen(8080, () => {
+  console.log('listening on 8080')
 })
 
 app.get('/', (req, res) => {
@@ -22,7 +22,8 @@ mongodb://<stina>:<newworld1>@ds163738.mlab.com:63738/stina
 mongod version: 3.2.11 (MMAPv1)
 */
 //const MongoClient = require('mongodb').MongoClient
-var MongoClient = require('mongodb').MongoClient;
+//var MongoClient = require('mongodb').MongoClient;
+
 //var Db = require('mongodb').Db;
 //var ObjectId = require('mongodb').ObjectID;
 var url = 'mongodb://<tomahawk>:<stina>@ds163738.mlab.com:63738/stina';
