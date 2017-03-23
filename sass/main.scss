@@ -32,12 +32,12 @@ header {
         font-size: 2rem;
 
         @media only screen and (min-width: 1025px) {
-           font-size: 2.3rem;
+           font-size: 2.2rem;
         }
 
   	    a {
   	    	color: #000000;
-  	    	letter-spacing: .3em;
+  	    	letter-spacing: .2em;
   	    	text-decoration: none;
 
   	    	&:hover, &:active, &:focus {
@@ -225,11 +225,14 @@ main p:last-of-type {
 }
 
 .social-media-icons {
-	width: 3.5rem;
+  width: 3.5rem;
   position: fixed;
   bottom: .5em;
   left: .5em;
 
+  > li:not(:last-of-type) {
+      margin-right: .4em;
+  }
 	.fa {
     	font-size: 1.5rem;
     	color: #000;
@@ -243,11 +246,11 @@ main p:last-of-type {
         left: inherit;
         width: 100%;
         background-color: #ffffff;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
 
     	li a {
         	display: inline-block;
-          padding: .4em .7em;
+            padding: .4em .5em;
     	}
 	}
 }
