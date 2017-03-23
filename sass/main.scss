@@ -100,13 +100,9 @@ header {
     }
 
     @media only screen and (max-width: 640px) {
-    	top: 3.5%;
+    	top: 2.8em;
       right: 1em;
       width: 14em;
-    }
-
-    @media only screen and (max-width: 321px) {
-      top: 5%;
     }
 
     @media only screen and (min-width: 800px) {
@@ -149,12 +145,12 @@ header {
 
 	@media only screen and (max-width: 640px) {
 		    z-index: 3;
-        bottom: 3.5em;
+        bottom: 3.8em;
         top: inherit;
         background-color: ghostwhite;
-        width: 8em;
+        width: 9em;
         opacity: .9;
-        font-size: .8rem;
+        font-size: .9rem;
 
         > ul {
 	        display: none !important;
