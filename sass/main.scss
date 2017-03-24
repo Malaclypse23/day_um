@@ -1,6 +1,6 @@
 @font-face {
     font-family: "FuturaLight", Arial, sans-serif !important;
-    src: url("../fonts/futura-light.ttf");
+    src: url("fonts/futura-light.ttf");
 }
 
 html header,
@@ -9,7 +9,7 @@ html .title,
 html .main-menu,
 html footer {
   font-family: "FuturaLight", Arial, sans-serif !important;
-  src: url("../fonts/futura-light.ttf");
+  src: url("fonts/futura-light.ttf");
 }
 
 header {
@@ -29,11 +29,7 @@ header {
   	h1 {
   	    width: 75%;
   	    margin: 0;
-        font-size: 2rem;
-
-        @media only screen and (min-width: 1025px) {
-           font-size: 2.2rem;
-        }
+        font-size: 1.9rem;
 
   	    a {
   	    	color: #000000;
@@ -48,13 +44,9 @@ header {
 	}
 
 	h2 {
-	    font-size: 1.1rem;
+	    font-size: 1rem;
 	    color: #cccccc;
-	    padding: .4em .2em;
-
-      @media only screen and (min-width: 1025px) {
-           font-size: 1.2rem;
-      }
+	    padding: .1em .2em;
 	}
 
 	@media only screen and (max-width: 640px) {
@@ -88,7 +80,7 @@ header {
 
 .title {
     position: fixed;
-    top: 20%;
+    top: 15em;
     right: 2em;
     font-size: .6rem;
     text-align: right;
@@ -100,7 +92,7 @@ header {
     }
 
     @media only screen and (max-width: 640px) {
-    	top: 2.8em;
+    	top: 2.4em;
       right: 1em;
       width: 14em;
     }
@@ -120,7 +112,7 @@ header {
     z-index: 100;
 
     @media only screen and (min-width: 1200px) {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     li:first-of-type {
@@ -148,9 +140,10 @@ header {
         bottom: 3.8em;
         top: inherit;
         background-color: ghostwhite;
-        width: 9em;
+        width: 10.5em;
         opacity: .9;
-        font-size: .9rem;
+        text-transform: uppercase;
+        font-size: .8rem;
 
         > ul {
 	        display: none !important;
@@ -159,7 +152,7 @@ header {
 
 	    input:checked ~ ul {
 	        display: block !important;
-	        opacity: .7;
+	        opacity: .75;
 	    }
 
 	    input:checked ~ ul li a:hover {
@@ -194,9 +187,6 @@ header {
 	      position: fixed;
 	      right: .5em;
 	      bottom: .5em;
-	      background-image: url('../img/menu-alt.png');
-	      width: 32px;
-	      height: 32px;
 	      display: block;
 	    }
 	}
@@ -207,7 +197,7 @@ main p:last-of-type {
 }
 
 .is-text main {
-    margin: 15em 0 1em;
+    margin: 11em 0 1em;
     padding: 1em;
 }
 
@@ -224,6 +214,11 @@ main p:last-of-type {
 	}
 }
 
+.fa {
+      font-size: 1.5rem;
+      color: #000;
+}
+
 .social-media-icons {
   width: 3.5rem;
   position: fixed;
@@ -233,10 +228,7 @@ main p:last-of-type {
   > li:not(:last-of-type) {
       margin-right: .4em;
   }
-	.fa {
-    	font-size: 1.5rem;
-    	color: #000;
-	}
+	
 
 	@media only screen and (max-width: 768px) {
         z-index: 3;
@@ -248,11 +240,15 @@ main p:last-of-type {
         background-color: #ffffff;
         font-size: 1.2rem;
 
-    	li a {
-        	display: inline-block;
-            padding: .4em .5em;
-    	}
+      	li a {
+          	display: inline-block;
+              padding: .4em .5em;
+      	}
 	}
+
+  @media only screen and (min-width: 600px) {
+    width: 75%;
+  }
 }
 
 .product-list {
@@ -316,25 +312,15 @@ footer {
     font-size: .8rem;
     width: 35% !important;
 
-	@media only screen and (max-width: 640px) {
-      display: none !important;
-		  left: 1%;
-	    bottom: .1em;
-	    z-index: 4;
-	    width: 42% !important;
+    @media only screen and (max-width: 736px) {
+        > img {
+          display: none !important;
+        }
+    }
 
-	    .txt-lft {
-	        position: static;
-	    }
-
-	    img {
-	        display: none !important;
-	    }
-
-	    &.contact {
-        	display: none;
-    	}
-	}
+  	@media only screen and (max-width: 640px) {
+        display: none !important;
+  	}
 }
 
 
@@ -349,20 +335,19 @@ footer {
 .fade > div {
     top: 14%;
     max-width: 100%;
-    max-height: 73vh;
+    max-height: 78vh;
     color: transparent;
     opacity: 0;
     z-index: 0;
     -webkit-backface-visibility: hidden;
 
     @media only screen and (min-width: 767px) {
-      left: 15%;
+      left: 10%;
       top: 20%;
     }
 
     @media only screen and (min-width: 1200px) {
       left: 25%;
-      top: 15%;
     }
 }
 
