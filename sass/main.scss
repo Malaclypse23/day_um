@@ -1,15 +1,24 @@
 @font-face {
-    font-family: "FuturaLight", Arial, sans-serif !important;
-    src: url("fonts/futura-light.ttf");
+    font-family: Watchword_regular, Arial, sans-serif !important;
+    src: url("ww.otf") format("opentype") !important;
 }
 
-html header,
-html main,
-html .title,
-html .main-menu,
-html footer {
-  font-family: "FuturaLight", Arial, sans-serif !important;
-  src: url("fonts/futura-light.ttf");
+* {
+  font-family: Watchword_regular, Arial, sans-serif !important;
+  src: url("ww.otf") !important;
+}
+
+i {
+  font-family: FontAwesome !important;
+}
+
+a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.fa-envelope {
+  margin-right: .2em;
 }
 
 header {
@@ -44,7 +53,7 @@ header {
 	}
 
 	h2 {
-	    font-size: 1rem;
+	    font-size: .9rem;
 	    color: #cccccc;
 	    padding: .1em .2em;
 	}
@@ -102,9 +111,9 @@ header {
     }
 }
 
-.main-menu {
+#root .main-menu {
 	  text-align: right;
-    font-size: 1rem;
+    font-size: .9rem;
     position: fixed;
     width: 100%;
     right: .5em;
@@ -124,53 +133,49 @@ header {
 	}
 
 	.pure-menu-selected {
-	    display: none !important;
-	}
+      background-color: #eee;
+      pointer-events: none;
+      cursor: default;
 
-	input, label {
-	    display: none;
-	}
-
-	label {
-	    cursor: pointer;
+      @media only screen and (max-width: 640px) {
+          border-top: 1px solid #cccccc;
+          border-left: 1px solid #cccccc;
+          border-right: 1px solid #cccccc;
+      }
 	}
 
 	@media only screen and (max-width: 640px) {
-		    z-index: 3;
-        bottom: 3.8em;
-        top: inherit;
-        background-color: ghostwhite;
-        width: 10.5em;
-        opacity: .9;
-        text-transform: uppercase;
-        font-size: .8rem;
+		  z-index: 3;
+      bottom: 3.5em;
+      top: inherit;
+      background-color: ghostwhite;
+      width: 10.5em;
+      opacity: .9;
+      text-transform: uppercase;
+      font-size: .8rem;
 
-        > ul {
-	        display: none !important;
-	        height: 100%;
-	    }
+      > ul {
+        display: none;
+        height: 100%;
+        opacity: .75;
+      }
 
-	    input:checked ~ ul {
-	        display: block !important;
-	        opacity: .75;
-	    }
-
-	    input:checked ~ ul li a:hover {
+	    ul li a:hover {
 	        color: #ffffff;
 	        opacity: 1;
 	    }
 
-	    input:checked ~ ul li:not(.pure-menu-selected) {
+	    ul li:not(.pure-menu-selected) {
 	        border-top: 1px solid #cccccc;
 	        border-left: 1px solid #cccccc;
           border-right: 1px solid #cccccc;
 	    }
 
-	    input:checked ~ ul li:last-of-type:not(.pure-menu-selected) {
+	    ul li:last-of-type:not(.pure-menu-selected) {
 	        border-bottom: 1px solid #cccccc;
 	    }
 
-	    input:checked ~ ul li:last-of-type {
+	    ul li:last-of-type {
 	        border-bottom: 1px solid #cccccc;
 	    }
 
@@ -181,13 +186,6 @@ header {
 	    ul li a {
 	       padding: 1.3em 1em;
 	       text-align: center;
-	    }
-
-	    label {
-	      position: fixed;
-	      right: .5em;
-	      bottom: .5em;
-	      display: block;
 	    }
 	}
 }
@@ -225,10 +223,30 @@ main p:last-of-type {
   bottom: .5em;
   left: .5em;
 
-  > li:not(:last-of-type) {
-      margin-right: .4em;
+  input {
+      display: none;
   }
-	
+
+  /*
+  @media only screen and (max-width: 320px) {
+    li:last-of-type {
+       margin-left: .5em;
+    }   
+  }
+  */
+
+  @media only screen and (max-width: 640px) {
+    li:last-of-type {
+       /*margin-left: 3em;*/
+       float: right;
+    }   
+  }
+
+  @media only screen and (min-width: 641px) {
+    li:last-of-type {
+      display: none !important;
+    }   
+  }
 
 	@media only screen and (max-width: 768px) {
         z-index: 3;
@@ -242,7 +260,7 @@ main p:last-of-type {
 
       	li a {
           	display: inline-block;
-              padding: .4em .5em;
+            padding: .4em .5em;
       	}
 	}
 
@@ -332,10 +350,20 @@ footer {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+
+.stop-ani {
+  -webkit-animation: 0 !important;
+  animation: 0 !important;
+}
+
+.show-image {
+  opacity: 1 !important;
+}
+
 .fade > div {
     top: 14%;
     max-width: 100%;
-    max-height: 78vh;
+    max-height: 67vh;
     color: transparent;
     opacity: 0;
     z-index: 0;
@@ -344,10 +372,12 @@ footer {
     @media only screen and (min-width: 767px) {
       left: 10%;
       top: 20%;
+      max-height: 73vh;
     }
 
     @media only screen and (min-width: 1200px) {
       left: 25%;
+      max-height: 85vh;
     }
 }
 

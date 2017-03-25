@@ -1,5 +1,19 @@
 var lang;
 
+function getCurrentImage() {
+	var highestOpacity = 0;
+	$('.fade div').each(function() {
+		var image = $(this).css('background-image');
+		var opacity = $(this).css('opacity');
+		if (opacity > highestOpacity) {
+			highestOpacity = opacity;
+			$(this).addClass("show-image");
+		}
+		$(this).attr('background-image', image);
+		$(this).addClass("stop-ani");
+	});
+}
+
 function select_language(language, isChange) {
 	$("[lang]").each(function () {
         if ($(this).attr("lang") == language)
@@ -20,6 +34,32 @@ function select_language(language, isChange) {
 }
 
 $(function() {
+	$(".social-media-icons li:last-of-type").on('click', function () {
+		$('.main-menu ul').toggle();
+	});
+
+    $(".fa-forward").on('click', function () {
+		getCurrentImage();
+		var $next = $('.show-image').next();
+		$('.fade div').removeClass("show-image");
+		if (!$next.length) {
+			$('.fade > div:first-of-type').addClass("show-image");
+		} else {
+			$next.addClass("show-image");	
+		}
+    });
+
+    $(".fa-backward").on('click', function () {
+		getCurrentImage();
+		var $prev = $('.show-image').prev();
+		$('.fade div').removeClass("show-image");
+		if (!$prev.length) {
+			$('.fade > div:last-of-type').addClass("show-image");
+		} else {
+			$prev.addClass("show-image");	
+		}
+    });
+
 	lang = $.cookie("lang");
 	if (lang == undefined) {
 		lang = 'en';
