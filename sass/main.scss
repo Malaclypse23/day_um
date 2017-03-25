@@ -217,6 +217,7 @@ main p:last-of-type {
       color: #000;
 }
 
+
 .social-media-icons {
   width: 3.5rem;
   position: fixed;
@@ -227,19 +228,13 @@ main p:last-of-type {
       display: none;
   }
 
-  /*
-  @media only screen and (max-width: 320px) {
-    li:last-of-type {
-       margin-left: .5em;
-    }   
-  }
-  */
-
   @media only screen and (max-width: 640px) {
+    li:nth-of-type(5) {
+       margin-left: .5em;
+    }
     li:last-of-type {
-       /*margin-left: 3em;*/
        float: right;
-    }   
+    }
   }
 
   @media only screen and (min-width: 641px) {
@@ -267,6 +262,13 @@ main p:last-of-type {
   @media only screen and (min-width: 600px) {
     width: 75%;
   }
+}
+
+@-moz-document url-prefix() {
+      .social-media-icons li:last-of-type {
+        float: none;
+        margin-left: 1em;
+      }
 }
 
 .product-list {

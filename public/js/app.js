@@ -1,4 +1,5 @@
 var lang;
+var isStopped = false;
 
 function getCurrentImage() {
 	var highestOpacity = 0;
@@ -39,7 +40,8 @@ $(function() {
 	});
 
     $(".fa-forward").on('click', function () {
-		getCurrentImage();
+		if (!isStopped) getCurrentImage();
+		isStopped = true;
 		var $next = $('.show-image').next();
 		$('.fade div').removeClass("show-image");
 		if (!$next.length) {
@@ -50,7 +52,7 @@ $(function() {
     });
 
     $(".fa-backward").on('click', function () {
-		getCurrentImage();
+		if (!isStopped) getCurrentImage();
 		var $prev = $('.show-image').prev();
 		$('.fade div').removeClass("show-image");
 		if (!$prev.length) {
