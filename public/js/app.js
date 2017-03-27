@@ -1,6 +1,8 @@
 var lang;
 var isStopped = false;
 
+var entries = [];
+
 function getCurrentImage() {
 	var highestOpacity = 0;
 	$('.fade div').each(function() {
@@ -63,6 +65,19 @@ $(function() {
     	} else {
     		$('#email-input').prop('disabled', true);
     	}
+	});
+
+	$('#submit').on('click', function(e) {
+		e.preventDefault();
+		var entry = { "purpose": $('#purpose').val(),
+					  "message": $('#message').val(),
+					  "reply": $('#reply').val(),
+					  "email": $('#email-input').val()
+					};
+		entries.push(entry);
+		console.log(entry);
+		console.log(entries);
+		alert('danke!');
 	});
 
 	$('#email-input, #message').change(function() {
