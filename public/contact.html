@@ -17,6 +17,16 @@
 
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-96281028-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
 
 <body>
@@ -44,18 +54,44 @@
 					<li class="pure-menu-item"><a href="https://www.facebook.com/ChristinaPatriceDay" target="_blank" class="pure-menu-link"><i class="fa fa-facebook-square" title="facebook icon"></i></a></li>
 					<li class="pure-menu-item"><a href="https://twitter.com/CStinaday" target="_blank" class="pure-menu-link"><i class="fa fa-twitter-square" title="twitter icon"></i></a></li>
 					<li class="pure-menu-item"><a href="https://www.instagram.com/rhysika2" target="_blank" class="pure-menu-link">	<i class="fa fa-instagram" title="instagram icon"></i></a></li>
-					<li class="pure-menu-item"><a href="mailto:christ_in_day@hotmail.com" target="_blank" class="pure-menu-link"><i class="fa fa-envelope" title="email icon"></i></a></li>
 					<li class="pure-menu-item"><a href="#" class="pure-menu-link"><i class="fa fa-bars"></i></a></li>
 				</ul>
 			</aside>
 			<main class="pure-u-1 pure-u-md-17-24">
-				<h2>Christina Patrice-Day</h2>
-				<div>
-					10247 · Berlin
-					<br />
-					<a href="mailto:christ_in_day@hotmail.com" target="_blank"><i class="fa fa-envelope" title="email icon"></i> info@christinaday.de</a>
-					<br /><br />
-				</div>
+				<form class="contact pure-form pure-form-aligned">
+				    <fieldset>
+				        <legend><h2><span lang="en">Get in contact</span><span lang="de">Kontaktformular</span></h2></legend>
+
+				        <div class="pure-control-group">
+				        	<label class="inline-label" for="purpose" class="pure-u-1-4 pure-u-md-1-4"><span lang="en">Purpose</span><span lang="de">Grund</span></label>
+		                	<select id="purpose" class="pure-u-3-5 pure-u-md-1-4">
+		                    	<option>Question</option>
+		                    	<option>Suggestion / Criticism</option>
+		                    	<option>Other</option>
+		                	</select>
+				        </div>
+				        
+				        <div class="pure-control-group">
+				        	<label class="inline-label" for="message" class="pure-u-1-4 pure-u-md-1-4">Text</label>
+				        	<textarea id="message" class="pure-u-3-5 pure-u-md-3-5" placeholder="Your Message" required></textarea>
+				        </div>
+
+				        <div class="pure-control-group">
+					        <label for="reply" class="inline-label">
+					            <input id="reply" type="checkbox"> Reply?
+					        </label>
+					        <input id="email-input" type="email" class="pure-u-3-5 pure-u-md-1-4" placeholder="Your E-Mail" disabled>
+					    </div>
+
+					    <div class="pure-control-group">
+					    	<button id="send" type="submit" class="pure-button pure-button-primary" disabled>Send</button>
+					    </div>
+				    </fieldset>
+				</form>
+
+				<br />
+
+				<h1><span lang="en">Legal</span><span lang="de">Rechtliches</span></h1>
 
 				<div lang="de">
 					<h2><strong>Haftungsbeschränkung</strong></h2>
@@ -91,10 +127,16 @@
 						Every effort is made to keep the website up and running smoothly. However, Christina Day takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
 					</p>
 				</div>
-			</main>
 
-			<aside class="title pure-u-1 pure-u-md-4-24 pure-menu">
-			</aside>
+				<div>
+					<div><strong>Christina Patrice-Day</strong></div>
+					Müggelstr. 28 · 10247 Berlin
+					<br />
+					<a href="mailto:info@christinaday.de" target="_blank"><i class="fa fa-envelope" title="email icon"></i> info@christinaday.de</a>
+				</div>
+
+				<br /><br /><br />
+			</main>
 		</div>
 
 		<div class="pure-g">

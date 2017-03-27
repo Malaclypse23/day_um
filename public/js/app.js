@@ -15,6 +15,12 @@ function getCurrentImage() {
 	});
 }
 
+function validateEmail(input) {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(input);
+}
+
+
 function select_language(language, isChange) {
 	$("[lang]").each(function () {
         if ($(this).attr("lang") == language)
@@ -35,11 +41,37 @@ function select_language(language, isChange) {
 }
 
 $(function() {
-	$(".social-media-icons li:last-of-type").on('click', function () {
+	$('.social-media-icons li:last-of-type').on('click', function() {
 		$('.main-menu ul').toggle();
 	});
 
-    $(".fa-forward").on('click', function () {
+	$('#reply').change(function() {
+    	if ($(this).prop('checked')) {
+    		$('#email-input').prop('disabled', false);	
+    	} else {
+    		$('#email-input').prop('disabled', true);	
+    	}
+	});
+
+	$('#email-input').change(function() {
+		var needEmail = $('#reply').prop('checked');
+    	if ($('#message').val().length > 2 && (!needEmail || (needEmail && validateEmail($('#email-input').val())))) {
+    		$('#send').prop('disabled', false);	
+    	} else {
+    		$('#send').prop('disabled', true);	
+    	}
+	});
+
+	$('#message').change(function() {
+		var needEmail = $('#reply').prop('checked');
+    	if ($('#message').val().length > 2 && (!needEmail || (needEmail && validateEmail($('#email-input').val())))) {
+    		$('#send').prop('disabled', false);	
+    	} else {
+    		$('#send').prop('disabled', true);	
+    	}
+	});
+
+    $('.fa-forward').on('click', function() {
 		if (!isStopped) getCurrentImage();
 		isStopped = true;
 		var $next = $('.show-image').next();
@@ -51,7 +83,7 @@ $(function() {
 		}
     });
 
-    $(".fa-backward").on('click', function () {
+    $('.fa-backward').on('click', function () {
 		if (!isStopped) getCurrentImage();
 		var $prev = $('.show-image').prev();
 		$('.fade div').removeClass("show-image");
@@ -62,11 +94,11 @@ $(function() {
 		}
     });
 
-	lang = $.cookie("lang");
+	lang = $.cookie('lang');
 	if (lang == undefined) {
 		lang = 'en';
 	} else if (lang == 'de') {
-		$('header select option[value="de"]').attr("selected", "selected");
+		$('header select option[value="de"]').attr('selected', 'selected');
 	}
 	
 	select_language(lang, false);
@@ -77,7 +109,6 @@ $(function() {
 		'alwaysShowNavOnTouchDevices': true,
 		'albumLabel':	"Image %1 of %2",
 	});
-	
 	
 	var cart = { item: "Product 1", price: 19.00, qty: 2 };
 	'cart':  JSON.stringify(cart)

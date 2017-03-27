@@ -21,6 +21,14 @@ a {
   margin-right: .2em;
 }
 
+.inline-label, #email-input {
+  display: inline-block !important;
+}
+
+.inline-label {
+  width: 25% !important;
+}
+
 header {
     position: fixed;
     left: 2em;
