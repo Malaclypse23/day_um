@@ -75,9 +75,15 @@ $(function() {
 					  "email": $('#email-input').val()
 					};
 		entries.push(entry);
+		
+		$('#message').val('');
+		$('#email-input').val('');
+		$('#purpose').val('');
+
 		console.log(entry);
 		console.log(entries);
 		alert('danke!');
+
 	});
 
 	$('#email-input, #message').change(function() {
