@@ -1,3 +1,5 @@
+$breakpoint-m: 767px;
+
 @font-face {
     font-family: Watchword_regular, Arial, sans-serif !important;
     src: url("ww.otf") format("opentype") !important;
@@ -37,18 +39,13 @@ a {
 
 header {
     position: fixed;
-    left: 2em;
-    top: 3em;
-
-    @media only screen and (min-width: 800px) {
-        top: 1em;
-        left: 1em;
-    }
+    top: 3.3em;
+    left: 1em;
+    z-index: 3;
 
   	h1 {
-  	    width: 75%;
   	    margin: 0;
-        font-size: 1.9rem;
+        font-size: 1.8rem;
 
   	    a {
   	    	color: #000000;
@@ -93,6 +90,12 @@ header {
 	}
 }
 
+@media only screen and (min-width: 1024px) {
+    header h1 {
+        width: 43%;
+    }
+}
+
 .is-text main h2 {
     font-size: 1.2rem;
 }
@@ -104,7 +107,7 @@ header {
     font-size: .6rem;
     text-align: right;
     z-index: 10;
-    width: 30em;
+    width: 33em;
 
     h1 {
       font-size: 1.4rem;
@@ -116,9 +119,6 @@ header {
       width: 14em;
     }
 
-    @media only screen and (min-width: 800px) {
-      right: 7em;
-    }
 }
 
 #root .main-menu {
@@ -127,8 +127,19 @@ header {
     position: fixed;
     width: 100%;
     right: .5em;
-    top: .5em;
-    z-index: 100;
+    top: 0;
+    padding-top: 1em;
+    z-index: 2;
+
+    @media only screen and (min-width: 767px) {
+        height: 90px;
+        background-color: #fff;
+        visibility: hidden;
+
+        &.show-menu {
+          visibility: visible;
+        }
+    }
 
     @media only screen and (min-width: 1200px) {
         font-size: 1.1rem;
@@ -156,13 +167,15 @@ header {
 
 	@media only screen and (max-width: 640px) {
 		  z-index: 3;
-      bottom: 3.5em;
+      bottom: 3.3em;
       top: inherit;
+      right: .05em;
       background-color: ghostwhite;
       width: 10.5em;
       opacity: .9;
       text-transform: uppercase;
       font-size: .8rem;
+      padding-top: 0;
 
       > ul {
         display: none;
@@ -205,8 +218,8 @@ main p:last-of-type {
 }
 
 .is-text main {
-    margin: 8em 0 1em;
-    padding: .5em;
+    margin: 8em 3em 1em;
+    padding: 2em;
 }
 
 @media only screen and (max-width: 640px) {
@@ -244,6 +257,7 @@ main p:last-of-type {
     }
     li:last-of-type {
        float: right;
+       margin-right: .05em;
     }
   }
 

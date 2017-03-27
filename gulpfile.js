@@ -45,9 +45,9 @@ gulp.task('styles', function() {
 
 // JS-uglify
 gulp.task('js', function() {
-  	return gulp.src('public/js/*.js')
-    	.pipe(gulpif(env === 'production', uglify()))
-    	.pipe(gulp.dest('public/js'));
+  	return gulp.src('public/js/app.js')
+    	.pipe(gulpif(env === 'development', uglify()))
+    	.pipe(gulp.dest('public/js/min'));
 });
 
 // Komprimiere Bilder

@@ -41,7 +41,10 @@ function select_language(language, isChange) {
 
 $(function() {
 	$('.social-media-icons li:last-of-type').on('click', function() {
-		$('.main-menu ul').toggle();
+		$('.fa-plus').toggleClass('fa-minus');
+		//$('.main-menu ul').delay(80).fadeToggle();
+		$('.main-menu ul').fadeToggle();
+		
 	});
 
 	$('#reply').change(function() {
@@ -92,6 +95,8 @@ $(function() {
 	}
 
 	select_language(lang, false);
+	$('.main-menu').addClass('show-menu');
+
 	/*
 	lightbox.option({
 		'resizeDuration': 200,
