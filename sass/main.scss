@@ -5,6 +5,13 @@ $breakpoint-m: 767px;
     src: url("ww.otf") format("opentype") !important;
 }
 
+#log {
+    display: none;
+    border: 1px solid black;
+    padding 1em;
+    margin: 2em 1em;
+}
+
 * {
   font-family: Watchword_regular, Arial, sans-serif !important;
   src: url("ww.otf") !important;

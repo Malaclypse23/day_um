@@ -1,7 +1,12 @@
 var lang;
 var isStopped = false;
 
-var entries = [];
+var former = console.log;
+
+console.log = function(msg) {
+	former(msg);
+	//$('#log').append("<div>" + msg + "</div>");
+}
 
 function getCurrentImage() {
 	var highestOpacity = 0;
@@ -42,7 +47,6 @@ function select_language(language, isChange) {
 }
 
 $(function() {
-
 	lang = $.cookie('lang');
 	if (lang == undefined) {
 		lang = 'en';
@@ -71,19 +75,10 @@ $(function() {
 		e.preventDefault();
 		var entry = { "purpose": $('#purpose').val(),
 					  "message": $('#message').val(),
-					  "reply": $('#reply').val(),
 					  "email": $('#email-input').val()
 					};
-		entries.push(entry);
-		
-		$('#message').val('');
-		$('#email-input').val('');
-		$('#purpose').val('');
-
-		console.log(entry);
-		console.log(entries);
-		alert('danke!');
-
+		console.log(JSON.stringify(entry));
+		//location.reload();
 	});
 
 	$('#email-input, #message').change(function() {
