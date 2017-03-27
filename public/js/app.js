@@ -40,6 +40,17 @@ function select_language(language, isChange) {
 }
 
 $(function() {
+
+	lang = $.cookie('lang');
+	if (lang == undefined) {
+		lang = 'en';
+	} else if (lang == 'de') {
+		$('header select option[value="de"]').attr('selected', 'selected');
+	}
+
+	select_language(lang, false);
+	$('.main-menu').addClass('show-menu');
+
 	$('.social-media-icons li:last-of-type').on('click', function() {
 		$('.fa-plus').toggleClass('fa-minus');
 		$('.main-menu ul').delay(80).fadeToggle();
@@ -85,16 +96,6 @@ $(function() {
 			$prev.addClass("show-image");
 		}
     });
-
-	lang = $.cookie('lang');
-	if (lang == undefined) {
-		lang = 'en';
-	} else if (lang == 'de') {
-		$('header select option[value="de"]').attr('selected', 'selected');
-	}
-
-	select_language(lang, false);
-	$('.main-menu').addClass('show-menu');
 
 	/*
 	lightbox.option({

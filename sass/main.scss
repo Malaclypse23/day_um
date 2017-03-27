@@ -35,6 +35,11 @@ a {
     textarea {
         height: auto;
     }
+
+    button {
+      background-color: #000 !important;
+      color: #ffffff !important;
+    }
 }
 
 header {
@@ -61,8 +66,8 @@ header {
 
 	h2 {
 	    font-size: .9rem;
-	    color: #cccccc;
-	    padding: .1em .2em;
+	    color: #444444;
+	    padding: .1em;
 	}
 
 	@media only screen and (max-width: 640px) {
@@ -97,7 +102,9 @@ header {
 }
 
 .is-text main h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: .5em;
 }
 
 .title {
@@ -108,6 +115,7 @@ header {
     text-align: right;
     z-index: 10;
     width: 33em;
+    color: #444444;
 
     h1 {
       font-size: 1.4rem;
@@ -218,8 +226,8 @@ main p:last-of-type {
 }
 
 .is-text main {
-    margin: 8em 3em 1em;
-    padding: 2em;
+    margin: 8em 3.5em 1em;
+    padding: 1em;
 }
 
 @media only screen and (max-width: 640px) {
