@@ -21,26 +21,28 @@ a {
   margin-right: .2em;
 }
 
-.inline-label, #email-input {
-  display: inline-block !important;
-}
+.contact {
+    .inline-label, #email-input {
+        display: inline-block !important;
+    }
 
-.inline-label {
-  width: 25% !important;
+    .inline-label {
+        width: 25% !important;
+    }
+
+    textarea {
+        height: auto;
+    }
 }
 
 header {
     position: fixed;
     left: 2em;
-    top: 5em;
+    top: 3em;
 
     @media only screen and (min-width: 800px) {
         top: 1em;
         left: 1em;
-    }
-
-    @media only screen and (min-width: 1025px) {
-        top: 1em;
     }
 
   	h1 {
@@ -203,8 +205,8 @@ main p:last-of-type {
 }
 
 .is-text main {
-    margin: 11em 0 1em;
-    padding: 1em;
+    margin: 8em 0 1em;
+    padding: .5em;
 }
 
 @media only screen and (max-width: 640px) {
@@ -248,7 +250,7 @@ main p:last-of-type {
   @media only screen and (min-width: 641px) {
     li:last-of-type {
       display: none !important;
-    }   
+    }
   }
 
 	@media only screen and (max-width: 768px) {

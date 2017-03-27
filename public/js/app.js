@@ -20,7 +20,6 @@ function validateEmail(input) {
     return re.test(input);
 }
 
-
 function select_language(language, isChange) {
 	$("[lang]").each(function () {
         if ($(this).attr("lang") == language)
@@ -28,14 +27,14 @@ function select_language(language, isChange) {
         else
             $(this).hide();
     });
-  
+
     if (language == 'de' && isChange) {
 		$('header select option[value="de"]').attr("selected", "selected");
-		$.cookie("lang", 'de');
+		$.cookie("lang", language);
 		lang = "de";
 	} else if (language == 'en' && isChange) {
 		$('header select option[value="en"]').attr("selected", "selected");
-		$.cookie("lang", 'en');
+		$.cookie("lang", language);
 		lang = "en";
 	}
 }
@@ -47,27 +46,18 @@ $(function() {
 
 	$('#reply').change(function() {
     	if ($(this).prop('checked')) {
-    		$('#email-input').prop('disabled', false);	
+    		$('#email-input').prop('disabled', false);
     	} else {
-    		$('#email-input').prop('disabled', true);	
+    		$('#email-input').prop('disabled', true);
     	}
 	});
 
-	$('#email-input').change(function() {
+	$('#email-input, #message').change(function() {
 		var needEmail = $('#reply').prop('checked');
     	if ($('#message').val().length > 2 && (!needEmail || (needEmail && validateEmail($('#email-input').val())))) {
-    		$('#send').prop('disabled', false);	
+    		$('#submit').prop('disabled', false);
     	} else {
-    		$('#send').prop('disabled', true);	
-    	}
-	});
-
-	$('#message').change(function() {
-		var needEmail = $('#reply').prop('checked');
-    	if ($('#message').val().length > 2 && (!needEmail || (needEmail && validateEmail($('#email-input').val())))) {
-    		$('#send').prop('disabled', false);	
-    	} else {
-    		$('#send').prop('disabled', true);	
+    		$('#submit').prop('disabled', true);
     	}
 	});
 
@@ -79,7 +69,7 @@ $(function() {
 		if (!$next.length) {
 			$('.fade > div:first-of-type').addClass("show-image");
 		} else {
-			$next.addClass("show-image");	
+			$next.addClass("show-image");
 		}
     });
 
@@ -90,7 +80,7 @@ $(function() {
 		if (!$prev.length) {
 			$('.fade > div:last-of-type').addClass("show-image");
 		} else {
-			$prev.addClass("show-image");	
+			$prev.addClass("show-image");
 		}
     });
 
@@ -100,7 +90,7 @@ $(function() {
 	} else if (lang == 'de') {
 		$('header select option[value="de"]').attr('selected', 'selected');
 	}
-	
+
 	select_language(lang, false);
 	/*
 	lightbox.option({
@@ -109,7 +99,7 @@ $(function() {
 		'alwaysShowNavOnTouchDevices': true,
 		'albumLabel':	"Image %1 of %2",
 	});
-	
+
 	var cart = { item: "Product 1", price: 19.00, qty: 2 };
 	'cart':  JSON.stringify(cart)
 	$.cookie("settings", JSON.stringify(settings));
