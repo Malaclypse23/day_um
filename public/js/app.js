@@ -1,12 +1,19 @@
 var lang;
 var isStopped = false;
 
+/*
 var former = console.log;
 
 console.log = function(msg) {
 	former(msg);
 	//$('#log').append("<div>" + msg + "</div>");
 }
+
+function validateEmail(input) {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(input);
+}
+*/
 
 function getCurrentImage() {
 	var highestOpacity = 0;
@@ -20,11 +27,6 @@ function getCurrentImage() {
 		$(this).attr('background-image', image);
 		$(this).addClass("stop-ani");
 	});
-}
-
-function validateEmail(input) {
-    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-    return re.test(input);
 }
 
 function select_language(language, isChange) {
@@ -55,7 +57,7 @@ $(function() {
 	}
 
 	select_language(lang, false);
-	$('.main-menu').addClass('show-menu');
+	$('.main-menu, .title').addClass('show-menu');
 
 	$('.social-media-icons li:last-of-type').on('click', function() {
 		$('.fa-plus').toggleClass('fa-minus');
@@ -63,6 +65,7 @@ $(function() {
 		//$('.main-menu ul').fadeToggle();
 	});
 
+	/*
 	$('#reply').change(function() {
     	if ($(this).prop('checked')) {
     		$('#email-input').prop('disabled', false);
@@ -89,6 +92,7 @@ $(function() {
     		$('#submit').prop('disabled', true);
     	}
 	});
+	*/
 
     $('.fa-forward').on('click', function() {
 		if (!isStopped) getCurrentImage();
