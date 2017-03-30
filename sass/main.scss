@@ -1,31 +1,12 @@
 $breakpoint-m: 767px;
 
-@font-face {
-    font-family: Watchword_regular, Arial, sans-serif !important;
-    src: url("ww.otf") format("opentype") !important;
-}
-
-* {
-  font-family: Watchword_regular, Arial, sans-serif !important;
-  src: url("ww.otf") !important;
-}
-
-
-
-@font-face {
-  font-family: 'NowAlt-Thin';
-  src: url('NowAlt-Thin.otf');
+body :not(i) {
+  font-family: 'Josefin Sans', sans-serif !important;
 }
 
 i {
   font-family: FontAwesome !important;
 }
-
-body {
-  font-family: 'NowAlt-Thin', Arial, sans-serif;
-}
-
-
 
 a {
   color: #cccccc;
