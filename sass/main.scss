@@ -5,21 +5,27 @@ $breakpoint-m: 767px;
     src: url("ww.otf") format("opentype") !important;
 }
 
-#log {
-    display: none;
-    border: 1px solid black;
-    padding: .5em;
-    margin: 2em .5em;
-}
-
 * {
   font-family: Watchword_regular, Arial, sans-serif !important;
   src: url("ww.otf") !important;
 }
 
+
+
+@font-face {
+  font-family: 'NowAlt-Thin';
+  src: url('NowAlt-Thin.otf');
+}
+
 i {
   font-family: FontAwesome !important;
 }
+
+body {
+  font-family: 'NowAlt-Thin', Arial, sans-serif;
+}
+
+
 
 a {
   color: #cccccc;
@@ -120,20 +126,20 @@ header {
 
 .title {
     position: fixed;
-    top: 15em;
+    top: 12em;
     right: 2em;
-    font-size: .6rem;
     text-align: right;
     z-index: 10;
     width: 33em;
     color: #444444;
 
-    h1 {
-      font-size: 1.4rem;
+    h2 {
+      font-size: 1.3rem;
+      margin: 0;
     }
 
     @media only screen and (min-width: $breakpoint-m) {
-        visibility: hidden;
+        /*visibility: hidden;*/
 
         &.show-menu {
           visibility: visible;
@@ -142,8 +148,8 @@ header {
 
     @media only screen and (max-width: 640px) {
     	top: 2.4em;
-      right: 1em;
-      width: 14em;
+      right: .5em;
+      width: 11em;
     }
 
 }
@@ -161,7 +167,7 @@ header {
     @media only screen and (min-width: 767px) {
         height: 90px;
         background-color: #fff;
-        visibility: hidden;
+        /*visibility: hidden;*/
 
         &.show-menu {
           visibility: visible;
@@ -394,15 +400,6 @@ footer {
   	}
 }
 
-.fade div {
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-
 .stop-ani {
   -webkit-animation: 0 !important;
   animation: 0 !important;
@@ -412,24 +409,34 @@ footer {
   opacity: 1 !important;
 }
 
+.fade div {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
 .fade > div {
-    top: 14%;
     max-width: 100%;
-    max-height: 67vh;
     color: transparent;
     opacity: 0;
     z-index: 0;
     -webkit-backface-visibility: hidden;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px; 
+    margin-left: -300px;
 
-    @media only screen and (min-width: 767px) {
-      left: 10%;
-      top: 20%;
-      max-height: 73vh;
+    @media only screen and (max-width: 320px) {
+      max-height: 72vh;
     }
 
-    @media only screen and (min-width: 1200px) {
-      left: 25%;
-      max-height: 85vh;
+    @media only screen and (max-width: 415px) {
+      max-height: 79vh;
+      margin-top: -37vh;
+      margin-left: -50vw;
     }
 }
 
