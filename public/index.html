@@ -29,7 +29,16 @@
 </head>
 
 <body>
-	<div id="root" class="is-text">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.8";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div id="root" class="is-text is-index">
 
 		<div class="pure-g">
 			<header class="pure-u-1 pure-u-md-1-3">
@@ -63,7 +72,7 @@
 				<div lang="en">
 					<p>Christina Patrice-Day is a Biro artist originally from Oxford and is now living in Berlin.</p>
 					<p>This Website is in <b>BETA</b> Phase. Be sure to bookmark it, as there will be an update soon!</p>
-					<p>Also, drop me a message, if you have any questions, suggestions, or criticism	!</p>
+					<p>Drop me a message if you have any questions, suggestions or criticism!</p>
 					<meta itemprop="gender" content="Female">
 					<meta itemprop="birthDate" content="February 17, 1987">
 					<meta itemprop="email" content="info@christinaday.de">
@@ -78,6 +87,10 @@
 
 				<a href="contact.html"><h3>Contact | Kontakt</h3></a>
 			</main>
+
+			<aside class="fb-aside pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+				<div class="fb-page" data-href="https://www.facebook.com/ChristinaPatriceDay/" data-tabs="timeline" data-width="320" data-height="600" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/ChristinaPatriceDay/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ChristinaPatriceDay/">Christina Day - Biro artist</a></blockquote></div>
+			</aside>
 		</div>
 
 		<div class="pure-g">

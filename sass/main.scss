@@ -1,4 +1,6 @@
+$breakpoint-xs: 320px;
 $breakpoint-m: 767px;
+$breakpoint-l: 1200px;
 
 body :not(i) {
   font-family: 'Josefin Sans', sans-serif !important;
@@ -135,6 +137,22 @@ header {
 
 }
 
+.fb-aside {
+  text-align: center;
+
+  @media only screen and (min-width: $breakpoint-m) {
+      margin-left: 2.5em;
+  }
+
+  @media only screen and (min-width: $breakpoint-l) {
+      position: absolute;    
+      right: 2em;
+      top: 7em;
+      margin-left: 0;
+      text-align: right;
+  }
+}
+
 #root .main-menu {
 	  text-align: right;
     font-size: .9rem;
@@ -155,7 +173,7 @@ header {
         }
     }
 
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $breakpoint-l) {
         font-size: 1.1rem;
     }
 
