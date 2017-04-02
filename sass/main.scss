@@ -1,4 +1,5 @@
 $breakpoint-xs: 320px;
+$breakpoint-s: 640px;
 $breakpoint-m: 767px;
 $breakpoint-l: 1200px;
 
@@ -17,25 +18,6 @@ a {
 
 .fa-envelope {
   margin-right: .2em;
-}
-
-.contact {
-    .inline-label, #email-input {
-        display: inline-block !important;
-    }
-
-    .inline-label {
-        width: 25% !important;
-    }
-
-    textarea {
-        height: auto;
-    }
-
-    button {
-      background-color: #000 !important;
-      color: #ffffff !important;
-    }
 }
 
 header {
@@ -66,15 +48,15 @@ header {
 	    padding: .1em;
 	}
 
-	@media only screen and (max-width: 640px) {
+	@media only screen and (max-width: $breakpoint-s) {
 		position: static;
-		top: 0;
+		top: .5em;
     left: 1rem;
 
         h1 {
 	        width: 100%;
 	        text-align: center;
-          margin-top: .1em;
+          margin-top: .2em;
 
 	        a {
 	        	text-align: center;
@@ -96,9 +78,9 @@ header {
         width: 43%;
     }
 
-    .is-text main h2 {
-      width: 70%;
-    }    
+    .is-text main {
+        width: 55%;
+    }
 }
 
 .is-text main h2 {
@@ -116,23 +98,18 @@ header {
     width: 33em;
     color: #444444;
 
-    h2 {
-      font-size: 1.3rem;
-      margin: 0;
+    h1, h2 {
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (max-width: $breakpoint-s) {
+    	top: 1.5em;
+      right: .5em;
+      width: 11em;
     }
 
     @media only screen and (min-width: $breakpoint-m) {
-        /*visibility: hidden;*/
-
-        &.show-menu {
-          visibility: visible;
-        }
-    }
-
-    @media only screen and (max-width: 640px) {
-    	top: 2.4em;
-      right: .5em;
-      width: 11em;
+      top: 50%;
     }
 
 }
@@ -146,10 +123,8 @@ header {
 
   @media only screen and (min-width: $breakpoint-l) {
       position: absolute;    
-      right: 2em;
+      right: .3em;
       top: 7em;
-      margin-left: 0;
-      text-align: right;
   }
 }
 
@@ -163,14 +138,9 @@ header {
     padding-top: 1em;
     z-index: 2;
 
-    @media only screen and (min-width: 767px) {
+    @media only screen and (min-width: $breakpoint-m) {
         height: 90px;
-        background-color: #fff;
-        /*visibility: hidden;*/
-
-        &.show-menu {
-          visibility: visible;
-        }
+        background-color: #ffffff;
     }
 
     @media only screen and (min-width: $breakpoint-l) {
@@ -186,14 +156,14 @@ header {
       pointer-events: none;
       cursor: default;
 
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: $breakpoint-s) {
           border-top: 1px solid #cccccc;
           border-left: 1px solid #cccccc;
           border-right: 1px solid #cccccc;
       }
 	}
 
-	@media only screen and (max-width: 640px) {
+	@media only screen and (max-width: $breakpoint-s) {
 		  z-index: 3;
       bottom: 3.3em;
       top: inherit;
@@ -246,12 +216,11 @@ main p:last-of-type {
 }
 
 .is-text main {
-    margin: 8em 3.5em 1em;
+    margin: 8em 0 1em 3em;
     padding: 1em;
 }
 
-@media only screen and (max-width: 640px) {
-
+@media only screen and (max-width: $breakpoint-s) {
     #root.is-text .main-menu {
         opacity: 1;
         z-index: 11;
@@ -268,7 +237,6 @@ main p:last-of-type {
       color: #000;
 }
 
-
 .social-media-icons {
   width: 3.5rem;
   position: fixed;
@@ -279,7 +247,7 @@ main p:last-of-type {
       display: none;
   }
 
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: $breakpoint-s) {
     li:nth-of-type(5) {
        margin-left: .5em;
     }
@@ -351,7 +319,7 @@ main p:last-of-type {
 		}
 	}
 
-	@media only screen and (max-width: 640px) {
+	@media only screen and (max-width: $breakpoint-s) {
 		.product {
         	margin: .8rem auto;
         	width: 80%;
@@ -394,7 +362,7 @@ footer {
         }
     }
 
-  	@media only screen and (max-width: 640px) {
+  	@media only screen and (max-width: $breakpoint-s) {
         display: none !important;
   	}
 }
@@ -408,16 +376,13 @@ footer {
   opacity: 1 !important;
 }
 
-.fade div {
+.fade > div {
     width: 600px;
     height: 600px;
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 0 0;
-}
-
-.fade > div {
     max-width: 100%;
     color: transparent;
     opacity: 0;
@@ -428,15 +393,34 @@ footer {
     margin-top: -300px; 
     margin-left: -300px;
 
-    @media only screen and (max-width: 320px) {
-      max-height: 72vh;
+    @media only screen and (max-width: $breakpoint-xs) {
+      max-height: 71vh;
     }
 
     @media only screen and (max-width: 415px) {
-      max-height: 79vh;
-      margin-top: -37vh;
+      max-height: 75vh;
+      margin-top: -34vh;
       margin-left: -50vw;
     }
+}
+
+.fade figcaption {
+  @media only screen and (min-width: $breakpoint-m) {
+      position: fixed;
+      top: 55%;
+      right: 2em;
+      text-align: right;
+      z-index: 10;
+      width: 15em;
+
+      ul {
+        list-style: none;
+      }
+  }
+
+  @media only screen and (max-width: $breakpoint-m - 1px) {
+      display: none;
+  }
 }
 
 .fade.nine > div {
@@ -484,159 +468,125 @@ footer {
 .fade > div:nth-child(9) {
     animation-delay: 32s;
 }
-.beards div:nth-child(1) {
+.beards > div:nth-child(1) {
   background-image: url(../img/beards/beards1.jpg);
 }
-.beards div:nth-child(2) {
+.beards > div:nth-child(2) {
   background-image: url(../img/beards/beards2.jpg);
 }
-.beards div:nth-child(3) {
-  background-image: url(../img/beards/beards3.jpg);
-}
-.beards div:nth-child(4) {
-  background-image: url(../img/beards/beards4.jpg);
-}
-.beards div:nth-child(5) {
+.beards > div:nth-child(3) {
   background-image: url(../img/beards/beards5.jpg);
 }
-.beards div:nth-child(6) {
+.beards > div:nth-child(4) {
   background-image: url(../img/beards/beards6.jpg);
 }
-.beards div:nth-child(7) {
+.beards > div:nth-child(5) {
   background-image: url(../img/beards/beards7.jpg);
 }
-.beards div:nth-child(8) {
+.beards > div:nth-child(6) {
   background-image: url(../img/beards/beards8.jpg);
 }
-.birds div:nth-child(1) {
+.birds > div:nth-child(1) {
   background-image: url(../img/birds/birds1.jpg);
 }
-.birds div:nth-child(2) {
+.birds > div:nth-child(2) {
   background-image: url(../img/birds/birds2.jpg);
 }
-.birds div:nth-child(3) {
+.birds > div:nth-child(3) {
   background-image: url(../img/birds/birds3.jpg);
 }
-.birds div:nth-child(4) {
+.birds > div:nth-child(4) {
   background-image: url(../img/birds/birds4.jpg);
 }
-.birds div:nth-child(5) {
+.birds > div:nth-child(5) {
   background-image: url(../img/birds/birds5.jpg);
 }
-.birds div:nth-child(6) {
+.birds > div:nth-child(6) {
   background-image: url(../img/birds/birds6.jpg);
 }
-.birds div:nth-child(7) {
+.birds > div:nth-child(7) {
   background-image: url(../img/birds/birds7.jpg);
 }
-.birds div:nth-child(8) {
+.birds > div:nth-child(8) {
   background-image: url(../img/birds/birds8.jpg);
 }
-.birds div:nth-child(9) {
+.birds > div:nth-child(9) {
   background-image: url(../img/birds/birds9.jpg);
 }
-.redhands div:nth-child(1) {
+.redhands > div:nth-child(1) {
   background-image: url(../img/redhands/redhand1.jpg);
 }
-.redhands div:nth-child(2) {
+.redhands > div:nth-child(2) {
   background-image: url(../img/redhands/redhand2.jpg);
 }
-.redhands div:nth-child(3) {
+.redhands > div:nth-child(3) {
   background-image: url(../img/redhands/redhand3.jpg);
 }
-
-/*
-.photos div:nth-child(1) {
-  background-image: url(../img/photos/what_my_pillow_sees_at_night.jpg);
+.portraits > div:nth-child(1) {
+  background-image: url(../img/portraits/luke_child.jpg);
 }
-.photos div:nth-child(2) {
-  background-image: url(../img/photos/artist_at_work.jpg);
-}
-.photos div:nth-child(3) {
-  background-image: url(../img/photos/yotoshi_publications.jpg);
-}
-.photos div:nth-child(4) {
-  background-image: url(../img/photos/marcus_room.jpg);
-}
-.photos div:nth-child(5) {
-  background-image: url(../img/photos/the_caretaker.jpg);
-}
-*/
-
-.portraits div:nth-child(1) {
+.portraits > div:nth-child(2) {
   background-image: url(../img/portraits/afro.jpg);
 }
-.portraits div:nth-child(2) {
+.portraits > div:nth-child(3) {
   background-image: url(../img/portraits/south_african_fashion.jpg);
 }
-.portraits div:nth-child(3) {
+.portraits > div:nth-child(4) {
   background-image: url(../img/portraits/untitled_woman.jpg);
 }
-.portraits div:nth-child(4) {
-  background-image: url(../img/portraits/stina.jpg);
-}
-.portraits div:nth-child(5) {
-  background-image: url(../img/portraits/bolan.jpg);
-}
-.portraits div:nth-child(6) {
+.portraits > div:nth-child(5) {
   background-image: url(../img/portraits/depardieu.jpg);
 }
-.portraits div:nth-child(7) {
-  background-image: url(../img/portraits/bearded_man.jpg);
+.portraits > div:nth-child(6) {
+  background-image: url(../img/portraits/jean_reno.jpg);
 }
-.illustrations div:nth-child(1) {
-  background-image: url(../img/illustrations/luke_child.jpg);
+.portraits > div:nth-child(7) {
+  background-image: url(../img/portraits/idris.jpg);
 }
-.illustrations div:nth-child(2) {
+.illustrations > div:nth-child(1) {
   background-image: url(../img/illustrations/gasmask.jpg);
 }
-.illustrations div:nth-child(3) {
+.illustrations > div:nth-child(2) {
   background-image: url(../img/illustrations/woman_with_gun.jpg);
 }
-.illustrations div:nth-child(4) {
+.illustrations > div:nth-child(3) {
   background-image: url(../img/illustrations/angrycircles1.jpg);
 }
-.illustrations div:nth-child(5) {
+.illustrations > div:nth-child(4) {
   background-image: url(../img/illustrations/angrycircles2.jpg);
 }
-.octopus div:nth-child(1) {
+.octopus > div:nth-child(1) {
   background-image: url(../img/octopus/octopus1.jpg);
 }
-.octopus div:nth-child(2) {
+.octopus > div:nth-child(2) {
   background-image: url(../img/octopus/octopus2.jpg);
 }
-.octopus div:nth-child(3) {
+.octopus > div:nth-child(3) {
   background-image: url(../img/octopus/octopus3.jpg);
 }
-.octopus div:nth-child(4) {
+.octopus > div:nth-child(4) {
   background-image: url(../img/octopus/octopus4.jpg);
 }
-.octopus div:nth-child(5) {
+.octopus > div:nth-child(5) {
   background-image: url(../img/octopus/octopus6.jpg);
 }
-.sneezing div:nth-child(1) {
+.sneezing > div:nth-child(1) {
   background-image: url(../img/sneezing/sneezing_in_green1.jpg);
 }
-.sneezing div:nth-child(2) {
+.sneezing > div:nth-child(2) {
   background-image: url(../img/sneezing/sneezing_in_green2.jpg);
 }
-.sneezing div:nth-child(3) {
+.sneezing > div:nth-child(3) {
   background-image: url(../img/sneezing/sneezing_in_green3.jpg);
 }
-.sneezing div:nth-child(4) {
+.sneezing > div:nth-child(4) {
   background-image: url(../img/sneezing/sneezing_in_green4.jpg);
 }
 
 @keyframes imageAnimation {
-    0% { opacity: 0;
-    animation-timing-function: ease-in; }
-    8% { opacity: 1;
-         animation-timing-function: ease-out; }
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
     17% { opacity: 1 }
     25% { opacity: 0 }
     100% { opacity: 0 }
-}
-
-form.contact {
-  display: none;
 }

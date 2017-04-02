@@ -7,12 +7,12 @@
 	<meta name="description" content="Portraits by Christina Day. The Oxford-born artist is now living in Berlin. She is best known for her biro pen (Kugelschreiber) drawings.">
 	<meta name="keywords" content="Christina Day, art, drawing, artist, Oxford, Berlin, biro pen, Kugelschreiber">
 
-	<title>Portraits | Porträts</title>
+	<title>Portraits | Porträts (biro pen drawings by Christina Day)</title>
 
 	<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">
 	<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
@@ -39,8 +39,8 @@
 				</h1>
 				<h2>
 					Oxford | Berlin &nbsp;
-					<select onchange="select_language(this.options[this.selectedIndex].value, true)">
-						<option value="en">EN</option>
+					<select id="lang">
+						<option value="en" selected="selected">EN</option>
 						<option value="de">DE</option>
 					</select>
 				</h2>
@@ -60,7 +60,7 @@
 				</ul>
 			</aside>
 			<main class="pure-u-1 pure-u-md-17-24">
-				<div class="fade seven portraits">
+				<figure class="fade seven portraits">
 					<div></div>
 					<div></div>
 					<div></div>
@@ -68,7 +68,19 @@
 					<div></div>
 					<div></div>
 					<div></div>
-				</div>
+					<figcaption class="caption">
+						<ul>
+							<li>Brother Luke</li>
+							<li>Afro Woman</li>
+							<li>South African Fashion</li>
+							<li>Untitled Woman</li>
+							<li>Gerard Depardieu</li>
+							<li>Jean Reno</li>
+							<li>Man with hat</li>
+						</ul>
+					</figcaption>
+				</figure>
+
 			</main>
 
 			<aside class="title pure-u-1 pure-u-md-4-24">
@@ -140,7 +152,7 @@
 		</div>
 
 	</div>
-	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/app.js"></script>
 </body>
