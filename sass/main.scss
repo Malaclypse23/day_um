@@ -103,7 +103,7 @@ header {
     }
 
     @media only screen and (max-width: $breakpoint-s) {
-    	top: 1.5em;
+    	top: 1.3em;
       right: .5em;
       width: 11em;
     }
@@ -399,7 +399,7 @@ footer {
 
     @media only screen and (max-width: 415px) {
       max-height: 74vh;
-      margin-top: -35vh;
+      margin-top: -36vh;
       margin-left: -50vw;
     }
 }
