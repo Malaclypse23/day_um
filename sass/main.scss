@@ -394,12 +394,12 @@ footer {
     margin-left: -300px;
 
     @media only screen and (max-width: $breakpoint-xs) {
-      max-height: 71vh;
+      max-height: 70vh;
     }
 
     @media only screen and (max-width: 415px) {
-      max-height: 75vh;
-      margin-top: -34vh;
+      max-height: 74vh;
+      margin-top: -35vh;
       margin-left: -50vw;
     }
 }
