@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Homepage of Christina Day and her art. The Oxford-born artist lives in Berlin. She is best known for her biro pen (Kugelschreiber) drawings.">
+	<meta name="description" content="Homepage of artist Christina Day. She is born in Oxford and now resides in Berlin. Her main practise is ballpoint pen drawings.">
 	<meta name="keywords" content="Christina Day, art, drawing, artist, Oxford, Berlin, biro pen, Kugelschreiber">
 
 	<title>Christina Day - Biro Pen Artist (Oxford, Berlin)</title>
@@ -62,23 +62,35 @@
 					<li class="pure-menu-item"><a href="https://www.facebook.com/ChristinaPatriceDay" target="_blank" class="pure-menu-link"><i class="fa fa-facebook-square" title="facebook icon"></i></a></li>
 					<li class="pure-menu-item"><a href="https://twitter.com/CStinaday" target="_blank" class="pure-menu-link"><i class="fa fa-twitter-square" title="twitter icon"></i></a></li>
 					<li class="pure-menu-item"><a href="https://www.instagram.com/rhysika2" target="_blank" class="pure-menu-link">	<i class="fa fa-instagram" title="instagram icon"></i></a></li>
-					<li class="pure-menu-item"><a href="mailto:christ_in_day@hotmail.com" target="_blank" class="pure-menu-link"><i class="fa fa-envelope" title="email icon"></i></a></li>
+					<li class="pure-menu-item"><a href="mailto:info@christinaday.de" target="_blank" class="pure-menu-link"><i class="fa fa-envelope" title="email icon"></i></a></li>
 					<li class="pure-menu-item"><a href="contact.html" class="pure-menu-link"><i class="fa fa-copyright" title="copyright icon"></i></a></li>
 					<li class="pure-menu-item"><a href="#" class="pure-menu-link"><i class="fa fa-plus"></i></a></li>
 				</ul>
 			</aside>
-			<main class="pure-u-1 pure-u-md-17-24" itemscope itemtype="http://schema.org/Person">
-				<h2 itemprop="name">Christina Patrice-Day</h2>
+			<main class="pure-u-1 pure-u-md-17-24">
+				<script type="application/ld+json">
+				{
+				  "@context": "http://schema.org",
+				  "@type": "Person",
+				  "name": "Christina Day",
+				  "gender": "Female",
+				  "birthDate": "February 17, 1987",
+				  "email": "info@christinaday.de",
+				  "image": "http://www.christinaday.de/img/stina_footer.jpg",
+				  "url": "https://www.christinaday.de",
+				  "sameAs": [
+				    "https://www.facebook.com/ChristinaPatriceDay",
+				    "https://www.instagram.com/rhysika2",
+				    "https://twitter.com/CStinaday"
+				  ]
+				}
+				</script>
+				<h2>Christina Patrice-Day</h2>
 
 				<div lang="en">
 					<p>Christina Patrice-Day is a Biro artist originally from Oxford and is now living in Berlin.</p>
 					<p>This Website is in <b>BETA</b> Phase. Be sure to bookmark it, as there will be an update soon!</p>
 					<p>Drop me a message if you have any questions, suggestions or criticism!</p>
-					<meta itemprop="gender" content="Female">
-					<meta itemprop="birthDate" content="February 17, 1987">
-					<meta itemprop="email" content="info@christinaday.de">
-					<meta itemprop="url" content="http://www.christinaday.de">
-					<meta itemprop="image" content="http://www.christinaday.de/img/stina_footer.jpg">
 				</div>
 				<div lang="de">
 					<p>Christina Patrice-Day ist eine Kugelschreiber-Künstlerin aus Oxford and lebt in Berlin.</p>
@@ -155,7 +167,14 @@
 		</div>
 
 	</div>
+
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+   		if (!window.jQuery) { 
+      		document.write('<script src="/js/jquery-3.2.0.min.js"><\/script>'); 
+   		}
+	</script>
+
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/app.js"></script>
 </body>
