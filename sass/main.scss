@@ -67,8 +67,16 @@ header {
 	    }
 
 	    h2 {
-	        margin: .3em 0 0 .5em;
+	        margin: .15em 0 0 .5em;
+          display: inline-block;
           font-size: .8rem;
+          width: 43%;
+
+          select {
+              font-size: 10px;
+              padding: .1em;
+              height: 18px;
+          }
 	    }
 	}
 }
@@ -103,7 +111,7 @@ header {
     }
 
     @media only screen and (max-width: $breakpoint-s) {
-    	top: 1.5em;
+    	top: 1.3em;
       right: .5em;
       width: 11em;
     }
@@ -394,12 +402,12 @@ footer {
     margin-left: -300px;
 
     @media only screen and (max-width: $breakpoint-xs) {
-      max-height: 71vh;
+      max-height: 70vh;
     }
 
     @media only screen and (max-width: 415px) {
-      max-height: 75vh;
-      margin-top: -34vh;
+      max-height: 74vh;
+      margin-top: -36vh;
       margin-left: -50vw;
     }
 }

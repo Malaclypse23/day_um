@@ -35,12 +35,19 @@ function select_language(language, isChange) {
 }
 
 $(function() {
+	var pathname = window.location.pathname; // Returns path only
+	var url      = window.location.href;     // Returns full URL
+
+	var isDe = window.location.href.indexOf("lang=de") > -1;
+
 	lang = $.cookie('lang');
-	if (lang == undefined) {
-		lang = 'en';
-	} else if (lang == 'de') {
+	
+	if (lang == 'de' || isDe == true) {
 		$('header select option[value="de"]').attr('selected', 'selected');
-	}
+		lang = 'de';
+	} else {
+		lang = 'en';
+	} 
 
 	select_language(lang, false);
 
