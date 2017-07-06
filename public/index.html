@@ -3,12 +3,13 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="description" content="Homepage of artist Christina Day. She is born in Oxford and now resides in Berlin. Her main practise is ballpoint pen drawings.">
 	<meta name="keywords" content="Christina Day, art, drawing, artist, Oxford, Berlin, biro pen, Kugelschreiber">
 
 	<title>Christina Day - Biro Pen Artist (Oxford, Berlin)</title>
 
+	<link href="http://www.hirnzweig.de" rel="canonical" />
 	<link rel="alternate" hreflang="de" href="https://www.christinaday.de?lang=de" />
 	<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">
 	<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
@@ -42,17 +43,13 @@
 	<div id="root" class="is-text is-index">
 
 		<div class="pure-g">
-			<header class="pure-u-1 pure-u-md-1-3">
-				<h1>
-					<a href="index.html">Christina Day</a>
-				</h1>
-				<h2>
-					Oxford | Berlin &nbsp;
-					<select id="lang">
-						<option value="en" selected="selected">EN</option>
-						<option value="de">DE</option>
-					</select>
-				</h2>
+			<header class="is-index pure-u-1 pure-u-md-1-5">
+				<h1 class="pure-u-1">Christina Day</h1>
+				<h2>Oxford | Berlin</h2>
+				<select id="lang">
+					<option value="en" selected="selected">EN</option>
+					<option value="de">DE</option>
+				</select>
 			</header>
 		</div>
 
@@ -62,9 +59,9 @@
 					<li class="pure-menu-item"><a href="https://www.facebook.com/ChristinaPatriceDay" target="_blank" class="pure-menu-link"><i class="fa fa-facebook-square" title="facebook icon"></i></a></li>
 					<li class="pure-menu-item"><a href="https://twitter.com/CStinaday" target="_blank" class="pure-menu-link"><i class="fa fa-twitter-square" title="twitter icon"></i></a></li>
 					<li class="pure-menu-item"><a href="https://www.instagram.com/rhysika2" target="_blank" class="pure-menu-link">	<i class="fa fa-instagram" title="instagram icon"></i></a></li>
-					<li class="pure-menu-item"><a href="mailto:info@christinaday.de" target="_blank" class="pure-menu-link"><i class="fa fa-envelope" title="email icon"></i></a></li>
-					<li class="pure-menu-item"><a href="contact.html" class="pure-menu-link"><i class="fa fa-copyright" title="copyright icon"></i></a></li>
-					<li class="pure-menu-item"><a href="#" class="pure-menu-link"><i class="fa fa-plus"></i></a></li>
+					<li class="pure-menu-item is-text"><a href="mailto:info@christinaday.de" target="_blank" class="pure-menu-link"><i class="fa fa-envelope" title="email icon"></i></a></li>
+					<li class="pure-menu-item is-text"><a href="contact.html" class="pure-menu-link"><i class="fa fa-copyright" title="copyright icon"></i></a></li>
+					<li class="pure-menu-item is-text"><a href="#" class="pure-menu-link"><i class="fa fa-plus"></i></a></li>
 				</ul>
 			</aside>
 			<main class="pure-u-1 pure-u-md-17-24">
@@ -85,31 +82,101 @@
 				  ]
 				}
 				</script>
-				<h2>Christina Patrice-Day</h2>
 
-				<div lang="en">
-					<p>Christina Patrice-Day is a Biro artist originally from Oxford and is now living in Berlin.</p>
-					<p>This Website is in <b>BETA</b> Phase. Be sure to bookmark it, as there will be an update soon!</p>
-					<p>Drop me a message if you have any questions, suggestions or criticism!</p>
-				</div>
-				<div lang="de">
-					<p>Christina Patrice-Day ist eine Kugelschreiber-Künstlerin aus Oxford and lebt in Berlin.</p>
-					<p>Diese Webseite ist im <b>BETA</b> Status. Bitte gerne einen Bookmark setzen, denn es gibt bald ein Update!</p>
-					<p>Bei Fragen, Anregungen oder Kritik, einfach eine E-Mail schreiben!</p>
-				</div>
+				<section>
+					<ul class="accordeon">
+					  	<li>
+					    	<input type="checkbox"><i></i>
+					    	<h2>Bio</h2>
+					    	<p lang="en">
+					    		Christina Patrice-Day was born in Oxford, England in 1987. 
 
-				<a href="contact.html"><h3>Contact | Kontakt</h3></a>
+					    		Since 2012 she lives and works in Berlin.
+					    	</p>
+					    	<p lang="de">Christina Patrice-Day ist eine Kugelschreiber-Künstlerin aus Oxford and lebt in Berlin.</p>
+					    	<div class="content">
+						    	<ul>
+						    		<li>
+						    			2009 - 2011: University of the West of England (UWE)
+						    			Fine Art degree
+						    		</li>
+						    		<li>
+						    			2006 - 2007: Plymouth College of Art and Design
+						    			ABC Foundation Diploma
+						    		</li>
+						    		<li>
+						    			2004 - 2006: Oxford and Cherwell Valley College
+						    			A level: Art, Photography, Photographic lighting
+						    		</li>
+						    	</ul>
+						    </div>
+					  	</li>
+					  	<li>
+					    	<input type="checkbox"><i></i>
+					    	<h2>Biro Pen Artwork</h2>
+					    	<p lang="en">
+					    		Christina's medium of choice is drawing in ballpoint (or biro) pens.
+					    		Biro pens are versatile, inexpensive and widely available, for professional artists as well as for amateur doodlers. Making a mistake poses a great risk to biro artists; once a line is drawn, it cannot be erased. Some may consider this irreversibility somewhat unnerving, but Christina faces the challenge as a test of her skills.
+					    	</p>
+					    	<p>
+					    		<b>Birds Beards Bones Bodies (25th May - 13th June 2014)</b>
+					    		<br /><br />
+					    		Christina Day talks about her exhibition with Helen Whitley, hosted by Wolfson College:
+					    		<audio controls="controls" src="DailyInfo_ChristinaDay.mp3" type="audio/mp3" preload="metadata">
+								  Your browser does not support the <code>audio</code> element.
+								</audio>
+								<small>Source: <a target="_blank" href="http://www.dailyinfo.co.uk/oxcast/archive/120">Daily Info Oxford (Oxcast)</a></small>
+							</p>
+							<p lang="en">
+					    		Besides drawing in biro, she also works with different types of media: 
+					    		oil and acryllic paint, experimenting with gold leaves or crocheting cute little octopus.
+							</p>
+							<p lang="de">
+					    		Christinas Leidenschaft ist Zeichnen mit Stiften aller Art - Kugelschreiber (biro ballpoint pens) sind ihr am Liebsten!
+							</p>
+					  	</li>
+					  	<li>
+					    	<input type="checkbox" checked><i></i>
+					    	<h2>Support</h2>
+					    	<p lang="en">Living as an artist is not easy. If you want to support Christina and her work, there are many different ways. You can look her up on <b><a target="_blank" href="https://www.patreon.com/christinaday">patreon</a></b> where you'll find personalized art, posters and signed cards.
+					    	<br />
+					    	Art material: paper and pens (office supply shops, but also art supply stores)
+							Sometimes it's easier to buy pens in bulk from online-shops:</p>
+					    	<p lang="de"></p>
+					    	<div class="content">
+					    		<a target="_blank" rel="nofollow" href="https://www.amazon.de/gp/product/B01F93FONK/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B01F93FONK&linkCode=as2&tag=uua-21">Paper Mate Ink-Joy 100 RT</a><img src="http://ir-de.amazon-adsystem.com/e/ir?t=uua-21&l=as2&o=3&a=B01F93FONK" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> ·
+								<a target="_blank" rel="nofollow" href="https://www.amazon.de/gp/product/B016DFAHSA/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B016DFAHSA&linkCode=as2&tag=uua-21">Staedtler Fineliner triplus</a><img src="http://ir-de.amazon-adsystem.com/e/ir?t=uua-21&l=as2&o=3&a=B016DFAHSA" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> ·
+								<a target="_blank" rel="nofollow" href="https://www.amazon.de/gp/product/B005BRK90S/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B005BRK90S&linkCode=as2&tag=uua-21">BIC Cristal Kugelschreiber (Medium)</a><img src="http://ir-de.amazon-adsystem.com/e/ir?t=uua-21&l=as2&o=3&a=B005BRK90S" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+							</div>
+					  	</li>
+						 <li>
+						    <input type="checkbox" checked><i></i>
+						    <h2>Contact</h2>
+							<p lang="en">
+								This Website is in <b>BETA</b> Phase. Be sure to bookmark it, as there will be an update soon!
+								Drop me a message if you have any questions, suggestions or criticism!
+							</p>
+							<p lang="de">
+								Diese Webseite ist im <b>BETA</b> Status. Bitte gerne einen Bookmark setzen, denn es gibt bald ein Update!
+								Bei Fragen, Anregungen oder Kritik, einfach eine E-Mail schreiben!
+							</p>
+							<div class="content">
+								<a href="contact.html"><h3>Contact | Kontakt</h3></a>
+							</div>
+						 </li>
+					</ul>
+				</section>
+
 			</main>
 
 			<aside class="fb-aside pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-				<div class="fb-page" data-href="https://www.facebook.com/ChristinaPatriceDay/" data-tabs="timeline" data-width="320" data-height="600" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/ChristinaPatriceDay/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ChristinaPatriceDay/">Christina Day - Biro artist</a></blockquote></div>
+				<div class="fb-page" data-href="https://www.facebook.com/ChristinaPatriceDay/" data-tabs="timeline" data-width="600" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/ChristinaPatriceDay/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ChristinaPatriceDay/">Christina Day - Biro artist</a></blockquote></div>
 			</aside>
 		</div>
 
 		<div class="pure-g">
 			<nav class="main-menu pure-u-1 pure-u-md-1-6 pure-menu pure-menu-horizontal" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 				<ul class="pure-menu-list">
-					<!--<li class="pure-menu-item"><a href="shop.html" class="pure-menu-link">Shop</a></li>-->
 					<li class="pure-menu-item">
 						<a href="beards.html" class="pure-menu-link" itemprop="url">
 							<span itemprop="name" lang="en">Beards</span>
@@ -152,6 +219,11 @@
 							<span lang="de">Niesen</span>
 						</a>
 					</li>
+					<li class="pure-menu-item">
+						<a href="sketchbooks.html" class="pure-menu-link" itemprop="url">
+							<span itemprop="name">Sketchbooks</span>
+						</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -174,8 +246,9 @@
       		document.write('<script src="/js/jquery-3.2.0.min.js"><\/script>'); 
    		}
 	</script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
+	<script src="js/jquery.mobile.custom.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
 

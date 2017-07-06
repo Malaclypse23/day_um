@@ -1,6 +1,47 @@
 var lang;
 var isStopped = false;
 
+// Callback function references the event target and adds the 'swipeleft' class to it
+function swipeleftHandler(event){
+ 	$(event.target).addClass("swipeleft");
+    if (!isStopped) getCurrentImage();
+	isStopped = true;
+	var $next = $('.show-image').next();
+	$('.fade div').removeClass("show-image");
+	if (!$next.length && !$next.hasClass('caption')) {
+		$('.fade > div:first-of-type').addClass("show-image");
+	} else if (!$next.hasClass('caption')) {
+		$next.addClass("show-image");
+	} else {
+		$('.fade > div:first-of-type').addClass("show-image");
+	}
+}
+
+function swiperightHandler(event) {
+	$(event.target).addClass("swiperight");
+	if (!isStopped) getCurrentImage();
+	isStopped = true;
+	var $prev = $('.show-image').prev();
+	$('.fade div').removeClass("show-image");
+	if (!$prev.length && !$prev.hasClass('caption')) {
+		$('.fade > div:last-of-type').addClass("show-image");
+	} else if (!$prev.hasClass('caption')) {
+		$prev.addClass("show-image");
+	} else {
+		$('.fade > div:last-of-type').addClass("show-image");
+	}
+}
+
+function prevPage(event) {
+	event.preventDefault();
+	$("input[name='slider']:selected").prev().prop("selected", "selected");
+}
+
+function nextPage(event) {
+	event.preventDefault();
+	$("input[name='slider']:selected").next().prop("selected", "selected");
+}
+
 function getCurrentImage() {
 	var highestOpacity = 0;
 	$('.fade div:not(.caption)').each(function() {
@@ -35,9 +76,6 @@ function select_language(language, isChange) {
 }
 
 $(function() {
-	var pathname = window.location.pathname; // Returns path only
-	var url      = window.location.href;     // Returns full URL
-
 	var isDe = window.location.href.indexOf("lang=de") > -1;
 
 	lang = $.cookie('lang');
@@ -50,6 +88,13 @@ $(function() {
 	} 
 
 	select_language(lang, false);
+
+	$(".fade > div").on("swipeleft", swipeleftHandler);
+ 	$(".fade > div").on("swiperight", swiperightHandler);
+ 	$(".fade > div").on("click", getCurrentImage);
+
+ 	$(".sliderElements").on("swipeleft", nextPage);
+ 	$(".sliderElements").on("swiperight", prevPage);
 
 	$('#lang').on('change', function(e) {
 		e.preventDefault();
