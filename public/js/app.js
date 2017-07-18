@@ -1,3 +1,5 @@
+'use strict';
+
 var lang;
 var isStopped = false;
 
