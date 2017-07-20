@@ -731,9 +731,11 @@ footer {
       }
     }
     
+    /*
     &:last-of-type {
       padding-bottom: 0;
     }
+    */
       
     i {
       position: absolute;
@@ -770,6 +772,7 @@ footer {
       &:checked {
         &~p, &~.content {
           margin-top: 0;
+          margin-bottom: 0;
           max-height: 0;
           opacity: 0;
           transform: translate(0, 50%);
