@@ -167,6 +167,21 @@ header {
   }
 }
 
+.row-lst {
+  margin-bottom: .5em;
+
+  ul, li, a {
+    display: inline;
+  }
+
+  @media only screen and (max-width: $breakpoint-s) {
+    li {
+      display: inline-block;
+      max-width: 48%;
+    }
+  }
+}
+
 #root .main-menu {
 	  text-align: right;
     font-size: .9rem;

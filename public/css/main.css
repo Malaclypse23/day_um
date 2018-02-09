@@ -153,6 +153,19 @@ header h2 {
   }
 }
 
+.row-lst {
+  margin-bottom: .5em;
+}
+.row-lst ul, .row-lst li, .row-lst a {
+  display: inline;
+}
+@media only screen and (max-width: 640px) {
+  .row-lst li {
+    display: inline-block;
+    max-width: 48%;
+  }
+}
+
 #root .main-menu {
   text-align: right;
   font-size: .9rem;
@@ -1045,7 +1058,7 @@ figure {
   display: inline-block;
 }
 
-/* Controls auf einheitliche Maße bringen und die Ecken abrunden */
+/* Controls auf einheitliche Ma├ƒe bringen und die Ecken abrunden */
 .sliderControls label {
   width: 20px;
   height: 20px;
