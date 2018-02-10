@@ -80,7 +80,7 @@ header h1:hover, header h1:active, header h1:focus, header a:hover, header a:act
   text-decoration: none;
   color: #000000;
 }
-header h2 {
+header h2, header h3 {
   color: #444444;
   padding: 0 .5em;
   margin: 0;
@@ -103,10 +103,10 @@ header h2 {
     text-align: center;
     width: 100%;
   }
-  header h2 {
+  header h2, header h3 {
     text-align: center;
   }
-  header h2 select {
+  header h2 select, header h3 select {
     padding: .1em;
     height: 18px;
   }
@@ -127,7 +127,8 @@ header h2 {
     font-size: 1.5rem !important;
   }
 
-  header h2 {
+  header h2,
+  header h3 {
     padding: 0 .5em 0 1.5em;
   }
 }
@@ -471,6 +472,9 @@ footer {
   }
   .fade figcaption ul {
     list-style: none;
+  }
+  .fade figcaption h2 {
+    font-size: 1.2rem;
   }
 }
 @media only screen and (orientation: portrait) {
