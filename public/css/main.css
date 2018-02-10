@@ -463,11 +463,11 @@ footer {
 @media only screen and (min-width: 767px) {
   .fade figcaption {
     position: fixed;
-    top: 66%;
+    top: 68%;
     right: 2em;
     text-align: right;
     z-index: 10;
-    width: 20em;
+    width: 28em;
   }
   .fade figcaption ul {
     list-style: none;
@@ -739,6 +739,35 @@ footer {
   background-image: url(../img/goldbook/goldbook_pages_9_10.jpg);
 }
 
+.sisters > div:nth-child(1) {
+  background-image: url(../img/sisters/infinite_sisterhood1.jpg);
+}
+
+.sisters > div:nth-child(2) {
+  background-image: url(../img/sisters/infinite_sisterhood2.jpg);
+}
+
+.sisters > div:nth-child(3) {
+  background-image: url(../img/sisters/infinite_sisterhood3.jpg);
+}
+
+.sisters > div:nth-child(4) {
+  background-image: url(../img/sisters/infinite_sisterhood4.jpg);
+}
+
+.sisters > div:nth-child(5) {
+  background-image: url(../img/sisters/infinite_sisterhood5.jpg);
+}
+
+.sisters > div:nth-child(6) {
+  background-image: url(../img/sisters/infinite_sisterhood6.jpg);
+}
+
+.poster {
+  float: right;
+  margin: .3em 0 0 1em;
+}
+
 @-webkit-keyframes imageAnimation {
   0% {
     opacity: 0;
@@ -813,11 +842,6 @@ footer {
   position: relative;
   margin: 0;
   padding: .5em 0;
-  /*
-  &:last-of-type {
-    padding-bottom: 0;
-  }
-  */
 }
 .accordeon li:visible:nth-of-type(1) {
   -webkit-animation-delay: 0.5s;

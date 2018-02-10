@@ -486,11 +486,11 @@ footer {
 .fade figcaption {
   @media only screen and (min-width: $breakpoint-m) {
       position: fixed;
-      top: 66%;
+      top: 68%;
       right: 2em;
       text-align: right;
       z-index: 10;
-      width: 20em;
+      width: 28em;
 
       ul {
         list-style: none;
@@ -704,11 +704,10 @@ footer {
 .sisters > div:nth-child(6) {
   background-image: url(../img/sisters/infinite_sisterhood6.jpg);
 }
-.sisters > div:nth-child(7) {
-  background-image: url(../img/sisters/infinite_sisterhood7.jpg);
-}
-.sisters > div:nth-child(8) {
-  background-image: url(../img/sisters/infinite_sisterhood8.jpg);
+
+.poster {
+    float: right;
+    margin: .3em 0 0 1em;
 }
 
 @keyframes imageAnimation {
