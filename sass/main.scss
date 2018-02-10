@@ -52,7 +52,7 @@ header {
     }
 
     .title {
-      text-align: right;    
+      text-align: right;
       color: #444444;
       padding: 0;
       margin: 0;
@@ -82,7 +82,7 @@ header {
         text-decoration: none;
         margin: .3em 0;
         font-weight: normal;
-        
+
   	    &:hover, &:active, &:focus {
       			text-decoration: none;
       			color: #000000;
@@ -161,7 +161,7 @@ header {
   }
 
   @media only screen and (min-width: $breakpoint-l) {
-      position: absolute;    
+      position: absolute;
       right: .3em;
       top: 7em;
   }
@@ -449,7 +449,7 @@ footer {
     -webkit-backface-visibility: hidden;
     top: 50%;
     left: 50%;
-    margin-top: -300px; 
+    margin-top: -300px;
     margin-left: -300px;
 
     @media only screen and (max-width: 415px) {
@@ -466,7 +466,7 @@ footer {
 .fade.wide > div {
   width: 800px;
   height: 600px;
-  margin-top: -400px; 
+  margin-top: -400px;
   margin-left: -400px;
 
   @media only screen and (max-width: 415px) {
@@ -665,7 +665,6 @@ footer {
 .sneezing > div:nth-child(4) {
   background-image: url(../img/sneezing/sneezing_in_green4.jpg);
 }
-
 .sketchbooks > div:nth-child(1) {
   background-image: url(../img/goldbook/goldbook_cover.jpg);
 }
@@ -686,6 +685,30 @@ footer {
 }
 .sketchbooks > div:nth-child(7) {
   background-image: url(../img/goldbook/goldbook_pages_9_10.jpg);
+}
+.sisters > div:nth-child(1) {
+  background-image: url(../img/sisters/infinite_sisterhood1.jpg);
+}
+.sisters > div:nth-child(2) {
+  background-image: url(../img/sisters/infinite_sisterhood2.jpg);
+}
+.sisters > div:nth-child(3) {
+  background-image: url(../img/sisters/infinite_sisterhood3.jpg);
+}
+.sisters > div:nth-child(4) {
+  background-image: url(../img/sisters/infinite_sisterhood4.jpg);
+}
+.sisters > div:nth-child(5) {
+  background-image: url(../img/sisters/infinite_sisterhood5.jpg);
+}
+.sisters > div:nth-child(6) {
+  background-image: url(../img/sisters/infinite_sisterhood6.jpg);
+}
+.sisters > div:nth-child(7) {
+  background-image: url(../img/sisters/infinite_sisterhood7.jpg);
+}
+.sisters > div:nth-child(8) {
+  background-image: url(../img/sisters/infinite_sisterhood8.jpg);
 }
 
 @keyframes imageAnimation {
@@ -708,7 +731,7 @@ footer {
   display: block;
   margin: .2em;
 }
-      
+
 .accordeon h2 {
   @extend .flipIn
 }
@@ -730,34 +753,28 @@ footer {
     margin: 0;
     padding: .5em 0;
     @extend .flipIn;
-      
+
     &:visible {
 
       &:nth-of-type(1) {
         animation-delay: 0.5s;
       }
-      
+
       &:nth-of-type(2) {
         animation-delay: 0.75s;
       }
-          
+
       &:nth-of-type(3) {
         animation-delay: 1.0s;
       }
     }
-    
-    /*
-    &:last-of-type {
-      padding-bottom: 0;
-    }
-    */
-      
+
     i {
       position: absolute;
       transform: translate(-6px, 0);
       margin-top: 1.7em;
       right: .5em;
-      
+
       &:before , &:after {
         content: "";
         @extend .transition;
@@ -766,16 +783,16 @@ footer {
         width: 3px;
         height: 9px;
       }
-        
+
       &:before {
         transform: translate(-2px, 0) rotate(45deg);
       }
-          
+
       &:after {
         transform: translate( 2px , 0 ) rotate(-45deg );
       }
     }
-    
+
     input[type=checkbox] {
       position: absolute;
       cursor: pointer;
@@ -783,7 +800,7 @@ footer {
       height: 100%;
       z-index: 1;
       opacity: 0;
-      
+
       &:checked {
         &~p, &~.content {
           margin-top: 0;
@@ -792,12 +809,12 @@ footer {
           opacity: 0;
           transform: translate(0, 50%);
         }
-            
+
         &~i {
           &:before {
             transform: translate(2px, 0) rotate(45deg);
           }
-          
+
           &:after {
             transform: translate(-2px , 0) rotate(-45deg);
           }
@@ -822,7 +839,7 @@ footer {
     opacity: 0;
     transform-origin: top center;
     transform: rotateX(-90deg);
-  } 
+  }
   5% {
     opacity: 1;
   }
@@ -850,7 +867,7 @@ figure {
 .sliderControls {
     margin: 0;
 }
- 
+
 .sliderElements:after {
     content: ".";
     display: block;
@@ -860,7 +877,7 @@ figure {
     font-size: 0;
     overflow: hidden;
 }
- 
+
 .sliderElements {
     list-style: none;
     position: relative;
@@ -872,7 +889,7 @@ figure {
 
 .sliderElements > li > figure:after {
  box-shadow: inset 0px 0px 2px 7px rgba(46, 48, 50, 0.9);
- background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%,rgba(255,255,255,1) 
+ background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%,rgba(255,255,255,1)
  100%);
  position: absolute;
  top: 0;
@@ -909,7 +926,7 @@ figure {
 #slide08:checked ~ .sliderElements {
     left: -700%;
 }
- 
+
 /* Bildunterschrift auf dem Bild positionieren */
 .sliderElements figcaption {
     display: none;
@@ -920,29 +937,29 @@ figure {
     padding: .4em;
     background: rgba(0,0,0,.5);
 }
- 
+
 /* Bilder responsive */
 .sliderElements img {
     display: block;
     width: 100%;
     height: auto;
 }
- 
+
 .content input {
     position: absolute;
     left: -99999px;
 }
- 
+
 /* mittige Ausrichtung der Controls - funktioniert im Zusammenspiel mit inline-block */
 .sliderControls {
     text-align: center;
 }
- 
+
 /* Controls nebeneinander bringen */
 .sliderControls li {
     display: inline-block;
 }
- 
+
 /* Controls auf einheitliche Maße bringen und die Ecken abrunden */
 .sliderControls label {
     width: 20px;
@@ -955,7 +972,7 @@ figure {
     background: #dddddd;
     color: #dddddd;
 }
- 
+
 /* Attributselektor und indirekter Nachfahrkombinator zum ansteuern der labels */
 .sliderControls label:hover,
 #slide01:checked ~ .sliderControls label[for="slide01"],
