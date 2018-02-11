@@ -85,13 +85,13 @@ header h2, header h3 {
   padding: 0 .5em;
   margin: 0;
   display: inline-block;
-  font-size: .9rem;
+  font-size: .8rem;
 }
 @media only screen and (max-width: 640px) {
   header .title h1 {
     padding: 0;
     margin: 0 !important;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: bold;
     border-bottom: 0 none;
   }
@@ -169,7 +169,7 @@ header h2, header h3 {
 
 #root .main-menu {
   text-align: right;
-  font-size: .9rem;
+  font-size: .8rem;
   position: fixed;
   width: 100%;
   right: .5em;
@@ -210,7 +210,7 @@ header h2, header h3 {
     top: inherit;
     right: .05em;
     background-color: ghostwhite;
-    width: 10.5em;
+    width: 13em;
     opacity: .9;
     text-transform: uppercase;
     font-size: .8rem;
