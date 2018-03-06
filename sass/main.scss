@@ -486,8 +486,8 @@ footer {
 .fade figcaption {
   @media only screen and (min-width: $breakpoint-m) {
       position: fixed;
-      top: 68%;
-      right: 2em;
+      top: 67%;
+      right: .5em;
       text-align: right;
       z-index: 10;
       width: 28em;

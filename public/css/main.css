@@ -464,8 +464,8 @@ footer {
 @media only screen and (min-width: 767px) {
   .fade figcaption {
     position: fixed;
-    top: 68%;
-    right: 2em;
+    top: 67%;
+    right: .5em;
     text-align: right;
     z-index: 10;
     width: 28em;
