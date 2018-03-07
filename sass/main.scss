@@ -132,7 +132,7 @@ header {
 
     header h2,
     header h3 {
-      padding: 0 .5em 0 1.5em;
+      padding: 0 .5em 0 2em;
     }
 }
 
@@ -209,24 +209,26 @@ header {
 
     @media only screen and (orientation:portrait) and (min-width: $breakpoint-m) {
       ul {
+        float: right;
         text-align: left;
-        width: 50%;
+        width: 45%;
 
         li {
           float: right;
-          width: 33%;
+          width: 37%;
         }
       }  
     }
 
     @media only screen and (orientation:landscape) and (max-width: $breakpoint-l - 1px) {
       ul {
+        float: right;
         text-align: left;
-        width: 50%;
+        width: 45%;
 
         li {
           float: right;
-          width: 33%;
+          width: 37%;
         }
       }  
     }
@@ -300,7 +302,7 @@ main p:last-of-type {
 }
 
 .is-text main {
-    margin: 0 0 1em 4em;
+    margin: 2em 0 1em 4em;
     padding: 1em;
 }
 
@@ -473,10 +475,8 @@ footer {
   }
 
   @media only screen and (orientation:landscape) {
-      margin-top: -140px;
-      //margin-left: -27vw;
-      max-width: 100vw;
-      max-height: 70vh;
+      margin-top: -130px;
+      max-height: 69vh;
   }
 
 }
