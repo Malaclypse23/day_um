@@ -508,6 +508,9 @@ footer {
   }
 }
 
+.fade.ten > div {
+    animation: imageAnimation 40s linear infinite 0s;
+}
 .fade.nine > div {
     animation: imageAnimation 36s linear infinite 0s;
 }
@@ -553,6 +556,9 @@ footer {
 .fade > div:nth-child(9) {
     animation-delay: 32s;
 }
+.fade > div:nth-child(10) {
+    animation-delay: 36s;
+}
 .beards > div:nth-child(1) {
   background-image: url(../img/beards/beards1.jpg);
 }
@@ -597,6 +603,9 @@ footer {
 }
 .birds > div:nth-child(9) {
   background-image: url(../img/birds/birds9.jpg);
+}
+.birds > div:nth-child(10) {
+  background-image: url(../img/birds/birds10.jpg);
 }
 .redhands > div:nth-child(1) {
   background-image: url(../img/redhands/redhand1.jpg);

@@ -473,11 +473,6 @@ footer {
   }
 }
 
-.fade.eleven > div {
-  -webkit-animation: imageAnimation 44s linear infinite 0s;
-  animation: imageAnimation 44s linear infinite 0s;
-}
-
 .fade.ten > div {
   -webkit-animation: imageAnimation 40s linear infinite 0s;
   animation: imageAnimation 40s linear infinite 0s;
@@ -563,11 +558,6 @@ footer {
   animation-delay: 36s;
 }
 
-.fade > div:nth-child(11) {
-  -webkit-animation-delay: 40s;
-  animation-delay: 40s;
-}
-
 .beards > div:nth-child(1) {
   background-image: url(../img/beards/beards1.jpg);
 }
@@ -626,6 +616,10 @@ footer {
 
 .birds > div:nth-child(9) {
   background-image: url(../img/birds/birds9.jpg);
+}
+
+.birds > div:nth-child(10) {
+  background-image: url(../img/birds/birds10.jpg);
 }
 
 .redhands > div:nth-child(1) {
