@@ -42,7 +42,7 @@ header {
   }
 }
 header select {
-  font-size: 10px;
+  font-size: 13px;
   vertical-align: 1px;
 }
 header .title {
@@ -65,10 +65,10 @@ header .title {
 }
 header h1, header a {
   display: block;
-  font-size: 1.8rem;
+  font-size: 2rem;
   letter-spacing: .1em !important;
   text-decoration: none;
-  margin: .3em 0 .3em .2em;
+  margin: .3em .1em;
   font-weight: normal;
 }
 header h1:hover, header h1:active, header h1:focus, header a:hover, header a:active, header a:focus {
@@ -77,16 +77,16 @@ header h1:hover, header h1:active, header h1:focus, header a:hover, header a:act
 }
 header h2, header h3 {
   color: #444444;
-  padding: 0 .5em;
+  padding: 0 .3em;
   margin: 0;
   display: inline-block;
-  font-size: .8rem;
+  font-size: .9rem;
 }
 @media only screen and (max-width: 640px) {
   header .title h1 {
     padding: 0;
     margin: 0 !important;
-    font-size: .8rem;
+    font-size: .9rem;
     font-weight: bold;
     border-bottom: 0 none;
   }
@@ -111,6 +111,11 @@ header h2, header h3 {
     font-size: 2.2rem !important;
   }
 
+  .is-text header h1 {
+    margin: .8em 0;
+    padding: 0;
+  }
+
   .title h1 {
     font-size: 1.5rem !important;
   }
@@ -120,8 +125,12 @@ header h2, header h3 {
     padding: 0 .5em 0 2em;
   }
 }
+.is-text main h1 {
+  font-size: 1.7rem;
+}
+
 .is-text main h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   border-bottom: 1px solid #cccccc;
   padding-bottom: .5em;
 }
@@ -164,7 +173,7 @@ header h2, header h3 {
 
 #root .main-menu {
   text-align: right;
-  font-size: .8rem;
+  font-size: .9rem;
   position: fixed;
   width: 100%;
   right: .5em;
@@ -226,14 +235,14 @@ header h2, header h3 {
 @media only screen and (max-width: 640px) {
   #root .main-menu {
     z-index: 3;
-    bottom: 3.3em;
+    bottom: 3em;
     top: inherit;
-    right: .05em;
+    right: 0;
     background-color: ghostwhite;
     width: 13em;
-    opacity: .9;
+    opacity: .85;
     text-transform: uppercase;
-    font-size: .8rem;
+    font-size: .9rem;
     padding-top: 0;
   }
   #root .main-menu > ul {
@@ -260,8 +269,7 @@ header h2, header h3 {
     display: block;
   }
   #root .main-menu ul li a {
-    padding: 1.1em 1em;
-    text-align: center;
+    padding: 1.2em .5em 1.2em 0;
   }
 }
 
@@ -273,6 +281,13 @@ main p:last-of-type {
   margin: 2em 0 1em 4em;
   padding: 1em;
 }
+.is-text main .address strong {
+  display: block;
+}
+.is-text main .address a {
+  display: block;
+  padding-top: 1rem;
+}
 
 @media only screen and (max-width: 640px) {
   #root.is-text .main-menu {
@@ -283,6 +298,10 @@ main p:last-of-type {
 
   .is-text main {
     margin: 0 0 1em;
+  }
+
+  footer {
+    display: none !important;
   }
 }
 .fa {
@@ -300,7 +319,7 @@ main p:last-of-type {
 }
 @media only screen and (max-width: 640px) {
   .social-media-icons li:nth-of-type(5) {
-    margin-left: .5em;
+    margin-left: .3em;
   }
   .social-media-icons li:last-of-type {
     float: right;
@@ -321,7 +340,7 @@ main p:last-of-type {
   .social-media-icons {
     z-index: 3;
     bottom: 0;
-    height: 2.2em;
+    height: 2.3em;
     top: inherit;
     left: inherit;
     width: 100%;
@@ -354,7 +373,7 @@ footer {
   right: 1em;
   text-decoration: none;
   text-align: right;
-  color: #cccccc;
+  color: #767676;
   font-size: .8rem;
   width: 35% !important;
 }
