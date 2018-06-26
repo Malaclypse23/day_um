@@ -41,7 +41,6 @@ var assets = {
     }
 };
 
-
 gulp.task('watch', function() {
   plugins.refresh.listen();
 

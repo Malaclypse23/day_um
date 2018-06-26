@@ -107,13 +107,12 @@ header h2, header h3 {
 
   header > h1, header > a {
     width: 70% !important;
-    padding: .3em .5em;
+    padding: .3em .6em;
     font-size: 2.2rem !important;
   }
 
-  .is-text header h1 {
-    margin: .8em 0;
-    padding: 0;
+  .p-lft {
+    padding-left: .7em !important;
   }
 
   .title h1 {
@@ -147,14 +146,14 @@ header h2, header h3 {
 }
 @media only screen and (min-width: 767px) {
   .fb-aside {
-    margin-left: 2.5em;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 1200px) {
   .fb-aside {
     position: absolute;
-    right: .3em;
-    top: 7em;
+    right: 1em;
+    top: 9em;
   }
 }
 
@@ -197,24 +196,19 @@ header h2, header h3 {
 }
 @media only screen and (orientation: portrait) and (min-width: 767px) {
   #root .main-menu ul {
-    float: right;
-    text-align: left;
-    width: 45%;
+    width: 50%;
   }
   #root .main-menu ul li {
-    float: right;
-    width: 37%;
+    width: 42%;
   }
 }
 @media only screen and (orientation: landscape) and (max-width: 1199px) {
   #root .main-menu ul {
-    float: right;
-    text-align: left;
-    width: 45%;
+    width: 50%;
   }
   #root .main-menu ul li {
     float: right;
-    width: 37%;
+    width: 42%;
   }
 }
 #root .main-menu a span {
@@ -278,8 +272,8 @@ main p:last-of-type {
 }
 
 .is-text main {
-  margin: 2em 0 1em 4em;
-  padding: 1em;
+  margin: 2em 0 1em 1em;
+  padding: .5em;
 }
 .is-text main .address strong {
   display: block;
@@ -424,7 +418,7 @@ footer {
 }
 @media only screen and (max-width: 640px) {
   .fade > div {
-    margin-top: -34vh;
+    margin-top: -33vh;
   }
 }
 @media only screen and (orientation: landscape) and (min-width: 767px) {
@@ -1129,4 +1123,13 @@ figure {
 #slide08:checked ~ .sliderControls label[for="slide08"] {
   background: #444444;
   color: #444444;
+}
+
+.hidden-label {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

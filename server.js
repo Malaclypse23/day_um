@@ -26,7 +26,7 @@ mongod version: 3.2.11 (MMAPv1)
 
 //var Db = require('mongodb').Db;
 //var ObjectId = require('mongodb').ObjectID;
-var url = 'mongodb://<tomahawk>:<stina>@ds163738.mlab.com:63738/stina';
+//var url = 'mongodb://<tomahawk>:<stina>@ds163738.mlab.com:63738/stina';
 
 
 

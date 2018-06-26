@@ -59,7 +59,7 @@ function getCurrentImage() {
 }
 
 function select_language(language, isChange) {
-	$("[lang]").each(function () {
+	$("[lang]").not("html").each(function () {
         if ($(this).attr("lang") == language)
             $(this).show();
         else
@@ -120,7 +120,6 @@ $(function() {
 
 	$('.social-media-icons li:last-of-type').on('click', function(e) {
 		e.preventDefault();
-		$('.fa-plus').toggleClass('fa-minus');
 		$('.main-menu ul').delay(80).fadeToggle();
 	});
 
