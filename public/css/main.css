@@ -53,12 +53,6 @@ ul {
   margin: 0;
 }
 
-audio {
-  margin: .5em 0 .2em 0;
-  display: block;
-  max-width: 100%;
-}
-
 a {
   color: #444444;
   text-decoration: none;
@@ -112,7 +106,7 @@ header h1:hover, header h1:active, header h1:focus, header a:hover, header a:act
 }
 header h2, header h3 {
   color: #444444;
-  padding: 0 .3em;
+  padding: 0 .1em;
   margin: 0;
   display: inline-block;
   font-size: .9rem;
@@ -502,9 +496,6 @@ footer {
     text-align: right;
     z-index: 10;
     width: 28em;
-  }
-  .fade figcaption ul {
-    list-style: none;
   }
   .fade figcaption h2 {
     font-size: 1.2rem;
@@ -1167,4 +1158,9 @@ figure {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+.is-index header h3 {
+  width: 100%;
+  margin-bottom: .2em;
 }
